@@ -1,0 +1,9 @@
+{% if fights_list %}
+    <ul>
+    {% for fight in fights_list %}
+        <li><a href="/{{ fight.id }}/">{{ fight.style }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Fights list is empty.</p>
+{% endif %}
