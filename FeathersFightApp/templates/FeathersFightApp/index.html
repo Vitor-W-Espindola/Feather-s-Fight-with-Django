@@ -5,7 +5,11 @@
         <link rel="stylesheet" type="text/css" href="{% static 'FeathersFightApp/style.css' %}">
     </head>
     <body>
-        <img class="logo" src="{% static 'FeathersFightApp/images/logo.png' %}">
+        <div class="imgs">
+            <img class="logo" src="{% static 'FeathersFightApp/images/logo.png' %}">
+            <img class="feather" src="{% static 'FeathersFightApp/images/feather.png' %}">
+        </div>
+        <hr class="divider">
         <div class="item_container">
 
             {% if fights_list %}
@@ -25,12 +29,11 @@
             <label>1 2 3 4</label>
         </div>
         -->
-        <footer>
-            <div class="footer_info">
-                <div class="footer_info_item"><a href="" class="footer_info_item">More</a></div>
-                <div class="footer_info_item"><a href="" class="footer_info_item">Become an author</a></div>
-                <div class="footer_info_item"><a href="" class="footer_info_item">About</a></div>
+            
+            <div class="index_footer_info">
+                <div class="index_footer_info_item"><a href="" class="index_footer_info_item">More</a></div>
+                <div class="index_footer_info_item"><a href="" class="index_footer_info_item">Become an author</a></div>
+                <div class="index_footer_info_item"><a href="" class="index_footer_info_item">About</a></div>
             </div>
-        </footer>
     </body>
 </html>

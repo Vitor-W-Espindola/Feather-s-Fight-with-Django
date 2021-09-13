@@ -7,11 +7,22 @@
   color: rgb(62, 122, 233);
   text-decoration: none;
 }
-.logo {
-  display: block;
+.imgs {
+  display: table;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 12%;
+  width: 50%;
+  text-align: left;
+  padding-top: 150px;
+}
+.logo {
+  display: table-cell;
+}
+.feather {
+  display: table-cell;
+}
+.divider {
+  width: 50%;
 }
 .item_container {
   padding: 50px;
@@ -37,15 +48,15 @@
   padding-left: 8px;
   font-size: 18px;
 }
-.footer_info {
-  text-align: center;
-  padding-top: 35px;
-  padding-bottom: 50px;
+
+.index_footer_info {
+  margin-top: 300px;
   color: rgb(0, 0, 0);
+  text-align: center;
 }
-.footer_info_item {
+.index_footer_info_item {
   font-size: 16px;
-  padding: 4px;
+  padding-bottom: 4px;
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
