@@ -1,56 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- <link rel=stylesheet" type="text/css" href="../../static/FeathersFightApp/style.css"> -->
-        <style>
-            * {
-                font-family: Arial, Helvetica, sans-serif;
-            }
-            .fightref {
-                color: rgb(62, 122, 233);
-                text-decoration: none;
-            }
-            .logo {
-                display: block;
-                width: 18%;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 12%;
-            }
-            .item_container {
-                padding: 50px;
-            }
-            .item_div {
-                padding: 10px;
-                text-align: center;
-            }
-            .short_description {
-                color:rgb(136, 136, 136);
-                font-style: italic;
-                text-align: left;
-                font-size: 17px;
-            }
-            .fightref {
-                text-align: right;
-                padding-left: 8px;
-                font-size: 18px;
-            }
-            .footer_info {
-                text-align: center;
-                padding-top: 35px;
-                padding-bottom: 50px;
-                color: rgb(0, 0, 0);
-            }
-            .footer_info_item {
-                font-size: 16px;
-                padding: 4px;
-                color: rgb(0, 0, 0);
-                text-decoration: none;
-            }
-        </style>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'FeathersFightApp/style.css' %}">
     </head>
     <body>
-        <img class="logo" src="../../static/FeathersFightApp/images/logo.png">
+        <img class="logo" src="{% static 'FeathersFightApp/images/logo.png' %}">
         <div class="item_container">
 
             {% if fights_list %}
@@ -64,18 +19,6 @@
                 <p>Fights list is empty.</p>
             {% endif %}
 
-            <div class="item_div">
-                <label class="short_description">Short Description...</label>
-                <a href="" class="fightref">Fight Style</a>
-            </div>
-            <div class="item_div">
-                <label class="short_description">Short Description...</label>
-                <a href="" class="fightref">Fight Style</a>
-            </div>
-            <div class="item_div">
-                <label class="short_description">Short Description...</label>
-                <a href="" class="fightref">Fight Style</a>
-            </div> 
         </div>
         <!--<div>
             <label>1 2 3 4</label>

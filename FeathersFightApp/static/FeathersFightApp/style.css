@@ -1,4 +1,82 @@
-.container {
-  background-color: aquamarine;
-  font-size: 20px;
+/* index.html */
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.fightref {
+  color: rgb(62, 122, 233);
+  text-decoration: none;
+}
+.logo {
+  display: block;
+  width: 18%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12%;
+}
+.item_container {
+  padding: 50px;
+}
+.item_div {
+  padding: 10px;
+  text-align: center;
+}
+.short_description {
+  color: rgb(136, 136, 136);
+  font-style: italic;
+  text-align: left;
+  font-size: 17px;
+}
+.fightref {
+  text-align: right;
+  padding-left: 8px;
+  font-size: 18px;
+}
+.footer_info {
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 50px;
+  color: rgb(0, 0, 0);
+}
+.footer_info_item {
+  font-size: 16px;
+  padding: 4px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+/* fight.html */
+
+.style {
+  width: 28%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 50px;
+  padding-top: 240px;
+  padding-bottom: 13px;
+  text-align: right;
+}
+.description {
+  width: 28%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+.footer_info {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: rgb(0, 0, 0);
+}
+.pub_date {
+  width: 28%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+}
+.footer_info_item {
+  font-size: 16px;
+  padding: 4px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
 }
