@@ -1,7 +1,8 @@
 {% if fights_list %}
     <ul>
     {% for fight in fights_list %}
-        <li><a href="/{{ fight.id }}/">{{ fight.style }}</a></li>
+        <li><a href="/{{ fight.fight.id }}/">{{ fight.fight.style }}</a></li>
+        <label>{{ fight.short_description }}</label>
     {% endfor %}
     </ul>
 {% else %}
