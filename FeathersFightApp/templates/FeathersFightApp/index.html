@@ -11,8 +11,9 @@
             {% if fights_list %}
                 {% for fight in fights_list %}
                     <div class="item_div">
-                        <label class="short_description">{{ fight.short_description }}</label>
+                        <div class="short_description">{{ fight.short_description }}</div>        
                         <a href="{{ fight.fight.id }}" class="fightref">{{ fight.fight.style }}</a>
+                        
                     </div>
                 {% endfor %}
             {% else %}

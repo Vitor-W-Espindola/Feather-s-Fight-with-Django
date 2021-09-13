@@ -9,26 +9,31 @@
 }
 .logo {
   display: block;
-  width: 18%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 12%;
 }
 .item_container {
   padding: 50px;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .item_div {
+  display: table;
+  width: 100%;
   padding: 10px;
-  text-align: center;
+  text-align: right;
 }
 .short_description {
+  display: table-cell;
   color: rgb(136, 136, 136);
   font-style: italic;
-  text-align: left;
   font-size: 17px;
+  text-align: justify;
+  width: 70%;
 }
 .fightref {
-  text-align: right;
   padding-left: 8px;
   font-size: 18px;
 }

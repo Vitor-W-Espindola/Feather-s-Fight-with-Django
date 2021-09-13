@@ -12,7 +12,7 @@ def index(request):
     class FightWithShortDescription():
         def __init__(self, fight):
             self.fight = fight
-            self.short_description = "%s%s" % (' '.join(fight.description.split(" ")[:7]), "...")            
+            self.short_description = "%s%s" % (' '.join(fight.description.split(" ")[:6]), "...")            
      
     fights_with_short_description = []
 
