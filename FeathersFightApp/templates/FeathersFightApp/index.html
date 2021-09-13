@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% if fights_list %}
     <ul>
     {% for fight in fights_list %}
@@ -8,3 +9,97 @@
 {% else %}
     <p>Fights list is empty.</p>
 {% endif %}
+=======
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link rel=stylesheet" type="text/css" href="../../static/FeathersFightApp/style.css"> -->
+        <style>
+            * {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .fightref {
+                color: rgb(62, 122, 233);
+                text-decoration: none;
+            }
+            .logo {
+                display: block;
+                width: 18%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 12%;
+            }
+            .item_container {
+                padding: 50px;
+            }
+            .item_div {
+                padding: 10px;
+                text-align: center;
+            }
+            .short_description {
+                color:rgb(136, 136, 136);
+                font-style: italic;
+                text-align: left;
+                font-size: 17px;
+            }
+            .fightref {
+                text-align: right;
+                padding-left: 8px;
+                font-size: 18px;
+            }
+            .footer_info {
+                text-align: center;
+                padding-top: 35px;
+                padding-bottom: 50px;
+                color: rgb(0, 0, 0);
+            }
+            .footer_info_item {
+                font-size: 16px;
+                padding: 4px;
+                color: rgb(0, 0, 0);
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <img class="logo" src="../../static/FeathersFightApp/images/logo.png">
+        <div class="item_container">
+
+            {% if fights_list %}
+                {% for fight in fights_list %}
+                    <div class="item_div">
+                        <label class="short_description">{{ fight.short_description }}</label>
+                        <a href="{{ fight.fight.id }}" class="fightref">{{ fight.fight.style }}</a>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>Fights list is empty.</p>
+            {% endif %}
+
+            <div class="item_div">
+                <label class="short_description">Short Description...</label>
+                <a href="" class="fightref">Fight Style</a>
+            </div>
+            <div class="item_div">
+                <label class="short_description">Short Description...</label>
+                <a href="" class="fightref">Fight Style</a>
+            </div>
+            <div class="item_div">
+                <label class="short_description">Short Description...</label>
+                <a href="" class="fightref">Fight Style</a>
+            </div> 
+        </div>
+        <!--<div>
+            <label>1 2 3 4</label>
+        </div>
+        -->
+        <footer>
+            <div class="footer_info">
+                <div class="footer_info_item"><a href="" class="footer_info_item">More</a></div>
+                <div class="footer_info_item"><a href="" class="footer_info_item">Become an author</a></div>
+                <div class="footer_info_item"><a href="" class="footer_info_item">About</a></div>
+            </div>
+        </footer>
+    </body>
+</html>
+>>>>>>> front_end
