@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .style {
+                width: 28%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 50px;
+                padding-top: 100px;
+                padding-bottom: 13px;
+                text-align: right;
+            }
+            .description {
+                width: 28%;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: justify;
+                
+            }
+            .footer_info {
+                text-align: center;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                color: rgb(0, 0, 0);
+            }
+            .footer_info_item {
+                font-size: 16px;
+                padding: 4px;
+                color: rgb(0, 0, 0);
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        {% if fight %} 
+        <div class="style">
+            <label>
+                {{ fight.fight.style }}
+            </label>
+        </div>   
+        <div class="description">
+            <label>
+                {{ fight.description }}
+            </label>
+        </div>
+        {% else %}
+        <div class="description">
+            <label>
+                Error: Fight object not received.
+            </label>
+        </div>
+        {% endif %}
+        <footer>
+            <div class="footer_info">
+                <div class="footer_info_item"><a href="" class="footer_info_item">Home Page</a></div>
+            </div>
+        </footer>
+
+    </body>
+</html>
+
+<!-- 
+    {% if fight %}
+    <h1>{{ fight.style }}</h1>
+    <p>{{ fight.description }}</p>
+    <p>Posted in {{ fight.pub_date }}</p>
+{% else %}
+    <p>Error: Fight object not received.</p>
+{% endif %}
+-->
