@@ -16,8 +16,7 @@
                 {% for fight in fights_list %}
                     <div class="item_div">
                         <div class="short_description">{{ fight.short_description }}</div>        
-                        <a href="{{ fight.fight.id }}" class="fightref">{{ fight.fight.style }}</a>
-                        
+                        <a href="fight/{{ fight.fight.id }}" class="fightref">{{ fight.fight.style }}</a>
                     </div>
                 {% endfor %}
             {% else %}
@@ -25,10 +24,19 @@
             {% endif %}
 
         </div>
-        <!--<div>
-            <label>1 2 3 4</label>
-        </div>
-        -->
+        {% if number_of_pages %}
+            <div class="pagination_div">
+            {% for number in number_of_pages %}
+                {% if number == index_page_id %}
+                    <label>{{ number }}</label>
+                {% else %}
+                    <a href="/{{ number }}" class="pageref">{{ number }}</a>
+                {% endif %}
+            {% endfor %}
+            </div>
+        {% else %}
+             <p>No page available</p>
+        {% endif %}
             
             <div class="index_footer_info">
                 <div class="index_footer_info_item"><a href="" class="index_footer_info_item">More</a></div>

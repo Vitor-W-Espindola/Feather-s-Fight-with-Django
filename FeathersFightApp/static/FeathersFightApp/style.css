@@ -27,6 +27,7 @@
 .item_container {
   padding: 50px;
   width: 25%;
+  height: 150px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -44,13 +45,15 @@
   text-align: justify;
   width: 70%;
 }
-.fightref {
-  padding-left: 8px;
-  font-size: 18px;
+.pagination_div {
+  text-align: center;
+  padding-top: 20px;
 }
-
+.pageref {
+  color: black;
+}
 .index_footer_info {
-  margin-top: 300px;
+  margin-top: 250px;
   color: rgb(0, 0, 0);
   text-align: center;
 }
