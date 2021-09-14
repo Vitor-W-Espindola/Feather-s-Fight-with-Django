@@ -17,7 +17,6 @@
                     <div class="item_div">
                         <div class="short_description">{{ fight.short_description }}</div>        
                         <a href="fight/{{ fight.fight.id }}" class="fightref">{{ fight.fight.style }}</a>
-                        
                     </div>
                 {% endfor %}
             {% else %}
@@ -29,7 +28,7 @@
             <div class="pagination_div">
             {% for number in number_of_pages %}
                 {% if number == index_page_id %}
-                    {{ number }}
+                    <label>{{ number }}</label>
                 {% else %}
                     <a href="/{{ number }}" class="pageref">{{ number }}</a>
                 {% endif %}
