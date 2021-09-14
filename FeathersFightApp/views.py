@@ -43,3 +43,7 @@ def fight(request, index_page_id, fight_id):
         'fight':fight,
     }
     return HttpResponse(template.render(context, request))
+
+def register(request):
+    template = loader.get_template('FeathersFightApp/register.html')
+    return HttpResponse(template.render({}, request))

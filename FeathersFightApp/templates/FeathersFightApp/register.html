@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        {% load static %}
+
+        <link rel="stylesheet" type="text/css" href="{% static 'FeathersFightApp/style.css' %}">
+    </head>
+    <body>
+        <div class="register_header">
+            <img class="register_feather" src="{% static 'FeathersFightApp/images/feather.png' %}">
+            <div class="register_title"><label>Become an author.</label></div>
+        </div>
+        <hr class="register_divider">
+
+        <form class="register_form" method="post">{% csrf_token %}
+            <div class="register_text_input">
+                <input type="text" class="register_area_input" name="" placeholder="Username">
+            </div>
+            
+            <div class="register_email_input">
+                <input type="email" class="register_area_input" name="" placeholder="Email">
+            </div>
+            
+            <div class="register_password_input">
+                <input type="password" class="register_area_input" name="" placeholder="Password">
+            </div>
+            
+            <div class="register_submit_input">
+                <input class="submit_button" type="submit" value="Register">
+            </div>
+        
+        </form>
+        <footer>
+            <div class="footer_info">
+                <div class="footer_info_item"><a href="/" class="footer_info_item">Home Page</a></div>
+            </div>
+        </footer>
+    </body>
+    
+    
+</html>
