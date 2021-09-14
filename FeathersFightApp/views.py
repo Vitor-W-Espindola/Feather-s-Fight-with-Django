@@ -21,9 +21,10 @@ def index_with_page(request, index_page_id):
      
     fights_with_short_description = []
     
-    number_of_pages = range(1, fights.count()//4 + 2)
-    page_interval_start = 4*(index_page_id - 1)
-    page_interval_end = (4*(index_page_id - 1) + 4)
+    items_for_page = 4
+    number_of_pages = range(1, (fights.count()//items_for_page + 2) if (fights.count()/items_for_page) % 1 != 0 else fights.count()//items_for_page + 1)
+    page_interval_start = items_for_page*(index_page_id - 1)
+    page_interval_end = (items_for_page*(index_page_id - 1) + items_for_page)
     print(page_interval_start)
     print(page_interval_end)
     print(number_of_pages)
