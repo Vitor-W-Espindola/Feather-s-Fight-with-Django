@@ -2,6 +2,7 @@ from django.http.response import HttpResponseRedirect
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
+from django.core.paginator import Paginator
 
 from .models import Fight
 
@@ -21,22 +22,17 @@ def index_with_page(request, index_page_id):
      
     fights_with_short_description = []
     
-    items_for_page = 4
-    number_of_pages = range(1, (fights.count()//items_for_page + 2) if (fights.count()/items_for_page) % 1 != 0 else fights.count()//items_for_page + 1)
-    page_interval_start = items_for_page*(index_page_id - 1)
-    page_interval_end = (items_for_page*(index_page_id - 1) + items_for_page)
-    print(page_interval_start)
-    print(page_interval_end)
-    print(number_of_pages)
-
-    for fight in fights[page_interval_start:page_interval_end]:
+    for fight in fights:
         fights_with_short_description.append(FightWithShortDescription(fight))
     
+    items_for_page = 4
+    paginator = Paginator(fights_with_short_description, items_for_page)
+
     template = loader.get_template('FeathersFightApp/index.html')
     context = {
-        'fights_list':fights_with_short_description,
-        'number_of_pages':number_of_pages,
-        'index_page_id':index_page_id
+        'fights_list': paginator.page(index_page_id).object_list,
+        'range_of_pages': paginator.page_range,
+        'index_page_id': index_page_id
     }
     return HttpResponse(template.render(context, request))
 

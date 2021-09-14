@@ -24,9 +24,9 @@
             {% endif %}
 
         </div>
-        {% if number_of_pages %}
+        {% if range_of_pages %}
             <div class="pagination_div">
-            {% for number in number_of_pages %}
+            {% for number in range_of_pages %}
                 {% if number == index_page_id %}
                     <label>{{ number }}</label>
                 {% else %}
