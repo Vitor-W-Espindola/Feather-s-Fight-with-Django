@@ -307,9 +307,16 @@ input[type="password"]:focus {
 }
 
 .dashboard_publication_title {
+  display: inline;
   font-size: 21px;
 }
-
+.dashboard_publication_awaiting {
+  display: inline;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-style: italic;
+}
 .dashboard_publication_short_description {
   padding-top: 5px;
   color: rgb(136, 136, 136);
@@ -323,4 +330,10 @@ input[type="password"]:focus {
   padding-right: 15px;
   color: rgb(62, 122, 233);
   text-decoration: none;
+}
+
+.dashboard_no_publication_yet {
+  padding-left: 60px;
+  padding-top: 45px;
+  font-size: 20px;
 }

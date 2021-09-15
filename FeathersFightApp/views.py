@@ -53,7 +53,7 @@ def index_with_page(request, index_page_id):
     }
     return HttpResponse(template.render(context, request))
 
-def fight(request, index_page_id, fight_id):
+def fight(request, fight_id):
     fight = Fight.objects.get(pk=fight_id)
     template = loader.get_template('FeathersFightApp/fight.html')
     context = {
@@ -142,4 +142,32 @@ def dashboard(request):
         'publication_list':fights_with_short_description,
         "username":request.user.username 
         }
+    return HttpResponse(template.render(context, request))
+
+def fight_preview(request, publication_id):
+    
+    
+    # If User is authenticated
+    if(request.user.is_authenticated == True):
+        username = request.user.username
+        logged_in = 1
+        # If User is an author
+        try:
+            if(Fight.objects.get(pk=publication_id, author=request.user) == None):
+                return HttpResponse("Not found.")
+        except:
+                return HttpResponse("Not found.")
+        
+    else:
+        return HttpResponse("Not authorized.")
+
+    publication = Fight.objects.get(pk=publication_id)
+
+
+    
+    template = loader.get_template('FeathersFightApp/fight_preview.html')
+
+    context = {
+        'publication':publication
+    }
     return HttpResponse(template.render(context, request))

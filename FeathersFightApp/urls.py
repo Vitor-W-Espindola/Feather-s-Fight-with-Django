@@ -10,6 +10,7 @@ urlpatterns = [
     path('login/success', views.login_process, name='login'),
     path('logout', views.logout_process, name='login'),
     path('<int:index_page_id>/', views.index_with_page, name='index_with_page'),
-    path('<int:index_page_id>/fight/<int:fight_id>/', views.fight, name='fight'),
+    path('fight/<int:fight_id>/', views.fight, name='fight'),
+    path('dashboard/fight_preview/<int:publication_id>/', views.fight_preview, name='fight_preview'),
     path('dashboard', views.dashboard, name='fight'),
 ]
