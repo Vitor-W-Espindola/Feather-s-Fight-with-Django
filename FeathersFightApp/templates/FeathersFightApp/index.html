@@ -1,55 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        {% load static %}
-        <link rel="stylesheet" type="text/css" href="{% static 'FeathersFightApp/style.css' %}">
-    </head>
-    <body>
-        <div class="imgs">
-            <img class="logo" src="{% static 'FeathersFightApp/images/logo.png' %}">
-            <img class="feather" src="{% static 'FeathersFightApp/images/feather.png' %}">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'FeathersFightApp/style.css' %}">
+</head>
+
+<body>
+    <div class="imgs">
+        <img class="logo" src="{% static 'FeathersFightApp/images/logo.png' %}">
+        <img class="feather" src="{% static 'FeathersFightApp/images/feather.png' %}">
+    </div>
+    <hr class="divider">
+    <div class="hello_text"><label>Welcome, {{ username }}</label></div>
+
+    <div class="item_container">
+
+        {% if fights_list %}
+        {% for fight in fights_list %}
+        <div class="item_div">
+            <div class="short_description">{{ fight.short_description }}</div>
+            <a href="fight/{{ fight.fight.id }}" class="fightref">{{ fight.fight.style }}</a>
         </div>
-        <hr class="divider">
-        <div class="hello_text"><label>Welcome, {{ username }}</label></div>
-
-        <div class="item_container">
-
-            {% if fights_list %}
-                {% for fight in fights_list %}
-                    <div class="item_div">
-                        <div class="short_description">{{ fight.short_description }}</div>        
-                        <a href="fight/{{ fight.fight.id }}" class="fightref">{{ fight.fight.style }}</a>
-                    </div>
-                {% endfor %}
-            {% else %}
-                <p>Fights list is empty.</p>
-            {% endif %}
-
-        </div>
-        {% if range_of_pages %}
-            <div class="pagination_div">
-            {% for number in range_of_pages %}
-                {% if number == index_page_id %}
-                    <label>{{ number }}</label>
-                {% else %}
-                    <a href="/{{ number }}" class="pageref">{{ number }}</a>
-                {% endif %}
-            {% endfor %}
-            </div>
+        {% endfor %}
         {% else %}
-             <p>No page available</p>
+        <p>Fights list is empty.</p>
         {% endif %}
-            
-            <div class="index_footer_info">
-                <a href="" class="index_footer_info_item">About |</a>
-                <a href="/register" class="index_footer_info_item">Become an author |</a>
-                <a href="" class="index_footer_info_item">More |</a>
-                {% if logged_in == 0%}
-                    <a href="/login" class="index_footer_info_item">Log in </a>
-                {% else %}
-                    <a href="/logout" class="index_footer_info_item">Log Out </a>
-                {% endif %}
 
-            </div>
-    </body>
+    </div>
+    {% if range_of_pages %}
+    <div class="pagination_div">
+        {% for number in range_of_pages %}
+        {% if number == index_page_id %}
+        <label>{{ number }}</label>
+        {% else %}
+        <a href="/{{ number }}" class="pageref">{{ number }}</a>
+        {% endif %}
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>No page available</p>
+    {% endif %}
+    <div class="index_footer_info">
+        <a href="" class="index_footer_info_item">About |</a>
+        <a href="/register" class="index_footer_info_item">Become an author |</a>
+        <a href="" class="index_footer_info_item">More |</a>
+        {% if logged_in == 0%}
+        <a href="/login" class="index_footer_info_item">Log in </a>
+        {% else %}
+        <a href="/logout" class="index_footer_info_item">Log Out </a>
+        {% endif %}
+    </div>
+</body>
+
 </html>

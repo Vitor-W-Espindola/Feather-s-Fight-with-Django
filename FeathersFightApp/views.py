@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from django.core.paginator import Paginator
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django.contrib import auth
 from django.db import IntegrityError
 
@@ -19,9 +19,13 @@ def index_with_page(request, index_page_id):
 
     username = "User"
     logged_in = 0
+    author = 0
     if(request.user.is_authenticated == True):
         username = request.user.username
         logged_in = 1
+        # If User is an author
+        if(len(request.user.groups.filter(name='Authors')) != 0):
+            author = 1
 
     fights = Fight.objects.all()
     
@@ -44,7 +48,8 @@ def index_with_page(request, index_page_id):
         'range_of_pages': paginator.page_range,
         'index_page_id': index_page_id,
         "username": username,
-        "logged_in": logged_in
+        "logged_in": logged_in,
+        "author": author
     }
     return HttpResponse(template.render(context, request))
 
