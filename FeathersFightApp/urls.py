@@ -4,7 +4,11 @@ from . import views
 
 urlpatterns = [
     path('', views.index_with_no_page, name='index_with_no_page'),
-    path('register', views.register, name='register'),
+    path('register', views.register_page, name='register_page'),
+    path('login', views.login_page, name='login_page'),
+    path('register/success', views.register_process, name='register'),
+    path('login/success', views.login_process, name='login'),
+    path('logout', views.logout_process, name='login'),
     path('<int:index_page_id>/', views.index_with_page, name='index_with_page'),
     path('<int:index_page_id>/fight/<int:fight_id>/', views.fight, name='fight'),
 ]

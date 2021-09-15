@@ -1,8 +1,11 @@
+from django.http.request import HttpRequest, QueryDict
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from django.core.paginator import Paginator
+from django.contrib.auth.models import User
+from django.contrib import auth
 
 from .models import Fight
 
@@ -12,6 +15,12 @@ def index_with_no_page(request):
     return HttpResponseRedirect('/1')
 
 def index_with_page(request, index_page_id):
+
+    username = "User"
+    logged_in = 0
+    if(request.user.is_authenticated == True):
+        username = request.user.username
+        logged_in = 1
 
     fights = Fight.objects.all()
     
@@ -32,7 +41,9 @@ def index_with_page(request, index_page_id):
     context = {
         'fights_list': paginator.page(index_page_id).object_list,
         'range_of_pages': paginator.page_range,
-        'index_page_id': index_page_id
+        'index_page_id': index_page_id,
+        "username": username,
+        "logged_in": logged_in
     }
     return HttpResponse(template.render(context, request))
 
@@ -44,6 +55,37 @@ def fight(request, index_page_id, fight_id):
     }
     return HttpResponse(template.render(context, request))
 
-def register(request):
+def register_page(request):
     template = loader.get_template('FeathersFightApp/register.html')
     return HttpResponse(template.render({}, request))
+    
+def register_process(request):
+    if(request.method != "POST"):
+        return HttpResponse("Not a post method.")
+    username = request.POST["username"]
+    email = request.POST["email"]
+    password = request.POST["password"]
+    user = User.objects.create_user(username=username, email=email, password=password)
+    user.save()
+    user = auth.authenticate(username=username, password=password)
+    auth.login(request, user)
+    return HttpResponseRedirect('/')
+
+def login_page(request):
+    template = loader.get_template('FeathersFightApp/login.html')
+    return HttpResponse(template.render({}, request))
+
+def login_process(request):
+    username = request.POST["username"]
+    password = request.POST["password"]
+    user = auth.authenticate(username=username, password=password)
+    
+    if user is not None and user.is_active == True:
+        auth.login(request, user)
+        return HttpResponseRedirect('/')
+    else: 
+        return HttpResponse("Not authenticated. %s %s" % (username, password))
+
+def logout_process(request):
+    auth.logout(request)
+    return HttpResponseRedirect('/')
