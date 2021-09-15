@@ -13,3 +13,9 @@ class Fight(models.Model):
 
     def __str__(self):
         return "%i -> %s" % (self.id, self.style)
+
+class DeleteRequest(models.Model):
+    publication = models.OneToOneField(Fight, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return "%s - %s" %(self.publication.style, self.publication.author.username)

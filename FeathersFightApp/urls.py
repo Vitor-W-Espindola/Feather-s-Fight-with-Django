@@ -13,5 +13,6 @@ urlpatterns = [
     path('fight/<int:fight_id>/', views.fight, name='fight'),
     path('dashboard/fight_preview/<int:publication_id>/', views.fight_preview, name='fight_preview'),
     path('dashboard/edit/<int:publication_id>/', views.fight_edit, name='fight_preview'),
+    path('dashboard/delete/<int:publication_id>/', views.fight_delete, name='fight_preview'),
     path('dashboard', views.dashboard, name='fight'),
 ]

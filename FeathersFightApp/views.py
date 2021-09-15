@@ -8,7 +8,7 @@ from django.contrib.auth.models import User, Group
 from django.contrib import auth
 from django.db import IntegrityError
 
-from .models import Fight
+from .models import DeleteRequest, Fight
 
 # Create your views here.
 
@@ -28,7 +28,11 @@ def index_with_page(request, index_page_id):
             author = 1
 
     fights = Fight.objects.all()
-    
+    fights_with_delete_request = []
+    for index in range(0, DeleteRequest.objects.count()):
+        fights_with_delete_request.append(DeleteRequest.objects.values_list('publication')[index][0])
+
+    print(fights_with_delete_request)
     class FightWithShortDescription():
         def __init__(self, fight):
             self.fight = fight
@@ -36,9 +40,14 @@ def index_with_page(request, index_page_id):
      
     fights_with_short_description = []
     
-    for fight in fights:
-        fights_with_short_description.append(FightWithShortDescription(fight))
     
+    for fight in fights:
+        
+        if(fight.awaiting == False and fight.id not in fights_with_delete_request):
+            fights_with_short_description.append(FightWithShortDescription(fight))
+        else:
+            print("%s This fight has a edit or delete request." % (fight.style))
+
     items_for_page = 4
     paginator = Paginator(fights_with_short_description, items_for_page)
 
@@ -137,10 +146,15 @@ def dashboard(request):
     for fight in fights:
         fights_with_short_description.append(FightWithShortDescription(fight))
     
+    fights_with_delete_request = []
+    for index in range(0, DeleteRequest.objects.count()):
+        print(DeleteRequest.objects.values_list('publication')[index][0])
+        fights_with_delete_request.append(DeleteRequest.objects.values_list('publication')[index][0])
 
     context = { 
         'publication_list':fights_with_short_description,
-        "username":request.user.username 
+        "username":request.user.username,
+        'publications_with_delete_request': fights_with_delete_request
         }
     return HttpResponse(template.render(context, request))
 
@@ -184,10 +198,36 @@ def fight_edit(request, publication_id):
                 return HttpResponse("Not found.")
         except:
                 return HttpResponse("Not found.")
-       
-    print(publication.awaiting)
-    if(publication.awaiting == True):
-        return HttpResponse("You can't edit this publication until an adminstrator approves its last request.")
+
+    fights_with_delete_request = []
+    for index in range(0, DeleteRequest.objects.count()):
+        fights_with_delete_request.append(DeleteRequest.objects.values_list('publication')[index][0])
+    
+    if(publication.awaiting == True or publication.id in fights_with_delete_request):
+        return HttpResponse("You can't edit this publication while it is in awaiting state.")
     else:
         return HttpResponse("Editor")
         
+def fight_delete(request, publication_id):
+    publication = None
+
+    # If User is authenticated
+    if(request.user.is_authenticated == True):
+        # If User is an author and this publication is yours
+        try:
+            publication = Fight.objects.get(pk=publication_id, author=request.user)
+            if(publication == None):
+                return HttpResponse("Not found.")
+        except:
+                return HttpResponse("Not found.")
+
+    fights_with_delete_request = []
+    for index in range(0, DeleteRequest.objects.count()):
+        fights_with_delete_request.append(DeleteRequest.objects.values_list('publication')[index][0])
+
+    if(publication.awaiting == True or publication.id in fights_with_delete_request):
+        return HttpResponse("You can't edit this publication while it is in awaiting state.")
+    else:
+        q = DeleteRequest.objects.create(publication = publication)
+        q.save()
+        return HttpResponse("Delete request sent.")
