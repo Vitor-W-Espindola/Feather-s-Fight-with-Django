@@ -57,8 +57,17 @@
 .pageref {
   color: black;
 }
+.index_dashboard {
+  padding-top: 50px;
+  font-size: 16px;
+  text-align: center;
+}
+.index_dashboardref {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
 .index_footer_info {
-  padding-top: 100px;
+  padding-top: 50px;
   color: rgb(0, 0, 0);
   margin-left: auto;
   margin-right: auto;
