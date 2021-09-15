@@ -11,4 +11,5 @@ urlpatterns = [
     path('logout', views.logout_process, name='login'),
     path('<int:index_page_id>/', views.index_with_page, name='index_with_page'),
     path('<int:index_page_id>/fight/<int:fight_id>/', views.fight, name='fight'),
+    path('dashboard', views.dashboard, name='fight'),
 ]

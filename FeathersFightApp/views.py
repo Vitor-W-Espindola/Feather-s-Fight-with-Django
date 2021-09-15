@@ -113,3 +113,7 @@ def login_process(request):
 def logout_process(request):
     auth.logout(request)
     return HttpResponseRedirect('/')
+
+def dashboard(request):
+    template = loader.get_template('FeathersFightApp/dashboard.html')
+    return HttpResponse(template.render({}, request))
