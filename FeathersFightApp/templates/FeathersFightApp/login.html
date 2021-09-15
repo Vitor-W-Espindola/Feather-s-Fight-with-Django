@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        {% load static %}
+
+        <link rel="stylesheet" type="text/css" href="{% static 'FeathersFightApp/style.css' %}">
+    </head>
+    <body>
+        <div class="login_header">
+            <img class="login_feather" src="{% static 'FeathersFightApp/images/feather.png' %}">
+            <div class="login_title"><label>Log in</label></div>
+        </div>
+        
+        <hr class="login_divider">
+
+        <form action="login/success" class="login_form" method="post">{% csrf_token %}
+            <div class="login_text_input">
+                <input type="text" class="login_area_input" name="username" placeholder="Username">
+            </div>
+            <div class="login_password_input">
+                <input type="password" class="login_area_input" name="password" placeholder="Password">
+            </div>
+            
+            {% if empty_field %}
+            <div>
+                <label>Complete all fields.</label>
+            </div>
+            {% endif %}
+
+            <div class="login_submit_input">
+                <input class="submit_button" type="submit" value="Log in">
+            </div>
+        
+        </form>
+        <footer>
+            <div class="footer_info">
+                <div class="footer_info_item"><a href="/" class="footer_info_item">Home Page</a></div>
+            </div>
+        </footer>
+    </body>
+    
+    
+</html>

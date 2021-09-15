@@ -10,6 +10,8 @@
             <img class="feather" src="{% static 'FeathersFightApp/images/feather.png' %}">
         </div>
         <hr class="divider">
+        <div class="hello_text"><label>Welcome, {{ username }}</label></div>
+
         <div class="item_container">
 
             {% if fights_list %}
@@ -40,9 +42,14 @@
             
             <div class="index_footer_info">
                 <a href="" class="index_footer_info_item">About |</a>
-                <a href="" class="index_footer_info_item">Become an author |</a>
+                <a href="/register" class="index_footer_info_item">Become an author |</a>
+                <a href="" class="index_footer_info_item">More |</a>
+                {% if logged_in == 0%}
+                    <a href="/login" class="index_footer_info_item">Log in </a>
+                {% else %}
+                    <a href="/logout" class="index_footer_info_item">Log Out </a>
+                {% endif %}
 
-                <a href="" class="index_footer_info_item">More </a>
             </div>
     </body>
 </html>
