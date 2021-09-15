@@ -116,4 +116,30 @@ def logout_process(request):
 
 def dashboard(request):
     template = loader.get_template('FeathersFightApp/dashboard.html')
-    return HttpResponse(template.render({}, request))
+
+    
+    # If User is authenticated
+    if(request.user.is_authenticated == True):
+        # If User is an author
+        if(len(request.user.groups.filter(name='Authors')) == 0):
+            return HttpResponse("Not authorized.")
+    else:
+        return HttpResponse("Not authorized.")
+
+    fights = Fight.objects.filter(author=request.user)
+    class FightWithShortDescription():
+        def __init__(self, fight):
+            self.fight = fight
+            self.short_description = "%s%s" % (' '.join(fight.description.split(" ")[:6]), "...")            
+     
+    fights_with_short_description = []
+    
+    for fight in fights:
+        fights_with_short_description.append(FightWithShortDescription(fight))
+    
+
+    context = { 
+        'publication_list':fights_with_short_description,
+        "username":request.user.username 
+        }
+    return HttpResponse(template.render(context, request))
