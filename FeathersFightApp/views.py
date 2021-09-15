@@ -6,6 +6,7 @@ from django.template import loader
 from django.core.paginator import Paginator
 from django.contrib.auth.models import User
 from django.contrib import auth
+from django.db import IntegrityError
 
 from .models import Fight
 
@@ -60,31 +61,44 @@ def register_page(request):
     return HttpResponse(template.render({}, request))
     
 def register_process(request):
+    
     if(request.method != "POST"):
         return HttpResponse("Not a post method.")
+    
     username = request.POST["username"]
     email = request.POST["email"]
     password = request.POST["password"]
-    user = User.objects.create_user(username=username, email=email, password=password)
-    user.save()
-    user = auth.authenticate(username=username, password=password)
-    auth.login(request, user)
-    return HttpResponseRedirect('/')
+    
+    # If user already exists
+    try:
+        user = User.objects.create_user(username=username, email=email, password=password)
+    except IntegrityError:
+        return HttpResponse("User already registered.")
+    else:
+        user.save()
+        auth.login(request, user)
+        return HttpResponseRedirect('/')
 
 def login_page(request):
     template = loader.get_template('FeathersFightApp/login.html')
     return HttpResponse(template.render({}, request))
 
 def login_process(request):
+    
+    if(request.method != "POST"):
+        return HttpResponse("Not a post method.")
+    
     username = request.POST["username"]
     password = request.POST["password"]
+
     user = auth.authenticate(username=username, password=password)
     
-    if user is not None and user.is_active == True:
+    # User's authentication check
+    if user is not None:
         auth.login(request, user)
         return HttpResponseRedirect('/')
     else: 
-        return HttpResponse("Not authenticated. %s %s" % (username, password))
+        return HttpResponse("Authetication failed.")
 
 def logout_process(request):
     auth.logout(request)
