@@ -65,6 +65,7 @@ def register_process(request):
     if(request.method != "POST"):
         return HttpResponse("Not a post method.")
     
+    
     username = request.POST["username"]
     email = request.POST["email"]
     password = request.POST["password"]
@@ -72,8 +73,12 @@ def register_process(request):
     # If user already exists
     try:
         user = User.objects.create_user(username=username, email=email, password=password)
+    
     except IntegrityError:
         return HttpResponse("User already registered.")
+    except ValueError:
+        return HttpResponse("Fill all form fields.")
+        
     else:
         user.save()
         auth.login(request, user)
