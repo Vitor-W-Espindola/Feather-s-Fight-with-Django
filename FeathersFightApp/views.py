@@ -149,9 +149,7 @@ def fight_preview(request, publication_id):
     
     # If User is authenticated
     if(request.user.is_authenticated == True):
-        username = request.user.username
-        logged_in = 1
-        # If User is an author
+        # If User is an author and this publication is yours
         try:
             if(Fight.objects.get(pk=publication_id, author=request.user) == None):
                 return HttpResponse("Not found.")
@@ -171,3 +169,25 @@ def fight_preview(request, publication_id):
         'publication':publication
     }
     return HttpResponse(template.render(context, request))
+
+def fight_edit(request, publication_id):
+
+    
+    publication = None
+
+    # If User is authenticated
+    if(request.user.is_authenticated == True):
+        # If User is an author and this publication is yours
+        try:
+            publication = Fight.objects.get(pk=publication_id, author=request.user)
+            if(publication == None):
+                return HttpResponse("Not found.")
+        except:
+                return HttpResponse("Not found.")
+       
+    print(publication.awaiting)
+    if(publication.awaiting == True):
+        return HttpResponse("You can't edit this publication until an adminstrator approves its last request.")
+    else:
+        return HttpResponse("Editor")
+        

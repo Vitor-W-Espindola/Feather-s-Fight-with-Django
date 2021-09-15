@@ -12,5 +12,6 @@ urlpatterns = [
     path('<int:index_page_id>/', views.index_with_page, name='index_with_page'),
     path('fight/<int:fight_id>/', views.fight, name='fight'),
     path('dashboard/fight_preview/<int:publication_id>/', views.fight_preview, name='fight_preview'),
+    path('dashboard/edit/<int:publication_id>/', views.fight_edit, name='fight_preview'),
     path('dashboard', views.dashboard, name='fight'),
 ]
