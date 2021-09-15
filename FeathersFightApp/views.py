@@ -150,14 +150,18 @@ def dashboard(request):
     for fight in fights:
         fights_with_short_description.append(FightWithShortDescription(fight))
     
+    fights_with_edit_request = []
+    for index in range(0, EditRequest.objects.count()):
+        fights_with_edit_request.append(EditRequest.objects.values_list('publication')[index][0])
+
     fights_with_delete_request = []
     for index in range(0, DeleteRequest.objects.count()):
-        print(DeleteRequest.objects.values_list('publication')[index][0])
         fights_with_delete_request.append(DeleteRequest.objects.values_list('publication')[index][0])
-
+    
     context = { 
         'publication_list':fights_with_short_description,
         "username":request.user.username,
+        'publications_with_edit_request': fights_with_edit_request,
         'publications_with_delete_request': fights_with_delete_request
         }
     return HttpResponse(template.render(context, request))
@@ -211,6 +215,9 @@ def fight_edit(request, publication_id):
 
     if(publication.id in fights_with_edit_request or publication.id in fights_with_delete_request):
         return HttpResponse("You can't edit this publication while it is in awaiting state.")
+    else:
+        EditRequest.objects.create(publication=publication)
+        return HttpResponseRedirect('/dashboard')
 
 def fight_delete(request, publication_id):
     publication = None
@@ -238,4 +245,4 @@ def fight_delete(request, publication_id):
     else:
         q = DeleteRequest.objects.create(publication = publication)
         q.save()
-        return HttpResponse("Delete request sent.")
+        return HttpResponseRedirect("/dashboard")

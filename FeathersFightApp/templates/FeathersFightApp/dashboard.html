@@ -29,12 +29,19 @@
 
     <div class="dashboard_publication">
         <div class="dashboard_publication_title">{{ publication.fight.style }}</div>
-        {% if publication.fight.awaiting == True %}
+
+        {% if publication.fight.id in publications_with_edit_request %}
+
         <div class="dashboard_publication_awaiting">(Editing awaiting for approvement)</div>
-        {% endif %}
+
+        {% else %}
         {% if publication.fight.id in publications_with_delete_request %}
+
         <div class="dashboard_publication_awaiting">(Deleting awaiting for approvement)</div>
+
         {% endif %}
+        {% endif %}
+
         <div class="dashboard_publication_short_description">{{ publication.short_description }}</div>
 
         <div class="dashboard_publication_actions">
