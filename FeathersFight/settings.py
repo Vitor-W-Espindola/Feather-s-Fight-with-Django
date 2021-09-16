@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_quill'
+    'ckeditor'
 ]
 
 MIDDLEWARE = [
@@ -120,27 +120,27 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = 'static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = 'media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-QUILL_CONFIGS = {
-    'default':{
-        'theme': 'snow',
-        'modules': {
-            'syntax': True,
-            'toolbar': [
-                [
-                    {'font': []},
-                    {'header': []},
-                    {'align': []},
-                    'bold', 'italic', 'underline', 'strike', 'blockquote',
-                ],
-                ['link'],
-                ['clean'],
-            ]
-        }
+CKEDITOR_CONFIGS = {
+    'default': {
+
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat']
+        ],
+        'height': 300,
+        'width': 800,
     }
 }

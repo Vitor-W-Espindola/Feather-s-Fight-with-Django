@@ -357,8 +357,11 @@ input[type="password"]:focus {
   font-style: italic;
   font-size: 15px;
 }
+.dashboard_footer {
+  padding-top: 70px;
+}
 
-/* new_publication.html */
+/* new_publication.html and edit_publication.html */
 
 .new_header_text {
   padding-top: 100px;
@@ -366,7 +369,11 @@ input[type="password"]:focus {
   font-size: 40px;
 }
 .new_title_input {
-  width: 30%;
+  padding-top: 40px;
+  text-align: right;
+}
+.new_title_input_text {
+  width: 40%;
   height: 35px;
   font-size: 18px;
   box-sizing: border-box;
@@ -374,13 +381,12 @@ input[type="password"]:focus {
   border-bottom: solid black 1px;
 }
 .new_text_area {
-  padding-top: 60px;
+  padding-top: 30px;
 }
 .new_form {
   padding-top: 50px;
   padding-left: 140px;
-
-  width: 50%;
+  width: 42%;
   height: 100%;
 }
 .new_submit {
@@ -420,6 +426,7 @@ input[type="password"]:focus {
 }
 .new_sb {
   padding-top: 15px;
+  padding-bottom: 40px;
   padding-left: 140px;
 }
 .new_sb_button {

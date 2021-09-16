@@ -1,6 +1,7 @@
+from FeathersFightApp.forms import PublicationRequestForm
 from django.http.request import HttpRequest, QueryDict
 from django.http.response import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
 from django.template import loader
 from django.core.paginator import Paginator
@@ -11,7 +12,6 @@ from django.db import IntegrityError
 import json
 
 from .models import PublicationRequest, EditRequest, DeleteRequest, Fight
-from .forms import QuillFieldForm
 
 # Create your views here.
 
@@ -43,7 +43,7 @@ def index_with_page(request, index_page_id):
     class FightWithShortDescription():
         def __init__(self, fight):
             self.fight = fight
-            self.short_description = "%s%s" % (' '.join(fight.description.split(" ")[:6]), "...")            
+            self.short_description = "%s%s" % (' '.join(fight.text.split(" ")[:6]), "...")            
     
     fights_with_short_description = []
     
@@ -142,7 +142,7 @@ def dashboard(request):
     class FightWithShortDescription():
         def __init__(self, fight):
             self.fight = fight
-            self.short_description = "%s%s" % (' '.join(fight.description.split(" ")[:6]), "...")            
+            self.short_description = "%s%s" % (' '.join(fight.text.split(" ")[:6]), "...")            
      
     fights_with_short_description = []
     
@@ -260,17 +260,30 @@ def fight_delete(request, publication_id):
         return HttpResponseRedirect("/dashboard")
 
 def new_publication_page(request):
-    return render(request, 'FeathersFightApp/new_publication.html', {'form': QuillFieldForm()})
+    form = PublicationRequestForm()
+    return render(request, 'FeathersFightApp/new_publication.html', {'form':form})
+
+def edit_publication_page(request, publication_id):
+    pub = get_object_or_404(Fight, id=publication_id)
+    print(pub.style)
+    print(pub.text)
+    title = pub.style
+    form = PublicationRequestForm(instance=pub)
+    context = {
+        'title':title,
+        'form':form,
+        'pub_id':publication_id
+    }
+    print(form)
+    return render(request, 'FeathersFightApp/edit_publication.html', context)
 
 def new_publication_request(request):
 
     if(request.method != "POST"):
         return HttpResponse("Not a post method.")
     
-    content = json.loads(request.POST["content"])
-    
     title = request.POST["title"]
-    text = content["html"]
+    text = request.POST["text"]
 
     PublicationRequest.objects.create(title=title, text=text, author=request.user)
 

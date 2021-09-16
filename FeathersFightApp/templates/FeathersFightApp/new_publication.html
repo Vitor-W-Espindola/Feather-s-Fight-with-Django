@@ -2,7 +2,6 @@
 <html>
 
 <head>
-    {{ form.media }}
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'FeathersFightApp/style.css' %}">
 
@@ -12,25 +11,15 @@
 
     <div class="new_header_text">New Publication</div>
 
+
     <form action="/dashboard/new/send" method="POST" class="new_form">{% csrf_token %}
-        <input type="text" class="new_title_input" name="title" placeholder="Title">
+
+        <input type="text" class="new_title_input_text" name="title" placeholder="Title">
+
         <div class="new_text_area" name="text">
-            {{ form.content }}
-
+            {{ form.media }}
+            {{ form.as_p }}
         </div>
-        <style>
-            .ql-editor .p {
-                content: "AAA";
-            }
-
-            .ql-editor {
-                content: "BBB";
-            }
-
-            p {
-                content: "CCC";
-            }
-        </style>
         <div class="new_submit">
             <input type="submit" class="new_submit_button" value="Submit">
         </div>

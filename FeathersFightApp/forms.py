@@ -1,6 +1,9 @@
 # forms.py
-from django import forms
-from django_quill.forms import QuillFormField
+from django.forms import ModelForm
+from .models import PublicationRequest
 
-class QuillFieldForm(forms.Form):
-    content = QuillFormField()
+class PublicationRequestForm(ModelForm):
+    class Meta:
+        model = PublicationRequest
+        fields = ['text']
+

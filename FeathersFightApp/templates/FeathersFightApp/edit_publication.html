@@ -2,19 +2,25 @@
 <html>
 
 <head>
-    {{ form.media }}
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'FeathersFightApp/style.css' %}">
+
 </head>
 
 <body>
 
-
     <div class="new_header_text">Edit Publication</div>
 
-    <form action="/dashboard/new/send" method="POST" class="new_form">{% csrf_token %}
-        <input type="text" class="new_title_input" name="title" placeholder="Title">
-        <div class="new_text_area" name="text">{{ form.content }}</div>
+
+    <form action="dashboard/edit/{{ pub_id }}/" method="POST" class="new_form">{% csrf_token %}
+
+        <input type="text" class="new_title_input_text" name="title" value="{{ title }}" placeholder="Title">
+
+
+        <div class="new_text_area" name="text">
+            {{ form.as_p }}
+            {{ form.media }}
+        </div>
         <div class="new_submit">
             <input type="submit" class="new_submit_button" value="Submit">
         </div>

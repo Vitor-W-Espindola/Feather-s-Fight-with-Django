@@ -2,10 +2,11 @@ from django.db import models
 from django.contrib.auth.models import User
 from datetime import *
 
+from ckeditor.fields import RichTextField
 # Create your models here.
 class Fight(models.Model):
     style = models.CharField(max_length=30)
-    description = models.TextField()
+    text = RichTextField()
     pub_date = models.DateTimeField()
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=True, limit_choices_to={'groups__name':'Authors'})
 
@@ -14,7 +15,7 @@ class Fight(models.Model):
 
 class PublicationRequest(models.Model):
     title = models.CharField(max_length=30)
-    text = models.TextField()
+    text = RichTextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=False, limit_choices_to={'groups__name':'Authors'})
     request_datetime = models.DateTimeField(default=datetime.now())
 
