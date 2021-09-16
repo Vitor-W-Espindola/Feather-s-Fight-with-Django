@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {{ form.media }}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'FeathersFightApp/style.css' %}">
+</head>
+
+<body>
+    <div class="new_header_text">New Publication</div>
+
+    <form action="/dashboard/new/send" method="POST" class="new_form">{% csrf_token %}
+        <input type="text" class="new_title_input" name="title" placeholder="Title">
+        <div class="new_text_area" name="text">{{ form.content }}</div>
+        <div class="new_submit">
+            <input type="submit" class="new_submit_button" value="Submit">
+        </div>
+
+    </form>
+
+    <form action="" method="POST" class="new_sk_form">{% csrf_token %}
+        <div class="new_sk">
+            <input type="submit" class="new_sk_button" value="Save and Keep Writing">
+        </div>
+    </form>
+
+    <form action="" method="POST" class="new_sk_form">{% csrf_token %}
+        <div class="new_sb">
+            <input type="submit" class="new_sb_button" value="Save and Return to Dashboard">
+        </div>
+    </form>
+
+</body>
+
+</html>

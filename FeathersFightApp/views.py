@@ -8,8 +8,10 @@ from django.contrib.auth.models import User, Group
 from django.contrib import messages
 from django.contrib import auth
 from django.db import IntegrityError
+import json
 
-from .models import EditRequest, DeleteRequest, Fight
+from .models import PublicationRequest, EditRequest, DeleteRequest, Fight
+from .forms import QuillFieldForm
 
 # Create your views here.
 
@@ -246,3 +248,20 @@ def fight_delete(request, publication_id):
         q = DeleteRequest.objects.create(publication = publication)
         q.save()
         return HttpResponseRedirect("/dashboard")
+
+def new_publication_page(request):
+    return render(request, 'FeathersFightApp/new_publication.html', {'form': QuillFieldForm()})
+
+def new_publication_request(request):
+
+    if(request.method != "POST"):
+        return HttpResponse("Not a post method.")
+    
+    content = json.loads(request.POST["content"])
+    
+    title = request.POST["title"]
+    text = content["html"]
+
+    PublicationRequest.objects.create(title=title, text=text, author=request.user)
+
+    return HttpResponseRedirect('/dashboard')

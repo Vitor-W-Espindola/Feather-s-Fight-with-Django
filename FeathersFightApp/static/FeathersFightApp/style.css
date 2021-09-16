@@ -163,7 +163,6 @@ input[type="password"]:focus {
 }
 
 .register_area_input {
-  width: 80%;
   height: 35px;
   font-size: 15px;
   width: 100%;
@@ -343,4 +342,77 @@ input[type="password"]:focus {
   padding-left: 60px;
   padding-top: 45px;
   font-size: 20px;
+}
+
+/* new_publication.html */
+
+.new_header_text {
+  padding-top: 100px;
+  padding-left: 140px;
+  font-size: 40px;
+}
+.new_title_input {
+  width: 30%;
+  height: 35px;
+  font-size: 18px;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: solid black 1px;
+}
+.new_text_area {
+  padding-top: 60px;
+}
+.new_form {
+  padding-top: 50px;
+  padding-left: 140px;
+
+  width: 50%;
+  height: 100%;
+}
+.new_submit {
+  padding-top: 70px;
+}
+.new_submit_button {
+  width: 10%;
+  height: 40px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+.new_back {
+  padding-top: 30px;
+  padding-left: 140px;
+}
+.new_back_button {
+  width: 4%;
+  height: 40px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+.new_sk {
+  padding-top: 15px;
+  padding-left: 140px;
+}
+.new_sk_button {
+  width: 10%;
+  height: 40px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+.new_sb {
+  padding-top: 15px;
+  padding-left: 140px;
+}
+.new_sb_button {
+  width: 12%;
+  height: 40px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
 }
