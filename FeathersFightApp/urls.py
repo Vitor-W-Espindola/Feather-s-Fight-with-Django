@@ -16,5 +16,6 @@ urlpatterns = [
     path('dashboard/delete/<int:publication_id>/', views.fight_delete, name='fight_preview'),
     path('dashboard/new', views.new_publication_page, name='new_publication_page'),
     path('dashboard/new/send', views.new_publication_request, name='new_publication_request'),
+    path('dashboard/request_preview/<int:request_id>', views.request_preview, name='request_preview'),
     path('dashboard', views.dashboard, name='fight'),
 ]

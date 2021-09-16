@@ -39,8 +39,6 @@ def index_with_page(request, index_page_id):
     fights_with_delete_request = []
     for index in range(0, DeleteRequest.objects.count()):
         fights_with_delete_request.append(DeleteRequest.objects.values_list('publication')[index][0])
-    print(fights_with_edit_request)
-    print(fights_with_delete_request)
 
     class FightWithShortDescription():
         def __init__(self, fight):
@@ -51,7 +49,6 @@ def index_with_page(request, index_page_id):
     
     for fight in fights:
         if(fight.id not in fights_with_edit_request and fight.id not in fights_with_delete_request):
-            print(fight.id)
             fights_with_short_description.append(FightWithShortDescription(fight))
         else:
             print("%s This fight has a edit or delete request." % (fight.style))
@@ -160,11 +157,24 @@ def dashboard(request):
     for index in range(0, DeleteRequest.objects.count()):
         fights_with_delete_request.append(DeleteRequest.objects.values_list('publication')[index][0])
     
+    requests = PublicationRequest.objects.filter(author=request.user)
+    class RequestWithShortDescription():
+        def __init__(self, pub_request):
+            self.id = pub_request.id
+            self.title = pub_request.title
+            self.short_text = "%s%s" % (' '.join(pub_request.text.split(" ")[:6]), "...")  
+            self.request_datetime = pub_request.request_datetime   
+    
+    requests_with_short_description = []
+    for pub_request in requests:
+        requests_with_short_description.append(RequestWithShortDescription(pub_request))
+    
     context = { 
         'publication_list':fights_with_short_description,
         "username":request.user.username,
         'publications_with_edit_request': fights_with_edit_request,
-        'publications_with_delete_request': fights_with_delete_request
+        'publications_with_delete_request': fights_with_delete_request,
+        'requests':requests_with_short_description
         }
     return HttpResponse(template.render(context, request))
 
@@ -265,3 +275,15 @@ def new_publication_request(request):
     PublicationRequest.objects.create(title=title, text=text, author=request.user)
 
     return HttpResponseRedirect('/dashboard')
+
+def request_preview(request, request_id):
+    
+
+    pub_request = PublicationRequest.objects.get(pk=request_id)
+    
+    template = loader.get_template('FeathersFightApp/request_preview.html')
+
+    context = {
+        'request':pub_request
+    }
+    return HttpResponse(template.render(context, request))

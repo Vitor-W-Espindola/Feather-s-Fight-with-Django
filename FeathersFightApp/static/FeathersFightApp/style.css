@@ -292,6 +292,9 @@ input[type="password"]:focus {
   margin-left: 60px;
   width: 60%;
 }
+.dashboard_users_publications {
+  width: 45%;
+}
 .dashboard_text_header {
   padding-left: 60px;
   padding-top: 70px;
@@ -300,20 +303,18 @@ input[type="password"]:focus {
   display: inline;
   font-size: 28px;
 }
-
-.dashboard_publications_counter {
+/*.dashboard_publications_counter {
   display: inline;
   padding-left: 2px;
   font-size: 22px;
 }
-
+*/
 .dashboard_publication {
   padding-left: 60px;
   padding-top: 45px;
 }
 
 .dashboard_publication_title {
-  display: inline;
   font-size: 21px;
 }
 .dashboard_publication_awaiting {
@@ -337,11 +338,24 @@ input[type="password"]:focus {
   color: rgb(62, 122, 233);
   text-decoration: none;
 }
-
 .dashboard_no_publication_yet {
   padding-left: 60px;
   padding-top: 45px;
   font-size: 20px;
+}
+.dashboard_users_publications_requests {
+  padding-left: 60px;
+  padding-top: 45px;
+}
+.dashboard_publication_request_title {
+  display: inline;
+  font-size: 21px;
+}
+.dashboard_publication_request_datetime {
+  padding-left: 4px;
+  display: inline;
+  font-style: italic;
+  font-size: 15px;
 }
 
 /* new_publication.html */
