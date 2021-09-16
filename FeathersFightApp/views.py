@@ -11,9 +11,20 @@ from django.contrib import auth
 from django.db import IntegrityError
 import json
 
+from bs4 import BeautifulSoup, BeautifulStoneSoup
+
+
 from .models import PublicationRequest, EditRequest, DeleteRequest, Fight
 
 # Create your views here.
+
+def removeTags(html):
+    soup = BeautifulSoup(html, "html.parser")
+    for data in soup(['style', 'script']):
+        data.decompose()
+  
+    # return data by retrieving the tag content
+    return ' '.join(soup.stripped_strings)   
 
 def index_with_no_page(request):
     return HttpResponseRedirect('/1')
@@ -40,11 +51,20 @@ def index_with_page(request, index_page_id):
     for index in range(0, DeleteRequest.objects.count()):
         fights_with_delete_request.append(DeleteRequest.objects.values_list('publication')[index][0])
 
+
+
     class FightWithShortDescription():
+        
+        
         def __init__(self, fight):
+                
             self.fight = fight
-            self.short_description = "%s%s" % (' '.join(fight.text.split(" ")[:6]), "...")            
+            self.description_with_tags = removeTags(fight.text)
+            self.short_description = "%s%s" % (' '.join(self.description_with_tags.split(" ")[: 6]),  "...")
+            print(self.short_description)
+
     
+
     fights_with_short_description = []
     
     for fight in fights:
@@ -141,8 +161,11 @@ def dashboard(request):
     fights = Fight.objects.filter(author=request.user)
     class FightWithShortDescription():
         def __init__(self, fight):
+                
             self.fight = fight
-            self.short_description = "%s%s" % (' '.join(fight.text.split(" ")[:6]), "...")            
+            self.description_with_tags = removeTags(fight.text)
+            self.short_description = "%s%s" % (' '.join(self.description_with_tags.split(" ")[: 6]),  "...")
+            print(self.short_description)           
      
     fights_with_short_description = []
     
