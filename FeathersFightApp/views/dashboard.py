@@ -279,3 +279,27 @@ def edit_save_go_to_dashboard(request, save_id):
 def delete_save(request, save_id):
     save = SavePublication.objects.filter(pk=save_id).delete()
     return HttpResponseRedirect('/dashboard')
+
+def submit_new(request):
+    title = request.POST['title']
+    text = request.POST['text']
+    author = request.user
+    
+    pub = PublicationRequest.objects.create(title=title, text=text, author=author, request_datetime=datetime.now())
+    pub.save()
+
+    return HttpResponseRedirect('/dashboard')
+
+def submit_save(request, save_id):
+    
+    title = request.POST['title']
+    text = request.POST['text']
+    author = request.user
+    
+    pub = PublicationRequest.objects.create(title=title, text=text, author=author, request_datetime=datetime.now())
+    pub.save()
+
+    save = SavePublication.objects.get(pk=save_id)
+    save.delete()
+
+    return HttpResponseRedirect('/dashboard')

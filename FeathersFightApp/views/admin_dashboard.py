@@ -29,7 +29,7 @@ def removeTags(html):
 
 def admin_dashboard(request):
     
-    publications_saved = SavePublication.objects.all()
+    publications_saved = PublicationRequest.objects.all()
     print(publications_saved)
     template = loader.get_template('FeathersFightApp/admin_dashboard.html')
 
@@ -50,7 +50,7 @@ def admin_dashboard(request):
     return HttpResponse(template.render(context, request))
 
 def admin_preview(request, request_id):
-    save = SavePublication.objects.get(pk=request_id)
+    save = PublicationRequest.objects.get(pk=request_id)
     template = loader.get_template('FeathersFightApp/admin_preview.html')
     context = {
         'save':save,
@@ -59,17 +59,16 @@ def admin_preview(request, request_id):
 
 def admin_approve(request, request_id):
 
-    save = SavePublication.objects.get(pk=request_id)
+    save = PublicationRequest.objects.get(pk=request_id)
     save.delete()
 
     new_fight = Fight.objects.create(style=save.title, text=save.text, pub_date=datetime.now(), author=save.author)
-
 
     return HttpResponseRedirect('/admin_dashboard')
 
 def admin_decline(request, request_id):
 
-    save = SavePublication.objects.get(pk=request_id)
+    save = PublicationRequest.objects.get(pk=request_id)
     save.delete()
 
     return HttpResponseRedirect('/admin_dashboard')

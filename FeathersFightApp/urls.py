@@ -33,9 +33,10 @@ urlpatterns = [
     path('dashboard/edit/save/<int:save_id>', edit_save, name='save_pub'),
     path('dashboard/edit/save/dashboard/<int:save_id>', edit_save_go_to_dashboard, name='save_pub_go_to_dashboard'),
     path('dashboard/delete/save/<int:save_id>', delete_save, name='save_pub'),
-    
     path('dashboard/delete/<int:publication_id>/', fight_delete, name='delete_pub'),
     path('dashboard/request_preview/<int:request_id>', request_preview, name='request_preview_page'),
+    path('dashboard/submit/save/<int:save_id>', submit_save, name='submit_save'),
+    path('dashboard/submit/new', submit_new, name='submit_new'),
 
     # admin_dashboard.py
     path('admin_dashboard', admin_dashboard, name='admin_dashboard_page'),
