@@ -40,7 +40,9 @@ urlpatterns = [
 
     # admin_dashboard.py
     path('admin_dashboard', admin_dashboard, name='admin_dashboard_page'),
-    path('admin_preview/<int:request_id>', admin_preview, name='admin_preview-page'),
+    path('admin_preview_request/<int:request_id>', admin_preview_request, name='admin_preview-page'),
+    path('admin_preview/<int:pub_id>', admin_preview, name='admin_preview-page'),
     path('admin_dashboard/approve/<int:request_id>', admin_approve, name='admin_approve'),
-    path('admin_dashboard/decline/<int:request_id>', admin_decline, name='admin_decline')
+    path('admin_dashboard/decline/<int:request_id>', admin_decline, name='admin_decline'),
+    path('admin_dashboard/delete/<int:pub_id>', admin_delete, name='admin_delete')
 ]

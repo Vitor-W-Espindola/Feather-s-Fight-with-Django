@@ -20,7 +20,7 @@
         {% for fight in fights_list %}
         <div class="item_div">
             <div class="short_description">{{ fight.short_description }}</div>
-            <a href="/fight/{{ fight.fight.id }}" class="fightref">{{ fight.fight.style }}</a>
+            <a href="/fight/{{ fight.fight.id }}" class="fightref">{{ fight.fight.title }}</a>
         </div>
         {% endfor %}
         {% else %}

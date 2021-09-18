@@ -5,7 +5,7 @@ from datetime import *
 from ckeditor.fields import RichTextField
 # Create your models here.
 class Fight(models.Model):
-    style = models.CharField(max_length=30)
+    title = models.CharField(max_length=30)
     text = RichTextField()
     pub_date = models.DateTimeField()
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=True, limit_choices_to={'groups__name':'Authors'})

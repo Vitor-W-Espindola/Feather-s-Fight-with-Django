@@ -29,27 +29,36 @@ def removeTags(html):
 
 def admin_dashboard(request):
     
-    publications_saved = PublicationRequest.objects.all()
-    print(publications_saved)
-    template = loader.get_template('FeathersFightApp/admin_dashboard.html')
-
-    class SavedPublicationWithShortDescription():
-        def __init__(self, save):
-            self.save = save
-            self.short_description = "%s%s" % (' '.join(removeTags(save.text).split(" ")[: 6]),  "...")
+    pub_requests = PublicationRequest.objects.all()
+    class PublicationRequestWithShortDescription():
+        def __init__(self, pub_request):
+            self.pub_request = pub_request
+            self.short_description = "%s%s" % (' '.join(removeTags(pub_request.text).split(" ")[: 6]),  "...")
     
     publications_saved_with_short_description = []
     
-    for save in publications_saved:
-        publications_saved_with_short_description.append(SavedPublicationWithShortDescription(save))
+    for pub_request in pub_requests:
+        publications_saved_with_short_description.append(PublicationRequestWithShortDescription(pub_request))
     
-    print(publications_saved_with_short_description)
+    publications = Fight.objects.all()
+    class PublicationWithShortDescription():
+        def __init__(self, pub):
+            self.pub = pub
+            self.short_description = "%s%s" % (' '.join(removeTags(pub.text).split(" ")[: 6]),  "...")
+    
+    publications_with_short_description = []
+    
+    for pub in publications:
+        publications_with_short_description.append(PublicationWithShortDescription(pub))
+
+    template = loader.get_template('FeathersFightApp/admin_dashboard.html')
     context = {
-        "publications_saved":publications_saved_with_short_description
+        "publications":publications_with_short_description,
+        "pub_requests":publications_saved_with_short_description
     }
     return HttpResponse(template.render(context, request))
 
-def admin_preview(request, request_id):
+def admin_preview_request(request, request_id):
     save = PublicationRequest.objects.get(pk=request_id)
     template = loader.get_template('FeathersFightApp/admin_preview.html')
     context = {
@@ -62,7 +71,7 @@ def admin_approve(request, request_id):
     save = PublicationRequest.objects.get(pk=request_id)
     save.delete()
 
-    new_fight = Fight.objects.create(style=save.title, text=save.text, pub_date=datetime.now(), author=save.author)
+    new_fight = Fight.objects.create(title=save.title, text=save.text, pub_date=datetime.now(), author=save.author)
 
     return HttpResponseRedirect('/admin_dashboard')
 
@@ -72,3 +81,19 @@ def admin_decline(request, request_id):
     save.delete()
 
     return HttpResponseRedirect('/admin_dashboard')
+
+def admin_preview(request, pub_id):
+    pub = Fight.objects.get(pk=pub_id)
+    template = loader.get_template('FeathersFightApp/admin_preview.html')
+    context = {
+        'save':pub,
+    }
+    return HttpResponse(template.render(context, request))
+
+def admin_delete(request, pub_id):
+
+    pub = Fight.objects.get(pk=pub_id)
+    pub.delete()
+
+    return HttpResponseRedirect('/admin_dashboard')
+
