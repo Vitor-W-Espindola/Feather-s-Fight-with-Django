@@ -11,10 +11,12 @@ from django.contrib import auth
 from django.db import IntegrityError
 import json
 
+from datetime import *
+
 from bs4 import BeautifulSoup, BeautifulStoneSoup
 
 
-from FeathersFightApp.models import PublicationRequest, EditRequest, DeleteRequest, Fight
+from FeathersFightApp.models import PublicationRequest, EditRequest, DeleteRequest, Fight, SavePublication
 
 def removeTags(html):
     soup = BeautifulSoup(html, "html.parser")
@@ -70,12 +72,26 @@ def dashboard(request):
     for pub_request in requests:
         requests_with_short_description.append(RequestWithShortDescription(pub_request))
     
+    saves = SavePublication.objects.filter(author=request.user)
+
+    class SaveWithShortDescription():
+        def __init__(self, save):
+            self.id = save.id
+            self.title = save.title
+            self.short_text = "%s%s" % (' '.join(pub_request.text.split(" ")[:6]), "...")  
+            self.last_save = save.last_save
+
+    save_with_short_description = []
+    for save in saves:
+        save_with_short_description.append(SaveWithShortDescription(save))
+
     context = { 
         'publication_list':fights_with_short_description,
         "username":request.user.username,
         'publications_with_edit_request': fights_with_edit_request,
         'publications_with_delete_request': fights_with_delete_request,
-        'requests':requests_with_short_description
+        'requests':requests_with_short_description,
+        'saves':save_with_short_description
         }
     return HttpResponse(template.render(context, request))
 
@@ -164,18 +180,26 @@ def new_publication_page(request):
     form = PublicationRequestForm()
     return render(request, 'FeathersFightApp/new_publication.html', {'form':form})
 
-def edit_publication_page(request, publication_id):
-    pub = get_object_or_404(Fight, id=publication_id)
-    print(pub.style)
-    print(pub.text)
-    title = pub.style
-    form = PublicationRequestForm(instance=pub)
+def edit_publication_page(request, save_id):
+    save = get_object_or_404(SavePublication, id=save_id)
+    title = save.title
+    form = PublicationRequestForm(instance=save)
     context = {
         'title':title,
         'form':form,
-        'pub_id':publication_id
+        'save':save
     }
-    print(form)
+    return render(request, 'FeathersFightApp/edit_publication.html', context)
+
+def save_publication_page(request, save_id):
+    save = get_object_or_404(SavePublication, id=save_id)
+    title = save.title
+    form = PublicationRequestForm(instance=save)
+    context = {
+        'title':title,
+        'form':form,
+        'save_id':save_id
+    }
     return render(request, 'FeathersFightApp/edit_publication.html', context)
 
 def new_publication_request(request):
@@ -191,7 +215,6 @@ def new_publication_request(request):
     return HttpResponseRedirect('/dashboard')
 
 def request_preview(request, request_id):
-    
 
     pub_request = PublicationRequest.objects.get(pk=request_id)
     
@@ -201,3 +224,58 @@ def request_preview(request, request_id):
         'request':pub_request
     }
     return HttpResponse(template.render(context, request))
+
+def new_save(request):
+    save = SavePublication.objects.create(
+        title=request.POST['title'],
+        text=request.POST['text'],
+        author=request.user,
+        last_save = datetime.now()
+    )
+
+    return HttpResponseRedirect('/dashboard/edit/%s' % (save.id))
+
+def new_save_go_to_dashboard(request):
+
+    SavePublication.objects.create(
+        title=request.POST['title'],
+        text=request.POST['text'],
+        author=request.user,
+        last_save = datetime.now()
+    )
+
+    return HttpResponseRedirect('/dashboard')
+
+def edit_save(request, save_id):
+    
+    title = request.POST['title']
+    text = request.POST['text']
+    author = request.user
+
+    save = SavePublication.objects.get(pk=save_id)
+    save.title = title
+    save.text = text
+    save.author = author
+    save.last_save = datetime.now()
+    save.save()
+
+    return HttpResponseRedirect('/dashboard/edit/%s' % (save.id))
+
+def edit_save_go_to_dashboard(request, save_id):
+
+    title = request.POST['title']
+    text = request.POST['text']
+    author = request.user
+
+    save = SavePublication.objects.get(pk=save_id)
+    save.title = title
+    save.text = text
+    save.author = author
+    save.last_save = datetime.now()
+
+    save.save()
+    return HttpResponseRedirect('/dashboard')
+
+def delete_save(request, save_id):
+    save = SavePublication.objects.filter(pk=save_id).delete()
+    return HttpResponseRedirect('/dashboard')

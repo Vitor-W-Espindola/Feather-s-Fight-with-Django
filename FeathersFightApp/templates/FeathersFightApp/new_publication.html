@@ -10,9 +10,7 @@
 <body>
 
     <div class="new_header_text">New Publication</div>
-
-
-    <form action="/dashboard/new/send" method="POST" class="new_form">{% csrf_token %}
+    <form method="POST" class="new_form">{% csrf_token %}
 
         <input type="text" class="new_title_input_text" name="title" placeholder="Title">
 
@@ -20,21 +18,22 @@
             {{ form.media }}
             {{ form.as_p }}
         </div>
+
         <div class="new_submit">
-            <input type="submit" class="new_submit_button" value="Submit">
+            <input type="submit" formaction="/save/new_send" class="new_submit_button" value="Submit">
         </div>
 
-    </form>
-
-    <form action="" method="POST" class="new_sk_form">{% csrf_token %}
         <div class="new_sk">
-            <input type="submit" class="new_sk_button" value="Save and Keep Writing">
+            <input type="submit" formaction="/dashboard/new/save" class="new_sk_button" value="Save">
         </div>
-    </form>
 
-    <form action="" method="POST" class="new_sk_form">{% csrf_token %}
         <div class="new_sb">
-            <input type="submit" class="new_sb_button" value="Save and Return to Dashboard">
+            <input type="submit" formaction="/dashboard/new/save/dashboard" class="new_sb_button"
+                value="Save and Return to Dashboard">
+        </div>
+
+        <div class="new_rd">
+            <input type="submit" formaction="/dashboard" class="new_rd_button" value="Return to Dashboard">
         </div>
     </form>
 

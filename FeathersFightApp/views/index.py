@@ -34,12 +34,15 @@ def index_with_page(request, index_page_id):
     username = "User"
     logged_in = 0
     author = 0
+    admin = 0
     if(request.user.is_authenticated == True):
         username = request.user.username
         logged_in = 1
         # If User is an author
         if(len(request.user.groups.filter(name='Authors')) != 0):
             author = 1
+        if(len(request.user.groups.filter(name='admin')) != 0):
+            admin = 1
 
     fights = Fight.objects.all()
 
@@ -83,7 +86,8 @@ def index_with_page(request, index_page_id):
         'index_page_id': index_page_id,
         "username": username,
         "logged_in": logged_in,
-        "author": author
+        "author": author,
+        "admin": admin
     }
     return HttpResponse(template.render(context, request))
 

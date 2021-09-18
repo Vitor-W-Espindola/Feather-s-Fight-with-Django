@@ -48,9 +48,11 @@
             <div class="dashboard_publication_actions">
                 <a href="dashboard/fight_preview/{{ publication.fight.id }}" class="dashboard_publication_action">See as
                     User</a>
+                <!--
                 <a href="dashboard/edit/{{ publication.fight.id }}" class="dashboard_publication_action">Edit</a>
 
                 <a href="dashboard/delete/{{ publication.fight.id }}" class="dashboard_publication_action">Delete</a>
+            -->
             </div>
         </div>
         {% endfor %}
@@ -59,17 +61,35 @@
         {% endif %}
     </div>
 
+    {% if requests %}
     <div class="dashboard_text_header">
         <div class="dashboard_text">Your requests</div>
     </div>
 
-    {% if requests %}
     {% for request in requests %}
     <div class="dashboard_users_publications_requests">
         <div class="dashboard_publication_request_title">{{ request.title }}</div>
         <div class="dashboard_publication_request_datetime">{{ request.request_datetime }}</div>
         <div class="dashboard_publication_actions">
             <a href="/dashboard/request_preview/{{ request.id }}" class="dashboard_publication_action">Preview</a>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+
+
+    {% if saves %}
+    <div class="dashboard_text_header">
+        <div class="dashboard_text">Your saves</div>
+    </div>
+    {% for save in saves %}
+    <div class="dashboard_users_publications_requests">
+        <div class="dashboard_publication_request_title">{{ save.title }}</div>
+        <div class="dashboard_publication_request_datetime">{{ save.last_save }}</div>
+        <div class="dashboard_publication_actions">
+            <a href="/dashboard/edit/{{ save.id }}" class="dashboard_publication_action">Edit</a>
+            <a href="/dashboard/delete/save/{{ save.id }}" class="dashboard_publication_action">Delete</a>
         </div>
     </div>
     {% endfor %}
