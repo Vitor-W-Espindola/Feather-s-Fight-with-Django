@@ -41,7 +41,7 @@ def index_with_page(request, index_page_id):
         # If User is an author
         if(len(request.user.groups.filter(name='Authors')) != 0):
             author = 1
-        if(len(request.user.groups.filter(name='admin')) != 0):
+        if(request.user.is_superuser):
             admin = 1
 
     fights = Fight.objects.all()

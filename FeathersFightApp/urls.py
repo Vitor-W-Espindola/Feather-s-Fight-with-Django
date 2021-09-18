@@ -4,6 +4,7 @@ from FeathersFightApp.views.index import *
 from FeathersFightApp.views.register import *
 from FeathersFightApp.views.login import *
 from FeathersFightApp.views.dashboard import *
+from FeathersFightApp.views.admin_dashboard import *
 
 urlpatterns = [
 
@@ -35,5 +36,10 @@ urlpatterns = [
     
     path('dashboard/delete/<int:publication_id>/', fight_delete, name='delete_pub'),
     path('dashboard/request_preview/<int:request_id>', request_preview, name='request_preview_page'),
-    
+
+    # admin_dashboard.py
+    path('admin_dashboard', admin_dashboard, name='admin_dashboard_page'),
+    path('admin_preview/<int:request_id>', admin_preview, name='admin_preview-page'),
+    path('admin_dashboard/approve/<int:request_id>', admin_approve, name='admin_approve'),
+    path('admin_dashboard/decline/<int:request_id>', admin_decline, name='admin_decline')
 ]

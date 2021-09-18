@@ -8,22 +8,22 @@
 
 <body>
 
-    {% if publication %}
+    {% if save %}
 
     <div class="style">
         <label>
-            {{ publication.style }}
+            {{ save.title }}
         </label>
     </div>
     <div class="description">
         <label>
-            {{ publication.text|linebreaks }}
+            {{ save.text|safe }}
         </label>
     </div>
     <p></p>
     <div class="pub_date">
         <label>
-            {{ publication.pub_date }}
+            {{ save.last_save }}
         </label>
     </div>
     <div class="author">
@@ -36,7 +36,7 @@
 
     <div class="description">
         <label>
-            Error: Publication object not received.
+            Error: Request object not received.
         </label>
     </div>
 
@@ -45,9 +45,8 @@
     <footer>
         <div class="footer_info">
 
-            <div class="footer_info_item"><a href="/dashboard" class="footer_info_item">Back to Dashboard</a></div>
-            a
-
+            <div class="footer_info_item"><a href="/admin_dashboard" class="footer_info_item">Back to Dashboard</a>
+            </div>
         </div>
     </footer>
 
