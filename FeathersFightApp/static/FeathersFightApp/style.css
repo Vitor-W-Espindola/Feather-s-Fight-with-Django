@@ -315,14 +315,15 @@ input[type="password"]:focus {
 }
 
 .dashboard_publication_title {
+  display: inline;
   font-size: 21px;
 }
-.dashboard_publication_awaiting {
+.dashboard_publication_datetime {
   display: inline;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  font-size: 16px;
+  padding-left: 4px;
+  display: inline;
   font-style: italic;
+  font-size: 15px;
 }
 .dashboard_publication_short_description {
   padding-top: 5px;
@@ -352,8 +353,8 @@ input[type="password"]:focus {
   font-size: 21px;
 }
 .dashboard_publication_request_datetime {
-  padding-left: 4px;
   display: inline;
+  padding-left: 4px;
   font-style: italic;
   font-size: 15px;
 }
@@ -548,4 +549,10 @@ input[type="password"]:focus {
 }
 .dashboard_footer {
   padding-top: 70px;
+}
+
+.admin_dashboard_publication_datetime {
+  padding-top: 10px;
+  font-style: italic;
+  font-size: 15px;
 }

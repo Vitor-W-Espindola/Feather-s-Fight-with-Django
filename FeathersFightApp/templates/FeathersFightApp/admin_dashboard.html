@@ -28,6 +28,7 @@
             <div class="dashboard_publication_title">{{ request.pub_request.title }}</div>
             <div class="dashboard_publication_author">- {{ request.pub_request.author.username }}</div>
             <div class="dashboard_publication_short_description">{{ request.short_description }}</div>
+            <div class="admin_dashboard_publication_datetime">{{ request.pub_request.request_datetime }}</div>
 
             <div class="dashboard_publication_actions">
                 <a href="admin_preview_request/{{ request.pub_request.id }}"
@@ -56,7 +57,7 @@
             <div class="dashboard_publication_title">{{ pub.pub.title }}</div>
             <div class="dashboard_publication_author">- {{ pub.pub.author.username }}</div>
             <div class="dashboard_publication_short_description">{{ pub.short_description }}</div>
-
+            <div class="admin_dashboard_publication_datetime">{{ pub.pub.pub_date }}</div>
             <div class="dashboard_publication_actions">
                 <a href="admin_preview/{{ pub.pub.id }}" class="dashboard_publication_action">Visualize</a>
                 <a href="admin_dashboard/delete/{{ pub.pub.id }}" class="dashboard_publication_action">Delete</a>

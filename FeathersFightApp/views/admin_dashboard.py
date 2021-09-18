@@ -78,6 +78,7 @@ def admin_approve(request, request_id):
 def admin_decline(request, request_id):
 
     save = PublicationRequest.objects.get(pk=request_id)
+    SavePublication.objects.create(title=save.title, text=save.text, author=save.author, last_save=save.request_datetime)
     save.delete()
 
     return HttpResponseRedirect('/admin_dashboard')
