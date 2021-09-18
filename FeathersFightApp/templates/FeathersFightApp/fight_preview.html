@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'FeathersFightApp/style.css' %}">
+</head>
+
+<body>
+
+    {% if publication %}
+
+    <div class="style">
+        <label>
+            {{ publication.title }}
+        </label>
+    </div>
+    <div class="description">
+        <label>
+            {{ publication.text|safe }}
+        </label>
+    </div>
+    <p></p>
+    <div class="pub_date">
+        <label>
+            {{ publication.pub_date }}
+        </label>
+    </div>
+    <div class="author">
+        <label>
+            Written by {{ publication.author.username }}
+        </label>
+    </div>
+
+    {% else %}
+
+    <div class="description">
+        <label>
+            Error: Publication object not received.
+        </label>
+    </div>
+
+    {% endif %}
+
+    <footer>
+        <div class="footer_info">
+
+            <div class="footer_info_item"><a href="/dashboard" class="footer_info_item">Back to Dashboard</a></div>
+
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

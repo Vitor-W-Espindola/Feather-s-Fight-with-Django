@@ -1,47 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        {% load static %}
-        <link rel="stylesheet" type="text/css" href="{% static 'FeathersFightApp/style.css' %}">
-    </head>
-    <body>
 
-        {% if fight %} 
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'FeathersFightApp/style.css' %}">
+</head>
 
-        <div class="style">
-            <label>
-                {{ fight.style }}
-            </label>
-        </div>   
-        <div class="description">
-            <label>
-                {{ fight.description|linebreaks }}
-            </label>
+<body>
+
+    {% if fight %}
+
+    <div class="style">
+        <label>
+            {{ fight.title }}
+        </label>
+    </div>
+    <div class="description">
+        <label>
+            {{ fight.text|safe|linebreaks }}
+        </label>
+    </div>
+    <p></p>
+    <div class="pub_date">
+        <label>
+            {{ fight.pub_date }}
+        </label>
+    </div>
+    <div class="author">
+        <label>
+            Written by {{ fight.author.username }}
+        </label>
+    </div>
+
+    {% else %}
+
+    <div class="description">
+        <label>
+            Error: Fight object not received.
+        </label>
+    </div>
+
+    {% endif %}
+
+    <footer>
+        <div class="footer_info">
+            <div class="footer_info_item"><a href="/" class="footer_info_item">Home Page</a></div>
         </div>
-        <p></p>
-        <div class="pub_date">
-            <label>
-                {{ fight.pub_date }}
-            </label>
-        </div>
+    </footer>
 
-        {% else %}
+</body>
 
-        <div class="description">
-            <label>
-                Error: Fight object not received.
-            </label>
-        </div>
-        
-        {% endif %}
-
-        <footer>
-            <div class="footer_info">
-                <div class="footer_info_item"><a href="/" class="footer_info_item">Home Page</a></div>
-            </div>
-        </footer>
-
-    </body>
 </html>
 
 <!-- 

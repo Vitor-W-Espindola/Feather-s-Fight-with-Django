@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'FeathersFightApp/style.css' %}">
+</head>
+
+<body>
+
+    {% if request %}
+
+    <div class="style">
+        <label>
+            {{ request.title }}
+        </label>
+    </div>
+    <div class="description">
+        <label>
+            {{ request.text|safe }}
+        </label>
+    </div>
+    <p></p>
+    <div class="pub_date">
+        <label>
+            {{ request.request_datetime }}
+        </label>
+    </div>
+
+    {% else %}
+
+    <div class="description">
+        <label>
+            Error: Request object not received.
+        </label>
+    </div>
+
+    {% endif %}
+
+    <footer>
+        <div class="footer_info">
+            <div class="footer_info_item"><a href="/dashboard" class="footer_info_item">Back to Dashboard</a></div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -108,6 +108,13 @@
   margin-right: auto;
   text-align: right;
 }
+.author {
+  padding-top: 10px;
+  width: 28%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+}
 .footer_info_item {
   font-size: 16px;
   padding: 4px;
@@ -156,7 +163,6 @@ input[type="password"]:focus {
 }
 
 .register_area_input {
-  width: 80%;
   height: 35px;
   font-size: 15px;
   width: 100%;
@@ -258,4 +264,295 @@ input[type="password"]:focus {
   border-style: solid;
   border-width: 1px;
   border-color: black;
+}
+
+/* dashboard.html */
+
+.dashboard_header {
+  position: relative;
+  padding-top: 100px;
+  padding-left: 60px;
+  width: 60%;
+}
+
+.dashboard_header_text {
+  display: inline;
+  font-size: 40px;
+}
+
+.dashboard_header_href {
+  display: inline;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.dashboard_divider {
+  margin-top: 10px;
+  margin-left: 60px;
+  width: 60%;
+}
+.dashboard_users_publications {
+  width: 45%;
+}
+.dashboard_text_header {
+  padding-left: 60px;
+  padding-top: 70px;
+}
+.dashboard_text {
+  display: inline;
+  font-size: 28px;
+}
+/*.dashboard_publications_counter {
+  display: inline;
+  padding-left: 2px;
+  font-size: 22px;
+}
+*/
+.dashboard_publication {
+  padding-left: 60px;
+  padding-top: 45px;
+}
+
+.dashboard_publication_title {
+  display: inline;
+  font-size: 21px;
+}
+.dashboard_publication_datetime {
+  display: inline;
+  padding-left: 4px;
+  display: inline;
+  font-style: italic;
+  font-size: 15px;
+}
+.dashboard_publication_short_description {
+  padding-top: 5px;
+  color: rgb(136, 136, 136);
+}
+
+.dashboard_publication_actions {
+  padding-top: 15px;
+}
+
+.dashboard_publication_action {
+  padding-right: 15px;
+  color: rgb(62, 122, 233);
+  text-decoration: none;
+}
+.dashboard_no_publication_yet {
+  padding-left: 60px;
+  padding-top: 45px;
+  font-size: 20px;
+}
+.dashboard_users_publications_requests {
+  padding-left: 60px;
+  padding-top: 45px;
+}
+.dashboard_publication_request_title {
+  display: inline;
+  font-size: 21px;
+}
+.dashboard_publication_request_datetime {
+  display: inline;
+  padding-left: 4px;
+  font-style: italic;
+  font-size: 15px;
+}
+.dashboard_footer {
+  padding-top: 70px;
+}
+
+/* new_publication.html and edit_publication.html */
+
+.new_header_text {
+  padding-top: 100px;
+  padding-left: 140px;
+  font-size: 40px;
+}
+.new_title_input {
+  padding-top: 40px;
+  text-align: right;
+}
+.new_title_input_text {
+  width: 40%;
+  height: 35px;
+  font-size: 18px;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: solid black 1px;
+}
+.new_text_area {
+  padding-top: 30px;
+}
+.new_form {
+  padding-top: 50px;
+  padding-left: 140px;
+  width: 42%;
+  height: 100%;
+}
+.new_submit {
+  padding-top: 30px;
+}
+.new_submit_button {
+  width: 10%;
+  height: 40px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+.new_back {
+  padding-top: 30px;
+  padding-left: 140px;
+}
+.new_back_button {
+  width: 4%;
+  height: 40px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+.new_sk {
+  padding-top: 15px;
+}
+.new_sk_button {
+  width: 25%;
+  height: 40px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+.new_sb {
+  padding-top: 15px;
+}
+.new_sb_button {
+  width: 25%;
+  height: 40px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+.new_rd {
+  padding-top: 15px;
+  padding-bottom: 40px;
+}
+.new_rd_button {
+  width: 25%;
+  height: 40px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+
+/* dashboard.html */
+
+.dashboard_header {
+  position: relative;
+  padding-top: 100px;
+  padding-left: 60px;
+  width: 60%;
+}
+
+.dashboard_header_text {
+  display: inline;
+  font-size: 40px;
+}
+
+.dashboard_header_href {
+  display: inline;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.dashboard_divider {
+  margin-top: 10px;
+  margin-left: 60px;
+  width: 60%;
+}
+.dashboard_users_publications {
+  width: 45%;
+}
+.dashboard_text_header {
+  padding-left: 60px;
+  padding-top: 70px;
+}
+.dashboard_text {
+  display: inline;
+  font-size: 28px;
+}
+/*.dashboard_publications_counter {
+  display: inline;
+  padding-left: 2px;
+  font-size: 22px;
+}
+*/
+.dashboard_publication {
+  padding-left: 60px;
+  padding-top: 45px;
+}
+
+.dashboard_publication_title {
+  display: inline;
+  font-size: 21px;
+}
+.dashboard_publication_author {
+  display: inline;
+  color: rgb(136, 136, 136);
+  padding-top: 7px;
+  padding-bottom: 5px;
+  font-size: 15;
+}
+.dashboard_publication_awaiting {
+  display: inline;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-style: italic;
+}
+.dashboard_publication_short_description {
+  padding-top: 5px;
+  color: rgb(136, 136, 136);
+}
+
+.dashboard_publication_actions {
+  padding-top: 15px;
+}
+
+.dashboard_publication_action {
+  padding-right: 15px;
+  color: rgb(62, 122, 233);
+  text-decoration: none;
+}
+.dashboard_no_publication_yet {
+  padding-left: 60px;
+  padding-top: 45px;
+  font-size: 20px;
+}
+.dashboard_users_publications_requests {
+  padding-left: 60px;
+  padding-top: 45px;
+}
+.dashboard_publication_request_title {
+  display: inline;
+  font-size: 21px;
+}
+.dashboard_publication_request_datetime {
+  padding-left: 4px;
+  display: inline;
+  font-style: italic;
+  font-size: 15px;
+}
+.dashboard_footer {
+  padding-top: 70px;
+}
+
+.admin_dashboard_publication_datetime {
+  padding-top: 10px;
+  font-style: italic;
+  font-size: 15px;
 }

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'FeathersFightApp/style.css' %}">
+</head>
+
+<body>
+    <div class="dashboard_header">
+        <div class="dashboard_header_text">Dashboard</div>
+        <div class="dashboard_header_href">
+            <a href="/dashboard/new">New publication</a>
+            |
+            <a href="/1">Home Page</a>
+        </div>
+    </div>
+
+    <hr class="dashboard_divider">
+
+    <div class="dashboard_users_publications">
+        <div class="dashboard_text_header">
+            <div class="dashboard_text">Your publications, {{ username }}</div>
+        </div>
+
+
+        {% if publication_list %}
+        {% for publication in publication_list %}
+
+        <div class="dashboard_publication">
+            <div class="dashboard_publication_title">{{ publication.fight.title }}</div>
+            <div class="dashboard_publication_datetime">{{ publication.fight.pub_date }}</div>
+
+            <div class="dashboard_publication_short_description">{{ publication.short_description }}</div>
+
+            <div class="dashboard_publication_actions">
+                <a href="dashboard/fight_preview/{{ publication.fight.id }}" class="dashboard_publication_action">See as
+                    User</a>
+                <!--
+                <a href="dashboard/edit/{{ publication.fight.id }}" class="dashboard_publication_action">Edit</a>
+
+                <a href="dashboard/delete/{{ publication.fight.id }}" class="dashboard_publication_action">Delete</a>
+            -->
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="dashboard_no_publication_yet">You have no publication yet.</div>
+        {% endif %}
+    </div>
+
+    {% if requests %}
+    <div class="dashboard_text_header">
+        <div class="dashboard_text">Your requests</div>
+    </div>
+
+    {% for request in requests %}
+    <div class="dashboard_users_publications_requests">
+        <div class="dashboard_publication_request_title">{{ request.title }}</div>
+        <div class="dashboard_publication_request_datetime">{{ request.request_datetime }}</div>
+        <div class="dashboard_publication_actions">
+            <a href="/dashboard/request_preview/{{ request.id }}" class="dashboard_publication_action">Preview</a>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    {% if saves %}
+    <div class="dashboard_text_header">
+        <div class="dashboard_text">Your saves</div>
+    </div>
+    {% for save in saves %}
+    <div class="dashboard_users_publications_requests">
+        <div class="dashboard_publication_request_title">{{ save.title }}</div>
+        <div class="dashboard_publication_request_datetime">{{ save.last_save }}</div>
+        <div class="dashboard_publication_actions">
+            <a href="/dashboard/edit/{{ save.id }}" class="dashboard_publication_action">Edit</a>
+            <a href="/dashboard/delete/save/{{ save.id }}" class="dashboard_publication_action">Delete</a>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    <div class="dashboard_footer"></div>
+
+</body>
+
+</html>

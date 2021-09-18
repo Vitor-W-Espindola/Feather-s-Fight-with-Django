@@ -1,0 +1,432 @@
+/* index.html */
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.fightref {
+  color: rgb(62, 122, 233);
+  text-decoration: none;
+}
+
+.imgs {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding-top: 150px;
+}
+.logo {
+  display: table-cell;
+}
+.feather {
+  display: table-cell;
+}
+.hello_text {
+  font-size: 20px;
+  text-align: right;
+  width: 75%;
+}
+.divider {
+  width: 50%;
+}
+.item_container {
+  padding: 50px;
+  width: 22%;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.item_div {
+  display: table;
+  width: 100%;
+  padding: 10px;
+  text-align: right;
+}
+.short_description {
+  display: table-cell;
+  color: rgb(136, 136, 136);
+  font-style: italic;
+  font-size: 17px;
+  text-align: justify;
+  width: 70%;
+}
+.pagination_div {
+  text-align: center;
+  padding-top: 20px;
+}
+.pageref {
+  color: black;
+}
+.index_dashboard {
+  padding-top: 50px;
+  font-size: 16px;
+  text-align: center;
+}
+.index_dashboardref {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+.index_footer_info {
+  padding-top: 50px;
+  color: rgb(0, 0, 0);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.index_footer_info_item {
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+/* fight.html */
+
+.style {
+  width: 28%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 50px;
+  padding-top: 240px;
+  padding-bottom: 13px;
+  text-align: right;
+}
+.description {
+  width: 28%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+.footer_info {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: rgb(0, 0, 0);
+}
+.pub_date {
+  width: 28%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+}
+.author {
+  padding-top: 10px;
+  width: 28%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+}
+.footer_info_item {
+  font-size: 16px;
+  padding: 4px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+/* register.html */
+
+.register_header {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.register_feather {
+  padding-top: 120px;
+  width: 150px;
+}
+.register_title {
+  font-size: 28px;
+  padding: 5px;
+}
+.register_divider {
+  width: 20%;
+  margin-bottom: 30px;
+}
+.register_form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+.register_area_text {
+  font-size: 18px;
+  width: 100%;
+  padding-bottom: 8px;
+  text-align: center;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+input[type="email"]:focus {
+  outline: none;
+}
+input[type="password"]:focus {
+  outline: none;
+}
+
+.register_area_input {
+  height: 35px;
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: solid black 1px;
+}
+
+.register_text_input {
+  padding-bottom: 15px;
+}
+
+.register_email_input {
+  padding-bottom: 15px;
+}
+
+.register_password_input {
+  padding-bottom: 15px;
+}
+
+.register_submit_input {
+  text-align: right;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.submit_button {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+
+/* login.html */
+
+.login_header {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.login_feather {
+  padding-top: 120px;
+  width: 150px;
+}
+.login_title {
+  font-size: 28px;
+  padding: 5px;
+}
+.login_divider {
+  width: 20%;
+  margin-bottom: 30px;
+}
+.login_form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+.login_area_text {
+  font-size: 18px;
+  width: 100%;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+.login_area_input {
+  width: 80%;
+  height: 35px;
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: solid black 1px;
+}
+
+.login_text_input {
+  padding-bottom: 15px;
+}
+
+.login_email_input {
+  padding-bottom: 15px;
+}
+
+.login_password_input {
+  padding-bottom: 15px;
+}
+
+.login_submit_input {
+  text-align: right;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.submit_button {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+
+/* dashboard.html */
+
+.dashboard_header {
+  position: relative;
+  padding-top: 100px;
+  padding-left: 60px;
+  width: 60%;
+}
+
+.dashboard_header_text {
+  display: inline;
+  font-size: 40px;
+}
+
+.dashboard_header_href {
+  display: inline;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.dashboard_divider {
+  margin-top: 10px;
+  margin-left: 60px;
+  width: 60%;
+}
+.dashboard_users_publications {
+  width: 45%;
+}
+.dashboard_text_header {
+  padding-left: 60px;
+  padding-top: 70px;
+}
+.dashboard_text {
+  display: inline;
+  font-size: 28px;
+}
+/*.dashboard_publications_counter {
+  display: inline;
+  padding-left: 2px;
+  font-size: 22px;
+}
+*/
+.dashboard_publication {
+  padding-left: 60px;
+  padding-top: 45px;
+}
+
+.dashboard_publication_title {
+  font-size: 21px;
+}
+.dashboard_publication_awaiting {
+  display: inline;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-style: italic;
+}
+.dashboard_publication_short_description {
+  padding-top: 5px;
+  color: rgb(136, 136, 136);
+}
+
+.dashboard_publication_actions {
+  padding-top: 15px;
+}
+
+.dashboard_publication_action {
+  padding-right: 15px;
+  color: rgb(62, 122, 233);
+  text-decoration: none;
+}
+.dashboard_no_publication_yet {
+  padding-left: 60px;
+  padding-top: 45px;
+  font-size: 20px;
+}
+.dashboard_users_publications_requests {
+  padding-left: 60px;
+  padding-top: 45px;
+}
+.dashboard_publication_request_title {
+  display: inline;
+  font-size: 21px;
+}
+.dashboard_publication_request_datetime {
+  padding-left: 4px;
+  display: inline;
+  font-style: italic;
+  font-size: 15px;
+}
+
+/* new_publication.html */
+
+.new_header_text {
+  padding-top: 100px;
+  padding-left: 140px;
+  font-size: 40px;
+}
+.new_title_input {
+  width: 30%;
+  height: 35px;
+  font-size: 18px;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: solid black 1px;
+}
+.new_text_area {
+  padding-top: 60px;
+}
+.new_form {
+  padding-top: 50px;
+  padding-left: 140px;
+
+  width: 50%;
+  height: 100%;
+}
+.new_submit {
+  padding-top: 70px;
+}
+.new_submit_button {
+  width: 10%;
+  height: 40px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+.new_back {
+  padding-top: 30px;
+  padding-left: 140px;
+}
+.new_back_button {
+  width: 4%;
+  height: 40px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+.new_sk {
+  padding-top: 15px;
+  padding-left: 140px;
+}
+.new_sk_button {
+  width: 10%;
+  height: 40px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+.new_sb {
+  padding-top: 15px;
+  padding-left: 140px;
+}
+.new_sb_button {
+  width: 12%;
+  height: 40px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}

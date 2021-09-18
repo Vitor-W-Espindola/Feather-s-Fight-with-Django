@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'FeathersFightApp/style.css' %}">
+
+</head>
+
+<body>
+
+    <div class="new_header_text">Edit Publication</div>
+    <form method="POST" class="new_form">{% csrf_token %}
+
+        <input type="text" class="new_title_input_text" name="title" value="{{ save.title }}" placeholder="Title">
+
+        <div class="new_text_area" name="text">
+            {{ form.as_p }}
+            {{ form.media }}
+        </div>
+
+        <div class="new_submit">
+            <input type="submit" formaction="/dashboard/submit/save/{{ save.id }}" class="new_submit_button"
+                value="Submit">
+        </div>
+
+        <div class="new_sk">
+            <input type="submit" formaction="/dashboard/edit/save/{{ save.id }}" class="new_sk_button"
+                value="Save and Keep Writing">
+        </div>
+
+        <div class="new_sb">
+            <input type="submit" formaction="/dashboard/edit/save/dashboard/{{ save.id }}" class="new_sb_button"
+                value="Save and Return to Dashboard">
+        </div>
+
+        <div class="new_rd">
+            <input type="submit" formaction="/dashboard" class="new_rd_button" value="Return to Dashboard">
+        </div>
+
+
+    </form>
+
+</body>
+
+</html>
