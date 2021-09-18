@@ -17,7 +17,7 @@
     </div>
     <div class="description">
         <label>
-            {{ publication.text|linebreaks }}
+            {{ publication.text|safe }}
         </label>
     </div>
     <p></p>
@@ -46,7 +46,7 @@
         <div class="footer_info">
 
             <div class="footer_info_item"><a href="/dashboard" class="footer_info_item">Back to Dashboard</a></div>
-            a
+
 
         </div>
     </footer>

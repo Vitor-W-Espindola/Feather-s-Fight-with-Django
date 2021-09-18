@@ -78,7 +78,7 @@ def dashboard(request):
         def __init__(self, save):
             self.id = save.id
             self.title = save.title
-            self.short_text = "%s%s" % (' '.join(pub_request.text.split(" ")[:6]), "...")  
+            self.short_text = "%s%s" % (' '.join(save.text.split(" ")[:6]), "...")  
             self.last_save = save.last_save
 
     save_with_short_description = []
