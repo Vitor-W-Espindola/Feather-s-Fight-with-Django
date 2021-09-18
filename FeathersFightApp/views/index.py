@@ -14,7 +14,7 @@ import json
 from bs4 import BeautifulSoup, BeautifulStoneSoup
 
 
-from FeathersFightApp.models import PublicationRequest, EditRequest, DeleteRequest, Fight
+from FeathersFightApp.models import PublicationRequest, Fight
 
 
 def removeTags(html):
@@ -46,16 +46,6 @@ def index_with_page(request, index_page_id):
 
     fights = Fight.objects.all()
 
-    fights_with_edit_request = []
-    for index in range(0, EditRequest.objects.count()):
-        fights_with_edit_request.append(EditRequest.objects.values_list('publication')[index][0])
-
-    fights_with_delete_request = []
-    for index in range(0, DeleteRequest.objects.count()):
-        fights_with_delete_request.append(DeleteRequest.objects.values_list('publication')[index][0])
-
-
-
     class FightWithShortDescription():
         
         
@@ -71,10 +61,8 @@ def index_with_page(request, index_page_id):
     fights_with_short_description = []
     
     for fight in fights:
-        if(fight.id not in fights_with_edit_request and fight.id not in fights_with_delete_request):
-            fights_with_short_description.append(FightWithShortDescription(fight))
-        else:
-            print("%s This fight has a edit or delete request." % (fight.style))
+        fights_with_short_description.append(FightWithShortDescription(fight))
+
 
     items_for_page = 4
     paginator = Paginator(fights_with_short_description, items_for_page)

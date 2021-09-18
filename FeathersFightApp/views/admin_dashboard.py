@@ -17,7 +17,7 @@ from datetime import *
 
 from bs4 import BeautifulSoup, BeautifulStoneSoup
 
-from FeathersFightApp.models import PublicationRequest, EditRequest, DeleteRequest, Fight, SavePublication
+from FeathersFightApp.models import PublicationRequest, Fight, SavePublication
 
 def removeTags(html):
     soup = BeautifulSoup(html, "html.parser")

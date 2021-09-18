@@ -14,7 +14,7 @@ import json
 from bs4 import BeautifulSoup, BeautifulStoneSoup
 
 
-from FeathersFightApp.models import PublicationRequest, EditRequest, DeleteRequest, Fight
+from FeathersFightApp.models import PublicationRequest, Fight
 
 
 def removeTags(html):

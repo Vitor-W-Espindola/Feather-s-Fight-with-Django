@@ -13,7 +13,7 @@ import json
 
 from bs4 import BeautifulSoup, BeautifulStoneSoup
 
-from FeathersFightApp.models import PublicationRequest, EditRequest, DeleteRequest, Fight
+from FeathersFightApp.models import PublicationRequest, Fight
 
 def login_page(request):
     template = loader.get_template('FeathersFightApp/login.html')

@@ -16,7 +16,7 @@ from datetime import *
 from bs4 import BeautifulSoup, BeautifulStoneSoup
 
 
-from FeathersFightApp.models import PublicationRequest, EditRequest, DeleteRequest, Fight, SavePublication
+from FeathersFightApp.models import PublicationRequest, Fight, SavePublication
 
 def removeTags(html):
     soup = BeautifulSoup(html, "html.parser")
@@ -52,14 +52,6 @@ def dashboard(request):
     for fight in fights:
         fights_with_short_description.append(FightWithShortDescription(fight))
     
-    fights_with_edit_request = []
-    for index in range(0, EditRequest.objects.count()):
-        fights_with_edit_request.append(EditRequest.objects.values_list('publication')[index][0])
-
-    fights_with_delete_request = []
-    for index in range(0, DeleteRequest.objects.count()):
-        fights_with_delete_request.append(DeleteRequest.objects.values_list('publication')[index][0])
-    
     requests = PublicationRequest.objects.filter(author=request.user)
     class RequestWithShortDescription():
         def __init__(self, pub_request):
@@ -88,8 +80,6 @@ def dashboard(request):
     context = { 
         'publication_list':fights_with_short_description,
         "username":request.user.username,
-        'publications_with_edit_request': fights_with_edit_request,
-        'publications_with_delete_request': fights_with_delete_request,
         'requests':requests_with_short_description,
         'saves':save_with_short_description
         }
@@ -134,19 +124,6 @@ def fight_edit(request, publication_id):
         except:
                 return HttpResponse("Not found.")
 
-    fights_with_edit_request = []
-    for index in range(0, EditRequest.objects.count()):
-        fights_with_edit_request.append(EditRequest.objects.values_list('publication')[index][0])
-
-    fights_with_delete_request = []
-    for index in range(0, DeleteRequest.objects.count()):
-        fights_with_delete_request.append(DeleteRequest.objects.values_list('publication')[index][0])
-
-    if(publication.id in fights_with_edit_request or publication.id in fights_with_delete_request):
-        return HttpResponse("You can't edit this publication while it is in awaiting state.")
-    else:
-        EditRequest.objects.create(publication=publication)
-        return HttpResponseRedirect('/dashboard')
 
 def fight_delete(request, publication_id):
     publication = None
@@ -161,24 +138,16 @@ def fight_delete(request, publication_id):
         except:
                 return HttpResponse("Not found.")
 
-    fights_with_edit_request = []
-    for index in range(0, EditRequest.objects.count()):
-        fights_with_edit_request.append(EditRequest.objects.values_list('publication')[index][0])
-
-    fights_with_delete_request = []
-    for index in range(0, DeleteRequest.objects.count()):
-        fights_with_delete_request.append(DeleteRequest.objects.values_list('publication')[index][0])
     
-    if(publication.id in fights_with_edit_request or publication.id in fights_with_delete_request):
-        return HttpResponse("You can't edit this publication while it is in awaiting state.")
-    else:
-        q = DeleteRequest.objects.create(publication = publication)
-        q.save()
-        return HttpResponseRedirect("/dashboard")
+    return HttpResponseRedirect("/dashboard")
 
 def new_publication_page(request):
-    form = PublicationRequestForm()
-    return render(request, 'FeathersFightApp/new_publication.html', {'form':form})
+    requests = PublicationRequest.objects.filter(author=request.user)
+    if(len(requests) > 0):
+        return HttpResponse('You have requests awaiting.')
+    else:
+        form = PublicationRequestForm()
+        return render(request, 'FeathersFightApp/new_publication.html', {'form':form})
 
 def edit_publication_page(request, save_id):
     save = get_object_or_404(SavePublication, id=save_id)

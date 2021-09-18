@@ -29,17 +29,3 @@ class SavePublication(models.Model):
 
     def __str__(self):
         return "%s - %s" % (self.title, self.author.username)
-class EditRequest(models.Model):
-    publication = models.OneToOneField(Fight, on_delete=models.CASCADE)
-    edit_request_date = models.DateTimeField(default=datetime.now())
-
-    def __str__(self):
-        return "%s - %s" %(self.publication.style, self.publication.author.username)
-
-class DeleteRequest(models.Model):
-    publication = models.OneToOneField(Fight, on_delete=models.CASCADE)
-    delete_request_date = models.DateTimeField(default=datetime.now())
-
-    def __str__(self):
-        return "%s - %s" %(self.publication.style, self.publication.author.username)
-    
