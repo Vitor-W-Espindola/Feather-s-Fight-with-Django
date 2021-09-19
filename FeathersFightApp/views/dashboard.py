@@ -134,6 +134,8 @@ def new_article_request(request):
 
         title = request.POST["title"]
         text = request.POST["text"]
+        if(title == "" or text == ""):
+            return HttpResponse('You need to fill all fields.')
         author = request.user
 
         article_request = ArticleRequest.objects.create(
@@ -155,6 +157,8 @@ def new_article_save_and_keep_writing(request):
     if(request.user.is_authenticated == True):
         title=request.POST['title']
         text=request.POST['text']
+        if(title == "" or text == ""):
+            return HttpResponse('You need to fill all fields.')
         author=request.user
         last_save = datetime.now()
 
@@ -176,18 +180,25 @@ def new_article_save_and_keep_writing(request):
 # when the url localhost:8000/dashboard/new/save/dashboard is required
 def new_article_save_and_go_to_dashboard(request):
 
+    title=request.POST['title']
+    text=request.POST['text']
+    if(title == "" or text == ""):
+            return HttpResponse('You need to fill all fields.')
+    author=request.user
+    last_save = datetime.now()
+
     SavedArticle.objects.create(
-        title=request.POST['title'],
-        text=request.POST['text'],
-        author=request.user,
-        last_save = datetime.now()
+        title=title,
+        text=text,
+        author=author,
+        last_save = last_save
     )
 
     return HttpResponseRedirect('/dashboard')
 
 # This method is used to edit an article save
-# when the url localhost:8000/dashboard/edit/{{ int:save_id }}
-def edit_save(request, article_save_id):
+# when the url localhost:8000/dashboard/edit/{{ int:article_save_id }}
+def edit_article_save(request, article_save_id):
     
     article_save = None
 
@@ -196,9 +207,8 @@ def edit_save(request, article_save_id):
         # If User is an author and this publication is yours
         try:
             article_save = SavedArticle.objects.get(pk=article_save_id, author=request.user)
-            if(article_save == None):
-                return HttpResponse("Not found.")
         except:
+                print("B")
                 return HttpResponse("Not found.")
     
     form = ArticleRequestForm(instance=article_save)
@@ -213,18 +223,21 @@ def edit_save(request, article_save_id):
 
 # This method is used to submit an article save
 # and go back to dashboard
-# when the url localhost:8000/dashboard/edit/submit/{{ save_id }}
-def edit_save_submit(request, article_save_id):
+# when the url localhost:8000/dashboard/edit/submit/{{ article_save_id }}
+def edit_article_save_submit(request, article_save_id):
         
     article_requests = ArticleRequest.objects.filter(author=request.user)
     if(len(article_requests) > 0):
         return HttpResponse('You have requests awaiting.')
     else:
-        title = request.POST['title']
-        text = request.POST['text']
-        author = request.user
-        
-        pub = ArticleRequest.objects.create(title=title, text=text, author=author, request_datetime=datetime.now())
+        title=request.POST['title']
+        text=request.POST['text']
+        if(title == "" or text == ""):
+                return HttpResponse('You need to fill all fields.')
+        author=request.user
+        request_datetime = datetime.now()
+
+        pub = ArticleRequest.objects.create(title=title, text=text, author=author, request_datetime=request_datetime)
         pub.save()
 
         save = SavedArticle.objects.get(pk=article_save_id)
@@ -234,44 +247,55 @@ def edit_save_submit(request, article_save_id):
 
 # This method is used to edit an article save and 
 # redirect to edit article page, retrieving its own saved data
-# when the url localhost:8000/dashboard/edit/save/{{ int:save_id }}
-def edit_save_save_and_keep_writing(request, article_save_id):
+# when the url localhost:8000/dashboard/edit/save/{{ article_save_id }}
+def edit_article_save_save_and_keep_writing(request, article_save_id):
     
     title = request.POST['title']
     text = request.POST['text']
-    author = request.user
+    
+    if(title == "" or text == ""):
+        return HttpResponse('You need to fill all fields.')
+    
+    author=request.user
+    
+    last_save = datetime.now()
 
     article_save = SavedArticle.objects.get(pk=article_save_id)
     article_save.title = title
     article_save.text = text
     article_save.author = author
-    article_save.last_save = datetime.now()
+    article_save.last_save = last_save
     article_save.save()
 
     return HttpResponseRedirect('/dashboard/edit/%s' % (article_save.id))
 
 # This method is used to edit an article save
 # and go back to dashboard
-# when the url localhost:8000/dashboard/edit/save/dashboard/{{ save_id }}
-def edit_save_save_and_go_to_dashboard(request, article_save_id):
+# when the url localhost:8000/dashboard/edit/save/dashboard/{{ article_save_id }}
+def edit_article_save_save_and_go_to_dashboard(request, article_save_id):
 
     title = request.POST['title']
     text = request.POST['text']
+
+    if(title == "" or text == ""):
+        return HttpResponse('You need to fill all fields.')    
+    
     author = request.user
+    last_save = datetime.now()
 
     article_save = SavedArticle.objects.get(pk=article_save_id)
     article_save.title = title
     article_save.text = text
     article_save.author = author
-    article_save.last_save = datetime.now()
+    article_save.last_save = last_save
     article_save.save()
 
     return HttpResponseRedirect('/dashboard')
 
 # This method is used to delete an article save
 # and go back to dashboard
-# when the url localhost:8000/dashboard/delete/save/{{ save_id }}
-def delete_save(request, article_save_id):
+# when the url localhost:8000/dashboard/delete/save/{{ article_save_id }}
+def delete_article_save(request, article_save_id):
     save = SavedArticle.objects.filter(pk=article_save_id).delete()
     return HttpResponseRedirect('/dashboard')
 

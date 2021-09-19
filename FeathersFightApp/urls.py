@@ -38,12 +38,12 @@ urlpatterns = [
     path('dashboard/new/save/dashboard', new_article_save_and_go_to_dashboard, name='edit_save_save_and_go_to_dashboard'),
     path('dashboard/new/submit', new_article_request, name='new_article_request'),
 
-    path('dashboard/edit/<int:article_save_id>', edit_save, name='edit_save'),
-    path('dashboard/edit/save/<int:article_save_id>', edit_save_save_and_keep_writing, name='edit_save_save_and_keep_writing'),
-    path('dashboard/edit/save/dashboard/<int:article_save_id>', edit_save_save_and_go_to_dashboard, name='edit_save_save_and_go_to_dashboard'),
-    path('dashboard/edit/submit/<int:article_save_id>', edit_save_submit, name='edit_save_submit'),
+    path('dashboard/edit/<int:article_save_id>', edit_article_save, name='edit_article_save'),
+    path('dashboard/edit/save/<int:article_save_id>', edit_article_save_save_and_keep_writing, name='edit_save_save_and_keep_writing'),
+    path('dashboard/edit/save/dashboard/<int:article_save_id>', edit_article_save_save_and_go_to_dashboard, name='edit_save_save_and_go_to_dashboard'),
+    path('dashboard/edit/submit/<int:article_save_id>', edit_article_save_submit, name='edit_save_submit'),
     
-    path('dashboard/delete/save/<int:article_save_id>', delete_save, name='delete_save'),
+    path('dashboard/delete/save/<int:article_save_id>', delete_article_save, name='delete_save'),
     
     path('dashboard/article_request_preview/<int:article_request_id>', article_request_preview, name='article_request_preview'),
     
