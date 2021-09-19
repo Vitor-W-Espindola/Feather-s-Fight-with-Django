@@ -9,33 +9,35 @@
 
 <body>
 
-    <div class="new_header_text">Edit Publication</div>
-    <form method="POST" class="new_form">{% csrf_token %}
+    <div class="edit_publication_header_text">Edit Publication</div>
+    <form method="POST" class="edit_publication_form">{% csrf_token %}
 
-        <input type="text" class="new_title_input_text" name="title" value="{{ save.title }}" placeholder="Title">
+        <input type="text" class="edit_publication_title_input" name="title" value="{{ save.title }}"
+            placeholder="Title">
 
-        <div class="new_text_area" name="text">
+        <div class="edit_publicaiton_text_area" name="text">
             {{ form.as_p }}
             {{ form.media }}
         </div>
 
-        <div class="new_submit">
-            <input type="submit" formaction="/dashboard/submit/save/{{ save.id }}" class="new_submit_button"
-                value="Submit">
+        <div class="edit_publication_submit">
+            <input type="submit" formaction="/dashboard/submit/save/{{ save.id }}"
+                class="edit_publication_submit_button" value="Submit">
         </div>
 
-        <div class="new_sk">
-            <input type="submit" formaction="/dashboard/edit/save/{{ save.id }}" class="new_sk_button"
-                value="Save and Keep Writing">
+        <div class="edit_publication_save_and_keep">
+            <input type="submit" formaction="/dashboard/edit/save/{{ save.id }}"
+                class="edit_publication_save_and_keep_button" value="Save and Keep Writing">
         </div>
 
-        <div class="new_sb">
-            <input type="submit" formaction="/dashboard/edit/save/dashboard/{{ save.id }}" class="new_sb_button"
-                value="Save and Return to Dashboard">
+        <div class="edit_publication_save_and_return">
+            <input type="submit" formaction="/dashboard/edit/save/dashboard/{{ save.id }}"
+                class="edit_publication_save_and_return_button" value="Save and Return to Dashboard">
         </div>
 
-        <div class="new_rd">
-            <input type="submit" formaction="/dashboard" class="new_rd_button" value="Return to Dashboard">
+        <div class="edit_publication_return_to_dashboard">
+            <input type="submit" formaction="/dashboard" class="edit_publication_return_to_dashboard_button"
+                value="Return to Dashboard">
         </div>
 
 

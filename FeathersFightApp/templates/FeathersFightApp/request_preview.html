@@ -10,26 +10,31 @@
 
     {% if request %}
 
-    <div class="style">
+    <div class="request_preview_title">
         <label>
             {{ request.title }}
         </label>
     </div>
-    <div class="description">
+    <div class="request_preview_text">
         <label>
             {{ request.text|safe }}
         </label>
     </div>
     <p></p>
-    <div class="pub_date">
+    <div class="request_preview_pub_date">
         <label>
             {{ request.request_datetime }}
+        </label>
+    </div>
+    <div class="request_preview_author">
+        <label>
+            Written by {{ request.author.username }}
         </label>
     </div>
 
     {% else %}
 
-    <div class="description">
+    <div class="request_preview_description">
         <label>
             Error: Request object not received.
         </label>
@@ -38,8 +43,9 @@
     {% endif %}
 
     <footer>
-        <div class="footer_info">
-            <div class="footer_info_item"><a href="/dashboard" class="footer_info_item">Back to Dashboard</a></div>
+        <div class="request_preview_footer_info">
+            <div class="request_preview_footer_info_item"><a href="/dashboard"
+                    class="request_preview_footer_info_item">Back to Dashboard</a></div>
         </div>
     </footer>
 

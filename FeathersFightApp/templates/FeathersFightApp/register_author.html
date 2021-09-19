@@ -8,27 +8,28 @@
 </head>
 
 <body>
-    <div class="register_header">
-        <img class="register_feather" src="{% static 'FeathersFightApp/images/feather.png' %}">
-        <div class="register_title"><label>Become an author</label></div>
+    <div class="register_author_header">
+        <img class="register_author_feather" src="{% static 'FeathersFightApp/images/feather.png' %}">
+        <div class="register_author_title"><label>Become an author</label></div>
     </div>
-    <hr class="register_divider">
+    <hr class="register_author_divider">
 
-    <form action="registe_author/success" class="register_form" method="post">{% csrf_token %}
-        <div class="register_text_input">
-            <input type="text" class="register_area_input" name="username" placeholder="Username">
+    <form action="registe_author/success" class="register_author_form" method="post">{% csrf_token %}
+        <div class="register_author_text_input">
+            <input type="text" class="register_author_area_input" name="username" placeholder="Username">
         </div>
 
-        <div class="register_email_input">
-            <input type="email" class="register_area_input" name="email" placeholder="Email">
+        <div class="register_author_email_input">
+            <input type="email" class="register_author_area_input" name="email" placeholder="Email">
         </div>
 
-        <div class="register_password_input">
-            <input type="password" class="register_area_input" name="password" placeholder="Password">
+        <div class="register_author_password_input">
+            <input type="password" class="register_author_area_input" name="password" placeholder="Password">
         </div>
 
-        <div class="register_password_input">
-            <input type="password" class="register_area_input" name="confirm_password" placeholder="Confirm password">
+        <div class="register_author_password_input">
+            <input type="password" class="register_author_area_input" name="confirm_password"
+                placeholder="Confirm password">
         </div>
 
         {% if empty_field %}
@@ -37,14 +38,15 @@
         </div>
         {% endif %}
 
-        <div class="register_submit_input">
-            <input class="submit_button" type="submit" value="Register">
+        <div class="register_author_submit_input">
+            <input class="register_author_submit_button" type="submit" value="Register">
         </div>
 
     </form>
     <footer>
-        <div class="footer_info">
-            <div class="footer_info_item"><a href="/" class="footer_info_item">Home Page</a></div>
+        <div class="register_author_footer_info">
+            <div class="register_author_footer_info_item"><a href="/" class="register_author_footer_info_item">Home
+                    Page</a></div>
         </div>
     </footer>
 </body>

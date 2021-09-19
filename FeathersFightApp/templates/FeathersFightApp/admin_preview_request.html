@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'FeathersFightApp/style.css' %}">
+</head>
+
+<body>
+
+    {% if pub_request %}
+
+    <div class="admin_preview_request_title">
+        <label>
+            {{ pub_request.title }}
+        </label>
+    </div>
+    <div class="admin_preview_request_text">
+        <label>
+            {{ pub_request.text|safe }}
+        </label>
+    </div>
+    <p></p>
+    <div class="admin_preview_request_pub_date">
+        <label>
+            {{ pub_request.request_datetime }}
+        </label>
+    </div>
+    <div class="admin_preview_request_author">
+        <label>
+            Written by {{ pub_request.author.username }}
+        </label>
+    </div>
+
+    {% else %}
+
+    <div class="admin_preview_request_error">
+        <label>
+            Error: Request object not received.
+        </label>
+    </div>
+
+    {% endif %}
+
+    <footer>
+        <div class="admin_preview_request_footer_info">
+
+            <div class="admin_preview_request_footer_info_item"><a href="/admin_dashboard"
+                    class="admin_preview_request_footer_info_item">Back to Dashboard</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

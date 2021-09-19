@@ -7,20 +7,20 @@
 </head>
 
 <body>
-    <div class="imgs">
-        <img class="logo" src="{% static 'FeathersFightApp/images/logo.png' %}">
-        <img class="feather" src="{% static 'FeathersFightApp/images/feather.png' %}">
+    <div class="index_imgs">
+        <img class="index_logo" src="{% static 'FeathersFightApp/images/logo.png' %}">
+        <img class="index_feather" src="{% static 'FeathersFightApp/images/feather.png' %}">
     </div>
-    <hr class="divider">
-    <div class="hello_text"><label>Welcome, {{ username }}</label></div>
+    <hr class="index_divider">
+    <div class="index_hello_text"><label>Welcome, {{ username }}</label></div>
 
-    <div class="item_container">
+    <div class="index_item_container">
 
         {% if fights_list %}
         {% for fight in fights_list %}
-        <div class="item_div">
-            <div class="short_description">{{ fight.short_description }}</div>
-            <a href="/fight/{{ fight.fight.id }}" class="fightref">{{ fight.fight.title }}</a>
+        <div class="index_item_div">
+            <div class="index_short_description">{{ fight.short_description }}</div>
+            <a href="/fight/{{ fight.fight.id }}" class="index_fightref">{{ fight.fight.title }}</a>
         </div>
         {% endfor %}
         {% else %}
@@ -29,12 +29,12 @@
 
     </div>
     {% if range_of_pages %}
-    <div class="pagination_div">
+    <div class="index_pagination_div">
         {% for number in range_of_pages %}
         {% if number == index_page_id %}
-        <label class="pageref">{{ number }}</label>
+        <label class="index_pageref">{{ number }}</label>
         {% else %}
-        <a href="/{{ number }}" class="pageref">{{ number }}</a>
+        <a href="/{{ number }}" class="index_pageref">{{ number }}</a>
         {% endif %}
         {% endfor %}
     </div>
@@ -48,7 +48,7 @@
     {% endif %}
     {% if admin == 1 %}
     <div class="index_admin_dashboard">
-        <a href="/admin_dashboard" class="index_dashboardref">Admin Dashboard</a>
+        <a href="/admin_dashboard" class="index_admin_dashboardref">Admin Dashboard</a>
     </div>
     {% endif %}
     <div class="index_footer_info">

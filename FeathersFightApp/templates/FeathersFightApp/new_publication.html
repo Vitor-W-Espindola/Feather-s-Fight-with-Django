@@ -9,31 +9,34 @@
 
 <body>
 
-    <div class="new_header_text">New Publication</div>
-    <form method="POST" class="new_form">{% csrf_token %}
+    <div class="new_publication_header_text">New Publication</div>
+    <form method="POST" class="new_publication_form">{% csrf_token %}
 
-        <input type="text" class="new_title_input_text" name="title" placeholder="Title">
+        <input type="text" class="new_publication_title_input" name="title" placeholder="Title">
 
-        <div class="new_text_area" name="text">
+        <div class="new_publicaiton_text_area" name="text">
             {{ form.media }}
             {{ form.as_p }}
         </div>
 
-        <div class="new_submit">
-            <input type="submit" formaction="/dashboard/submit/new" class="new_submit_button" value="Submit">
+        <div class="new_publication_submit">
+            <input type="submit" formaction="/dashboard/submit/new" class="new_publication_submit_button"
+                value="Submit">
         </div>
 
-        <div class="new_sk">
-            <input type="submit" formaction="/dashboard/new/save" class="new_sk_button" value="Save">
+        <div class="new_publication_save_and_keep">
+            <input type="submit" formaction="/dashboard/new/save" class="new_publication_save_and_keep_button"
+                value="Save">
         </div>
 
-        <div class="new_sb">
-            <input type="submit" formaction="/dashboard/new/save/dashboard" class="new_sb_button"
-                value="Save and Return to Dashboard">
+        <div class="new_publication_save_and_return">
+            <input type="submit" formaction="/dashboard/new/save/dashboard"
+                class="new_publication_save_and_return_button" value="Save and Return to Dashboard">
         </div>
 
-        <div class="new_rd">
-            <input type="submit" formaction="/dashboard" class="new_rd_button" value="Return to Dashboard">
+        <div class="new_publication_return_to_dashboard">
+            <input type="submit" formaction="/dashboard" class="new_publication_return_to_dashboard_button"
+                value="Return to Dashboard">
         </div>
     </form>
 

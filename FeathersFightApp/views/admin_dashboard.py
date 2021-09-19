@@ -59,10 +59,10 @@ def admin_dashboard(request):
     return HttpResponse(template.render(context, request))
 
 def admin_preview_request(request, request_id):
-    save = PublicationRequest.objects.get(pk=request_id)
-    template = loader.get_template('FeathersFightApp/admin_preview.html')
+    pub_request = PublicationRequest.objects.get(pk=request_id)
+    template = loader.get_template('FeathersFightApp/admin_preview_request.html')
     context = {
-        'save':save,
+        'pub_request':pub_request,
     }
     return HttpResponse(template.render(context, request))
 
@@ -84,10 +84,10 @@ def admin_decline(request, request_id):
     return HttpResponseRedirect('/admin_dashboard')
 
 def admin_preview(request, pub_id):
-    pub = Fight.objects.get(pk=pub_id)
+    publication = Fight.objects.get(pk=pub_id)
     template = loader.get_template('FeathersFightApp/admin_preview.html')
     context = {
-        'save':pub,
+        'publication':publication,
     }
     return HttpResponse(template.render(context, request))
 

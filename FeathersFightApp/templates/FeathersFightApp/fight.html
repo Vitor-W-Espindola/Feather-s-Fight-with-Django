@@ -10,12 +10,12 @@
 
     {% if fight %}
 
-    <div class="style">
+    <div class="title">
         <label>
             {{ fight.title }}
         </label>
     </div>
-    <div class="description">
+    <div class="text">
         <label>
             {{ fight.text|safe|linebreaks }}
         </label>
@@ -34,7 +34,7 @@
 
     {% else %}
 
-    <div class="description">
+    <div class="error">
         <label>
             Error: Fight object not received.
         </label>
@@ -51,13 +51,3 @@
 </body>
 
 </html>
-
-<!-- 
-    {% if fight %}
-    <h1>{{ fight.style }}</h1>
-    <p>{{ fight.description }}</p>
-    <p>Posted in {{ fight.pub_date }}</p>
-{% else %}
-    <p>Error: Fight object not received.</p>
-{% endif %}
--->

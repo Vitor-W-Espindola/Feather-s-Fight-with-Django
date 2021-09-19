@@ -53,8 +53,9 @@
     <div class="dashboard_users_publications_requests">
         <div class="dashboard_publication_request_title">{{ request.title }}</div>
         <div class="dashboard_publication_request_datetime">{{ request.request_datetime }}</div>
-        <div class="dashboard_publication_actions">
-            <a href="/dashboard/request_preview/{{ request.id }}" class="dashboard_publication_action">Preview</a>
+        <div class="dashboard_publication_request_actions">
+            <a href="/dashboard/request_preview/{{ request.id }}"
+                class="dashboard_publication_request_action">Preview</a>
         </div>
     </div>
     {% endfor %}
@@ -65,12 +66,12 @@
         <div class="dashboard_text">Your saves</div>
     </div>
     {% for save in saves %}
-    <div class="dashboard_users_publications_requests">
-        <div class="dashboard_publication_request_title">{{ save.title }}</div>
-        <div class="dashboard_publication_request_datetime">{{ save.last_save }}</div>
-        <div class="dashboard_publication_actions">
-            <a href="/dashboard/edit/{{ save.id }}" class="dashboard_publication_action">Edit</a>
-            <a href="/dashboard/delete/save/{{ save.id }}" class="dashboard_publication_action">Delete</a>
+    <div class="dashboard_saves">
+        <div class="dashboard_save_title">{{ save.title }}</div>
+        <div class="dashboard_save_last_save">{{ save.last_save }}</div>
+        <div class="dashboard_save_actions">
+            <a href="/dashboard/edit/{{ save.id }}" class="dashboard_save_action">Edit</a>
+            <a href="/dashboard/delete/save/{{ save.id }}" class="dashboard_save_action">Delete</a>
         </div>
     </div>
     {% endfor %}
