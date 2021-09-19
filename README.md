@@ -47,13 +47,9 @@ It becomes easy to manipulate those roles, as explained later on.
 
 ## Read an Article
 
-<br></br>
-
 <div align="center">
 <img alt="Read an Article" src="https://media.giphy.com/media/LEo0WKMgQ621y0mjje/giphy.gif?cid=790b76116b46572d560b15945fb69c168345dd7afb70889b&rid=giphy.gif&ct=g" />
 </div>
-
-<br></br>
 
 **Read an Article** turns to be the **<3** of **Feather's Fight**.
 
@@ -66,7 +62,6 @@ At the moment, user is limited to only read the article and further information.
 
 ## Sign up
 Here is a very hospitable **Sign Up** Page.
-<br></br>
 
 <div align="center">
 <img alt="Sign up" width=300 src="https://live.staticflickr.com/65535/51491201576_4248dcf2b8_z.jpg" />
@@ -86,17 +81,14 @@ With a beautiful feather displayed on screen, the Log In Page requires user's us
 
 ## Become an author
 
-<p></p>
+
 
 This is the page which gives an ordinary user some powerful features.
-
-<br></br>
 
 <div align="center">
 <img alt="Become an author" width=300 src="https://live.staticflickr.com/65535/51492129055_96ed041398.jpg" />
 </div>
 
-<br></br>
 
 At the moment, this page allows everyone to become an author (being added to the Authors group).
 
@@ -105,20 +97,16 @@ If the username or email is already registered, or if passwords do not match, an
 
 In futures releases, when various actions are provided to ordinary users, becoming an author will not be that easy ! >:(
 
-
-<br></br>
 # As Author
 "With great power, comes great responsibilities." 
 
 (Maybe this sentence should have been written in the "As Admin" section, but, from now on, an author can already have some special power)
 
-<br></br>
 
 <div align="center">
 <img alt="As Author" width=500 src="https://live.staticflickr.com/65535/51491912139_d1f6480518.jpg" />
 </div>
 
-<br></br>
 
 An Author grows the webpage up. They have their own dashboard. 
 
@@ -132,13 +120,12 @@ Submit an article doesn't mean it will suddenly show up at the home page. An adm
 
 Here is where authors enjoy their free time. (Beautiful, isn't it ?)
 
-<br></br>
+
 
 <div align="center">
 <img alt="Dashboard" src="https://media.giphy.com/media/rBja6oxIU7hjO9rB2x/giphy.gif?cid=790b761150a5338df12e27f7772bef1cfcb63ed3cab74fbb&rid=giphy.gif&ct=g" />
 </div>
 
-<br></br>
 
 The Dashboard shows all author's publications, pending requests, and saved publications. 
 
@@ -149,13 +136,10 @@ Every time an author wants to publish a new article, the first thing to do is to
 
 This leads the author to a friendly New Publication page, where will be written **title and content of the new article**.
 
-<br></br>
 
 <div align="center">
 <img alt="New Publication" width=530 src="https://live.staticflickr.com/65535/51491201586_d0be78cd01.jpg" />
 </div>
-
-<br></br>
 
 ## Publications,  requests and saves
 
@@ -170,18 +154,12 @@ As you can see in the last picture, at bottom of the page, **the author can choo
 
 The **submit button** is very important. Once the author submit an article, in order to write a new article, he/she needs to **wait until an admin approve or decline it**.
 
-<br></br>
-
 # As Admin
 Being an author is good, but being an admin is **wonderful** (*and dangerous*).
 
-<br></br>
-
 <div align="center">
-<img alt="Image of Home Page as Admin" width=550 src="https://live.staticflickr.com/65535/51491419278_5952335769.jpg" />
+<img alt="Image of Home Page as Admin" width=550 src="https://live.staticflickr.com/65535/51491201616_4e459a7c07.jpg" />
 </div>
-
-<br></br>
 
 An admin has **full control** of requests and publications.
 In order to become an admin, it is necessary to contact other admin - there is no interface for this.
@@ -195,8 +173,6 @@ The Admin Dashboard allows an admin to visualize all current requests and if the
 - If the admin **declines** it, this article will **return to author's dashboard as a save**.
 
 This dashboard also shows all current articles in the home page, and allows the admin to visualize and delete any, if needed.
-
-<br></br>
 
 <div align="center">
 <img alt="Image of Admin Dashboard" width=550 src="https://live.staticflickr.com/65535/51491419278_5952335769.jpg" />
