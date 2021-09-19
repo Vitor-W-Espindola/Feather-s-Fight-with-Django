@@ -4,7 +4,7 @@ from datetime import *
 
 from ckeditor.fields import RichTextField
 # Create your models here.
-class Fight(models.Model):
+class Article(models.Model):
     title = models.CharField(max_length=30)
     text = RichTextField()
     pub_date = models.DateTimeField()
@@ -13,7 +13,7 @@ class Fight(models.Model):
     def __str__(self):
         return "%i -> %s" % (self.id, self.title)
 
-class PublicationRequest(models.Model):
+class ArticleRequest(models.Model):
     title = models.CharField(max_length=30)
     text = RichTextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=False, limit_choices_to={'groups__name':'Authors'})
@@ -21,7 +21,7 @@ class PublicationRequest(models.Model):
 
     def __str__(self):
         return "%s - %s" % (self.title, self.author.username)
-class SavePublication(models.Model):
+class SavedArticle(models.Model):
     title = models.CharField(max_length=30)
     text = RichTextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=False, limit_choices_to={'groups__name':'Authors'})

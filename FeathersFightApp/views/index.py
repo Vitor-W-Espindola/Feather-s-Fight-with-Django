@@ -1,40 +1,36 @@
-from FeathersFightApp.forms import PublicationRequestForm
-from django.http.request import HttpRequest, QueryDict
 from django.http.response import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
 from django.template import loader
 from django.core.paginator import Paginator
-from django.contrib.auth.models import User, Group
-from django.contrib import messages
-from django.contrib import auth
-from django.db import IntegrityError
-import json
 
-from bs4 import BeautifulSoup, BeautifulStoneSoup
+from bs4 import BeautifulSoup
 
+from FeathersFightApp.models import Article
 
-from FeathersFightApp.models import PublicationRequest, Fight
-
-
+# This method is used to remove all html tags in the text
 def removeTags(html):
+
     soup = BeautifulSoup(html, "html.parser")
+
     for data in soup(['style', 'script']):
         data.decompose()
   
-    # return data by retrieving the tag content
     return ' '.join(soup.stripped_strings)   
 
-
+# This method is used when user browse localhost:8000/
 def index_with_no_page(request):
     return HttpResponseRedirect('/1')
 
+# This method is used to retrieve the home page
+# and display the current page of articles
+# from the url localhost:8000/{page}
 def index_with_page(request, index_page_id):
 
     username = "Visitor"
     logged_in = 0
     author = 0
     admin = 0
+
     if(request.user.is_authenticated == True):
         username = request.user.username
         logged_in = 1
@@ -44,32 +40,26 @@ def index_with_page(request, index_page_id):
         if(request.user.is_superuser):
             admin = 1
 
-    fights = Fight.objects.all()
+    articles = Article.objects.all()
 
-    class FightWithShortDescription():
-        
-        
-        def __init__(self, fight):
-                
-            self.fight = fight
-            self.description_with_tags = removeTags(fight.text)
+    # This class is used to retrieve the article with its short description
+    class ArticlesWithShortDescription():
+        def __init__(self, article): 
+            self.article = article
+            self.description_with_tags = removeTags(article.text)
             self.short_description = "%s%s" % (' '.join(self.description_with_tags.split(" ")[: 6]),  "...")
-            print(self.short_description)
 
+    articles_with_short_description = []
     
-
-    fights_with_short_description = []
-    
-    for fight in fights:
-        fights_with_short_description.append(FightWithShortDescription(fight))
-
+    for article in articles:
+        articles_with_short_description.append(ArticlesWithShortDescription(article))
 
     items_for_page = 4
-    paginator = Paginator(fights_with_short_description, items_for_page)
+    paginator = Paginator(articles_with_short_description, items_for_page)
 
     template = loader.get_template('FeathersFightApp/index.html')
     context = {
-        'fights_list': paginator.page(index_page_id).object_list,
+        'articles_list': paginator.page(index_page_id).object_list,
         'range_of_pages': paginator.page_range,
         'index_page_id': index_page_id,
         "username": username,
@@ -77,12 +67,18 @@ def index_with_page(request, index_page_id):
         "author": author,
         "admin": admin
     }
+
     return HttpResponse(template.render(context, request))
 
-def fight(request, fight_id):
-    fight = Fight.objects.get(pk=fight_id)
-    template = loader.get_template('FeathersFightApp/fight.html')
+# This method is used to retrieve the article page
+# by the url localhost:8000/{page}/article/{article_id}
+def article(request, article_id):
+
+    article = Article.objects.get(pk=article_id)
+
+    template = loader.get_template('FeathersFightApp/article.html')
     context = {
-        'fight':fight,
+        'article':article,
     }
+
     return HttpResponse(template.render(context, request))

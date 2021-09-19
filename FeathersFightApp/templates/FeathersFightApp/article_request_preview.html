@@ -8,27 +8,27 @@
 
 <body>
 
-    {% if request %}
+    {% if article_request %}
 
     <div class="request_preview_title">
         <label>
-            {{ request.title }}
+            {{ article_request.title }}
         </label>
     </div>
     <div class="request_preview_text">
         <label>
-            {{ request.text|safe }}
+            {{ article_request.text|safe }}
         </label>
     </div>
     <p></p>
     <div class="request_preview_pub_date">
         <label>
-            {{ request.request_datetime }}
+            {{ article_request.request_datetime }}
         </label>
     </div>
     <div class="request_preview_author">
         <label>
-            Written by {{ request.author.username }}
+            Written by {{ article_request.author.username }}
         </label>
     </div>
 
@@ -36,7 +36,7 @@
 
     <div class="request_preview_description">
         <label>
-            Error: Request object not received.
+            Error: Article Request object not received.
         </label>
     </div>
 

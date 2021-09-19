@@ -1,24 +1,15 @@
-from FeathersFightApp.forms import PublicationRequestForm
-from django.http.request import HttpRequest, QueryDict
 from django.http.response import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
 from django.template import loader
-from django.core.paginator import Paginator
-from django.contrib.auth.models import User, Group
-from django.contrib import messages
 from django.contrib import auth
-from django.db import IntegrityError
-import json
 
-from bs4 import BeautifulSoup, BeautifulStoneSoup
-
-from FeathersFightApp.models import PublicationRequest, Fight
-
+# This method is used to retrieve the login page
 def login_page(request):
     template = loader.get_template('FeathersFightApp/login.html')
     return HttpResponse(template.render({}, request))
 
+# This method is used to process a log in
+# when the url localhost:8000/login/success is required
 def login_process(request):
     
     if(request.method != "POST"):
@@ -36,6 +27,8 @@ def login_process(request):
     else: 
         return HttpResponse("Authetication failed.")
 
+# This method is used to process a log out
+# when the url localhost:8000/logout
 def logout_process(request):
     auth.logout(request)
     return HttpResponseRedirect('/')

@@ -21,21 +21,27 @@
             <div class="admin_dashboard_requests_text">All requests</div>
         </div>
 
-        {% if pub_requests %}
-        {% for request in pub_requests %}
+        {% if article_requests %}
+        {% for article_request in article_requests %}
 
         <div class="admin_dashboard_publication_request">
-            <div class="admin_dashboard_publication_request_title">{{ request.pub_request.title }}</div>
-            <div class="admin_dashboard_publication_request_author">- {{ request.pub_request.author.username }}</div>
-            <div class="admin_dashboard_publication_request_short_description">{{ request.short_description }}</div>
-            <div class="admin_dashboard_publication_request_datetime">{{ request.pub_request.request_datetime }}</div>
+            <div class="admin_dashboard_publication_request_title">{{ article_request.article_request.title }}</div>
+            <div class="admin_dashboard_publication_request_author">
+                - {{ article_request.article_request.author.username }}
+            </div>
+            <div class="admin_dashboard_publication_request_short_description">
+                {{ article_request.short_description }}
+            </div>
+            <div class="admin_dashboard_publication_request_datetime">
+                {{ article_request.article_request.request_datetime }}
+            </div>
 
             <div class="admin_dashboard_publication_request_actions">
-                <a href="admin_preview_request/{{ request.pub_request.id }}"
+                <a href="admin_dashboard/admin_article_request_preview/{{ article_request.article_request.id }}"
                     class="admin_dashboard_publication_request_action">Visualize</a>
-                <a href="admin_dashboard/approve/{{ request.pub_request.id }}"
+                <a href="admin_dashboard/approve/{{ article_request.article_request.id }}"
                     class="admin_dashboard_publication_request_action">Approve</a>
-                <a href="admin_dashboard/decline/{{ request.pub_request.id }}"
+                <a href="admin_dashboard/decline/{{ article_request.article_request.id }}"
                     class="admin_dashboard_publication_request_action">Decline</a>
             </div>
         </div>
@@ -50,17 +56,18 @@
             <div class="admin_dashboard_authors_publications_text">All publications</div>
         </div>
 
-        {% if publications %}
-        {% for pub in publications %}
+        {% if articles %}
+        {% for article in articles %}
 
         <div class="admin_dashboard_author_publication">
-            <div class="admin_dashboard_author_publication_title">{{ pub.pub.title }}</div>
-            <div class="admin_dashboard_author_publication_author">- {{ pub.pub.author.username }}</div>
-            <div class="admin_dashboard_author_publication_short_description">{{ pub.short_description }}</div>
-            <div class="admin_dashboard_author_publication_datetime">{{ pub.pub.pub_date }}</div>
+            <div class="admin_dashboard_author_publication_title">{{ article.article.title }}</div>
+            <div class="admin_dashboard_author_publication_author">- {{ article.article.author.username }}</div>
+            <div class="admin_dashboard_author_publication_short_description">{{ article.short_description }}</div>
+            <div class="admin_dashboard_author_publication_datetime">{{ article.article.pub_date }}</div>
             <div class="admin_dashboard_author_publication_actions">
-                <a href="admin_preview/{{ pub.pub.id }}" class="admin_dashboard_author_publication_action">Visualize</a>
-                <a href="admin_dashboard/delete/{{ pub.pub.id }}"
+                <a href="admin_dashboard/admin_article_preview/{{ article.article.id }}"
+                    class="admin_dashboard_author_publication_action">Visualize</a>
+                <a href="admin_dashboard/delete/{{ article.article.id }}"
                     class="admin_dashboard_author_publication_action">Delete</a>
             </div>
         </div>

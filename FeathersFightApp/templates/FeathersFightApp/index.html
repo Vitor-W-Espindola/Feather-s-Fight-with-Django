@@ -16,15 +16,15 @@
 
     <div class="index_item_container">
 
-        {% if fights_list %}
-        {% for fight in fights_list %}
+        {% if articles_list %}
+        {% for article in articles_list %}
         <div class="index_item_div">
-            <div class="index_short_description">{{ fight.short_description }}</div>
-            <a href="/fight/{{ fight.fight.id }}" class="index_fightref">{{ fight.fight.title }}</a>
+            <div class="index_short_description">{{ article.short_description }}</div>
+            <a href="/article/{{ article.article.id }}" class="index_fightref">{{ article.article.title }}</a>
         </div>
         {% endfor %}
         {% else %}
-        <p>Fights list is empty.</p>
+        <p>Articles list is empty.</p>
         {% endif %}
 
     </div>

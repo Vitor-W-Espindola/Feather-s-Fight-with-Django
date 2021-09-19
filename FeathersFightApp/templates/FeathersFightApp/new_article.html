@@ -9,7 +9,7 @@
 
 <body>
 
-    <div class="new_publication_header_text">New Publication</div>
+    <div class="new_publication_header_text">New Article</div>
     <form method="POST" class="new_publication_form">{% csrf_token %}
 
         <input type="text" class="new_publication_title_input" name="title" placeholder="Title">
@@ -20,7 +20,7 @@
         </div>
 
         <div class="new_publication_submit">
-            <input type="submit" formaction="/dashboard/submit/new" class="new_publication_submit_button"
+            <input type="submit" formaction="/dashboard/new/submit" class="new_publication_submit_button"
                 value="Submit">
         </div>
 

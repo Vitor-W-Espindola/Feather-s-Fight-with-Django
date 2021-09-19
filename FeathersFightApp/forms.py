@@ -1,9 +1,9 @@
 # forms.py
 from django.forms import ModelForm
-from .models import PublicationRequest
+from .models import ArticleRequest
 
-class PublicationRequestForm(ModelForm):
+class ArticleRequestForm(ModelForm):
     class Meta:
-        model = PublicationRequest
+        model = ArticleRequest
         fields = ['text']
 

@@ -12,7 +12,7 @@
     <div class="edit_publication_header_text">Edit Publication</div>
     <form method="POST" class="edit_publication_form">{% csrf_token %}
 
-        <input type="text" class="edit_publication_title_input" name="title" value="{{ save.title }}"
+        <input type="text" class="edit_publication_title_input" name="title" value="{{ article_save.title }}"
             placeholder="Title">
 
         <div class="edit_publicaiton_text_area" name="text">
@@ -21,17 +21,17 @@
         </div>
 
         <div class="edit_publication_submit">
-            <input type="submit" formaction="/dashboard/submit/save/{{ save.id }}"
+            <input type="submit" formaction="/dashboard/edit/submit/{{ article_save.id }}"
                 class="edit_publication_submit_button" value="Submit">
         </div>
 
         <div class="edit_publication_save_and_keep">
-            <input type="submit" formaction="/dashboard/edit/save/{{ save.id }}"
+            <input type="submit" formaction="/dashboard/edit/save/{{ article_save.id }}"
                 class="edit_publication_save_and_keep_button" value="Save and Keep Writing">
         </div>
 
         <div class="edit_publication_save_and_return">
-            <input type="submit" formaction="/dashboard/edit/save/dashboard/{{ save.id }}"
+            <input type="submit" formaction="/dashboard/edit/save/dashboard/{{ article_save.id }}"
                 class="edit_publication_save_and_return_button" value="Save and Return to Dashboard">
         </div>
 

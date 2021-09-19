@@ -8,27 +8,27 @@
 
 <body>
 
-    {% if pub_request %}
+    {% if article %}
 
     <div class="admin_preview_request_title">
         <label>
-            {{ pub_request.title }}
+            {{ article.title }}
         </label>
     </div>
     <div class="admin_preview_request_text">
         <label>
-            {{ pub_request.text|safe }}
+            {{ article.text|safe }}
         </label>
     </div>
     <p></p>
     <div class="admin_preview_request_pub_date">
         <label>
-            {{ pub_request.request_datetime }}
+            {{ article.pub_date }}
         </label>
     </div>
     <div class="admin_preview_request_author">
         <label>
-            Written by {{ pub_request.author.username }}
+            Written by {{ article.author.username }}
         </label>
     </div>
 
@@ -36,7 +36,7 @@
 
     <div class="admin_preview_request_error">
         <label>
-            Error: Request object not received.
+            Error: Article object not received.
         </label>
     </div>
 
@@ -45,7 +45,7 @@
     <footer>
         <div class="admin_preview_request_footer_info">
 
-            <div class="admin_preview_request_footer_info_item"><a href="/admin_dashboard"
+            <div class="admin_preview_request_footer_info_item"><a href="/dashboard"
                     class="admin_preview_request_footer_info_item">Back to Dashboard</a>
             </div>
         </div>

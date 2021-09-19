@@ -8,27 +8,27 @@
 
 <body>
 
-    {% if publication %}
+    {% if article_request %}
 
     <div class="fight_preview_title">
         <label>
-            {{ publication.title }}
+            {{ article_request.title }}
         </label>
     </div>
     <div class="fight_preview_text">
         <label>
-            {{ publication.text|safe }}
+            {{ article_request.text|safe }}
         </label>
     </div>
     <p></p>
     <div class="fight_preview_pub_date">
         <label>
-            {{ publication.pub_date }}
+            {{ article_request.request_datetime }}
         </label>
     </div>
     <div class="fight_preview_author">
         <label>
-            Written by {{ publication.author.username }}
+            Written by {{ article_request.author.username }}
         </label>
     </div>
 
@@ -36,7 +36,7 @@
 
     <div class="fight_preview_error">
         <label>
-            Error: Publication object not received.
+            Error: Article Request object not received.
         </label>
     </div>
 
@@ -45,8 +45,9 @@
     <footer>
         <div class="fight_preview_footer_info">
 
-            <div class="fight_preview_footer_info_item"><a href="/dashboard" class="fight_preview_footer_info_item">Back
-                    to Dashboard</a></div>
+            <div class="fight_preview_footer_info_item"><a href="/admin_dashboard"
+                    class="fight_preview_footer_info_item">Back
+                    to Admin Dashboard</a></div>
 
 
         </div>

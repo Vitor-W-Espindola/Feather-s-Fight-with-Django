@@ -1,100 +1,116 @@
-from django import template
-from FeathersFightApp.views.dashboard import save_publication_page
-from FeathersFightApp.forms import PublicationRequestForm
-from django.http.request import HttpRequest, QueryDict
+from FeathersFightApp.views.index import article
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
 from django.template import loader
-from django.core.paginator import Paginator
-from django.contrib.auth.models import User, Group
-from django.contrib import messages
-from django.contrib import auth
-from django.db import IntegrityError
-import json
 
 from datetime import *
 
-from bs4 import BeautifulSoup, BeautifulStoneSoup
+from bs4 import BeautifulSoup
 
-from FeathersFightApp.models import PublicationRequest, Fight, SavePublication
+from FeathersFightApp.models import Article, ArticleRequest, SavedArticle
 
+#  This method is used to remove all html tags in the tex
 def removeTags(html):
     soup = BeautifulSoup(html, "html.parser")
     for data in soup(['style', 'script']):
         data.decompose()
   
-    # return data by retrieving the tag content
     return ' '.join(soup.stripped_strings)   
 
+# This method is used to retrieve the admin dashboard
+# when the url localhost:8000/dashboard is required
 def admin_dashboard(request):
     
-    pub_requests = PublicationRequest.objects.all()
-    class PublicationRequestWithShortDescription():
-        def __init__(self, pub_request):
-            self.pub_request = pub_request
-            self.short_description = "%s%s" % (' '.join(removeTags(pub_request.text).split(" ")[: 6]),  "...")
+    article_requests = ArticleRequest.objects.all()
+    class ArticleRequestWithShortDescription():
+        def __init__(self, article_request):
+            self.article_request = article_request
+            self.short_description = "%s%s" % (' '.join(removeTags(article_request.text).split(" ")[: 6]),  "...")
     
-    publications_saved_with_short_description = []
+    article_requests_with_short_description = []
     
-    for pub_request in pub_requests:
-        publications_saved_with_short_description.append(PublicationRequestWithShortDescription(pub_request))
+    for article_request in article_requests:
+        article_requests_with_short_description.append(ArticleRequestWithShortDescription(article_request))
     
-    publications = Fight.objects.all()
-    class PublicationWithShortDescription():
-        def __init__(self, pub):
-            self.pub = pub
-            self.short_description = "%s%s" % (' '.join(removeTags(pub.text).split(" ")[: 6]),  "...")
+    articles = Article.objects.all()
+    class ArticleWithShortDescription():
+        def __init__(self, article):
+            self.article = article
+            self.short_description = "%s%s" % (' '.join(removeTags(article.text).split(" ")[: 6]),  "...")
     
-    publications_with_short_description = []
+    articles_with_short_description = []
     
-    for pub in publications:
-        publications_with_short_description.append(PublicationWithShortDescription(pub))
+    for article in articles:
+        articles_with_short_description.append(ArticleWithShortDescription(article))
 
     template = loader.get_template('FeathersFightApp/admin_dashboard.html')
     context = {
-        "publications":publications_with_short_description,
-        "pub_requests":publications_saved_with_short_description
+        "articles":articles_with_short_description,
+        "article_requests":article_requests_with_short_description
     }
+    
     return HttpResponse(template.render(context, request))
 
-def admin_preview_request(request, request_id):
-    pub_request = PublicationRequest.objects.get(pk=request_id)
-    template = loader.get_template('FeathersFightApp/admin_preview_request.html')
+# This method is used to retrieve the preview of an article request
+# when the url localhost:8000/admin_dashboard/admin_article_request_preview/{{ article_request_id }} is required
+def admin_article_request_preview(request, article_request_id):
+    article_request = ArticleRequest.objects.get(pk=article_request_id)
+    template = loader.get_template('FeathersFightApp/admin_article_request_preview.html')
     context = {
-        'pub_request':pub_request,
+        'article_request':article_request,
     }
     return HttpResponse(template.render(context, request))
 
-def admin_approve(request, request_id):
-
-    save = PublicationRequest.objects.get(pk=request_id)
-    save.delete()
-
-    new_fight = Fight.objects.create(title=save.title, text=save.text, pub_date=datetime.now(), author=save.author)
-
-    return HttpResponseRedirect('/admin_dashboard')
-
-def admin_decline(request, request_id):
-
-    save = PublicationRequest.objects.get(pk=request_id)
-    SavePublication.objects.create(title=save.title, text=save.text, author=save.author, last_save=save.request_datetime)
-    save.delete()
-
-    return HttpResponseRedirect('/admin_dashboard')
-
-def admin_preview(request, pub_id):
-    publication = Fight.objects.get(pk=pub_id)
-    template = loader.get_template('FeathersFightApp/admin_preview.html')
+# This method is used to retrieve the preview of an article
+# when the url localhost:8000/admin_dashboard/admin_article_preview/{{ article_id }} is required
+def admin_article_preview(request, article_id):
+    publication = Article.objects.get(pk=article_id)
+    template = loader.get_template('FeathersFightApp/admin_article_preview.html')
     context = {
         'publication':publication,
     }
     return HttpResponse(template.render(context, request))
 
-def admin_delete(request, pub_id):
+# This method is used to approve an article request 
+# and redirect to admin dashboard
+# when the url localhost:8000/admin_dashboard/approve/{{ article_request_id }} is required
+def admin_approve(request, article_request_id):
 
-    pub = Fight.objects.get(pk=pub_id)
-    pub.delete()
+    article_request = ArticleRequest.objects.get(pk=article_request_id)
+    article_request.delete()
+
+    new_fight = Article.objects.create(
+        title=article_request.title,
+         text=article_request.text,
+          pub_date=datetime.now(),
+           author=article_request.author)
+
+    return HttpResponseRedirect('/admin_dashboard')
+
+# This method is used to decline an article request,
+# return the article request to author as a saved article 
+# and redirect to admin dashboard
+# when the url localhost:8000/admin_dashboard/decline/{{ article_request_id }} is required
+def admin_decline(request, article_request_id):
+
+    article_request = ArticleRequest.objects.get(pk=article_request_id)
+    SavedArticle.objects.create(
+        title=article_request.title,
+         text=article_request.text,
+          author=article_request.author,
+           last_save=article_request.request_datetime)
+    article_request.delete()
+
+    return HttpResponseRedirect('/admin_dashboard')
+
+# This method is used to delete an article,
+# and redirect to admin dashboard
+# when the url localhost:8000/admin_dashboard/delete/{{ article_id }} is required
+def admin_delete(request, article_id):
+
+    article = Article.objects.get(pk=article_id)
+    article.delete()
 
     return HttpResponseRedirect('/admin_dashboard')
 

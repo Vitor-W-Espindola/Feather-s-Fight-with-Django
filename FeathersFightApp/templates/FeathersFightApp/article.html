@@ -8,27 +8,27 @@
 
 <body>
 
-    {% if fight %}
+    {% if article %}
 
     <div class="title">
         <label>
-            {{ fight.title }}
+            {{ article.title }}
         </label>
     </div>
     <div class="text">
         <label>
-            {{ fight.text|safe|linebreaks }}
+            {{ article.text|safe|linebreaks }}
         </label>
     </div>
     <p></p>
     <div class="pub_date">
         <label>
-            {{ fight.pub_date }}
+            {{ article.pub_date }}
         </label>
     </div>
     <div class="author">
         <label>
-            Written by {{ fight.author.username }}
+            Written by {{ article.author.username }}
         </label>
     </div>
 
@@ -36,7 +36,7 @@
 
     <div class="error">
         <label>
-            Error: Fight object not received.
+            Error: Article object not received.
         </label>
     </div>
 
