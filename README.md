@@ -1,6 +1,7 @@
 <div align="center">
-<img alt="Logo" src="https://lh3.googleusercontent.com/V8MOxOcFMQhgg3ES5uMok_hPZNzKKJQf-E_QOIUIEwfiIQSQzlIeCRsZCO745tyBuTA3jY76I1zvcTnBsrWFCAMEm2aKew7686eUrvX18CXcuLtlwMG0rg8jK8nuxx5rUJENJWQG67ExZksxNgazR6Znj8wV-i4u_ob4eXBPiGMtOCgkbda1kC1LE-vByZEaMAQ4bTdTeJcvZsgL4Ks_KW7jvpbP-oCLWBcx6EJ6QUFl68YOvZGBEU3zX1z3a938WkKJbroaNBOBlx_EX1fsCZeNocYq_aBE2R5IeIyEhKWa8j0uTumz0cqjRHqFiNW7WWOXkpz49uutx29uPE_AUaQgIqY80mrzZZJZg8zkXmdtVhyWliLQVI-LpL3FIYXaJnoFIixfACQv0RfiQ6p8tC6YUUis2qC3pmqnpNjpdfwOI7hybufOoigIh5KXnHSxV8AMYdtvDanqeJ7plWX7k4OaeMD_ONoAItjCejBz9dJmLjOWwXTF0gV8VPRnba6FfHxx_flJ_96XeQSMngJRnouxaCs_XAdG2bEd58S6FeoyIOaDdRjrYy1Ik2Wm1ipu_3YqWsb3wi4fbDc9oHR9DtOma3tb-IGa0v5Nno13EW2the2paKww8zHV_hguIpv7wBJGOc7J-JAWeoDSlOGJAgLNnmvX2L_DUQpG91FxPS5nrFmEiumvZZucqiz1Gy2v0Bu1W4qxAq8aHU-FP3svcQ=w571-h156-no?authuser=1" />
+<img alt="Logo" src="https://live.staticflickr.com/65535/51492129080_082ac41c7b.jpg" />
 </div>
+
 <br></br>
 
 **Feather's Fight** is a simple journalistic web page. Authors write about fighting culture among various styles and new discoveries around the world.
@@ -117,6 +118,8 @@ In futures releases, when various actions are provided to ordinary users, becomi
 <img alt="As Author" width=500 src="https://live.staticflickr.com/65535/51491912139_d1f6480518.jpg" />
 </div>
 
+<br></br>
+
 An Author grows the webpage up. They have their own dashboard. 
 
 As an Author, it is possible to create a new article, edit it, save it, and, finally, submit it. 
@@ -149,7 +152,7 @@ This leads the author to a friendly New Publication page, where will be written 
 <br></br>
 
 <div align="center">
-<img alt="New Publication" width=550 height=439 src="https://live.staticflickr.com/65535/51491201586_d0be78cd01.jpg" />
+<img alt="New Publication" width=520 src="https://live.staticflickr.com/65535/51491201586_d0be78cd01.jpg" />
 </div>
 
 <br></br>
@@ -174,7 +177,9 @@ Being an author is good, but being an admin is **wonderful** (*and dangerous*).
 
 <br></br>
 
-![Image of home page as admin](https://live.staticflickr.com/65535/51491201616_4e459a7c07.jpg)
+
+<img alt="Image of Home Page as Admin" width=550 src="https://live.staticflickr.com/65535/51491419278_5952335769.jpg" />
+</div>
 
 <br></br>
 
@@ -193,6 +198,6 @@ This dashboard also shows all current articles in the home page, and allows the 
 
 <br></br>
 
-![Image of Admin Dashboard](https://lh3.googleusercontent.com/b8EXwV7dkK9PoAQQPG7JfYyrXz20ZoxgPTMkWZITahUl-QNS4-lV--8be2IfrWhU04E1UWBppfhlqdf0I2TarYbnNVBnOkewiS0GiqOeR4e9tYHes-r2zh9k3RZCOLZnhpFJmPpn2T7dj0aep55hkaRgzxWMHtyYpVvgLSlLGfpNgwL9ZVlrqOk8QFmdrLhxCIj6vpweiFqOoTZhe4wo5-sF_gVK_01COyGjOjOAcwwNSSr0KjY5q9mWhvxCkzH67AOPS-1hDVB3UWg1aNqcaxgnXDjQQ-8DptQ6q0apAWalamPSaGGQwBO48QgKqcf6KD0AAb_ZaNpSzenyXDVuSBu19bzBZ8OgSjfGuDtAKPzN-3YHDfrWNIjpkPG5B_Y7lX2vwa4B0seAZqrVzRD1f3TEkMOUH9-LbBnCNGUrsdXUc9h0T_am_5JrzwLErK3tqNrdSproCatjdcJHmqrM3RE15QvkOZFlNBM2CBNsfwvUBcRiXHMkvJdHihIwiBj_-lXKtkHk3WQeRMjLlezqPuJ9mia0_g132CAlsZZqwNZ1TSeX5JL_jrZKsBYqmshD6j_IW_c-Qt3b50uMue8qhZNMQMMMhuHASTdZ1Xrxljt_5Y8OXLzFjmK0iKp8JGmLAL6tiKSLxppQ6wtToYMZfL-HqceFc8hqtLMbKa3Vft-x3C8nFeQP2dvHg5Ae_O9J5i0G4jyQteDbvnXOzNQHhQ=w1300-h811-no?authuser=1)
-
-
+<div align="center">
+<img alt="Image of Admin Dashboard" width=550 src="https://live.staticflickr.com/65535/51491419278_5952335769.jpg" />
+</div>
