@@ -152,7 +152,7 @@ This leads the author to a friendly New Publication page, where will be written 
 <br></br>
 
 <div align="center">
-<img alt="New Publication" width=520 src="https://live.staticflickr.com/65535/51491201586_d0be78cd01.jpg" />
+<img alt="New Publication" width=530 src="https://live.staticflickr.com/65535/51491201586_d0be78cd01.jpg" />
 </div>
 
 <br></br>
@@ -177,7 +177,7 @@ Being an author is good, but being an admin is **wonderful** (*and dangerous*).
 
 <br></br>
 
-
+<div align="center">
 <img alt="Image of Home Page as Admin" width=550 src="https://live.staticflickr.com/65535/51491419278_5952335769.jpg" />
 </div>
 
