@@ -208,12 +208,11 @@ def edit_article_save(request, article_save_id):
         try:
             article_save = SavedArticle.objects.get(pk=article_save_id, author=request.user)
         except:
-                print("B")
                 return HttpResponse("Not found.")
     
     form = ArticleRequestForm(instance=article_save)
 
-    template = loader.get_template('FeathersFightApp/edit_save.html')
+    template = loader.get_template('FeathersFightApp/edit_article_save.html')
     context = {
         'form':form,
         'article_save':article_save

@@ -9,7 +9,7 @@
 
 <body>
 
-    <div class="edit_article_header_text">Edit Publication</div>
+    <div class="edit_article_header_text">Edit Article</div>
     <form method="POST" class="edit_article_form">{% csrf_token %}
 
         <input type="text" class="edit_article_title_input" name="title" value="{{ article_save.title }}"

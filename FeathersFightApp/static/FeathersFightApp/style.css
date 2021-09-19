@@ -436,24 +436,24 @@ input[type="password"]:focus {
   color: rgb(62, 122, 233);
   text-decoration: none;
 }
-.dashboard_saves {
+.dashboard_article_saves {
   padding-left: 60px;
   padding-top: 45px;
 }
-.dashboard_save_title {
+.dashboard_article_save_title {
   display: inline;
   font-size: 21px;
 }
-.dashboard_save_last_save {
+.dashboard_article_save_last_save {
   display: inline;
   padding-left: 4px;
   font-style: italic;
   font-size: 15px;
 }
-.dashboard_save_actions {
+.dashboard_article_save_actions {
   padding-top: 15px;
 }
-.dashboard_save_action {
+.dashboard_article_save_action {
   padding-right: 15px;
   color: rgb(62, 122, 233);
   text-decoration: none;

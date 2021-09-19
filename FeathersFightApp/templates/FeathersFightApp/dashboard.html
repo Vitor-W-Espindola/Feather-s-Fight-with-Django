@@ -66,12 +66,12 @@
         <div class="dashboard_text">Your Saves</div>
     </div>
     {% for saved_article in saved_articles %}
-    <div class="dashboard_saves">
-        <div class="dashboard_save_title">{{ saved_article.title }}</div>
-        <div class="dashboard_save_last_save">{{ saved_article.last_save }}</div>
-        <div class="dashboard_save_actions">
-            <a href="/dashboard/edit/{{ saved_article.id }}" class="dashboard_save_action">Edit</a>
-            <a href="/dashboard/delete/save/{{ saved_article.id }}" class="dashboard_save_action">Delete</a>
+    <div class="dashboard_article_saves">
+        <div class="dashboard_article_save_title">{{ saved_article.title }}</div>
+        <div class="dashboard_article_save_last_save">{{ saved_article.last_save }}</div>
+        <div class="dashboard_article_save_actions">
+            <a href="/dashboard/edit/{{ saved_article.id }}" class="dashboard_article_save_action">Edit</a>
+            <a href="/dashboard/delete/save/{{ saved_article.id }}" class="dashboard_article_save_action">Delete</a>
         </div>
     </div>
     {% endfor %}
