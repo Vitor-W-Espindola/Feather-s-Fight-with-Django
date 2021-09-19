@@ -1,5 +1,5 @@
 <div align="center">
-<img alt="Read an Article" src="https://lh3.googleusercontent.com/V8MOxOcFMQhgg3ES5uMok_hPZNzKKJQf-E_QOIUIEwfiIQSQzlIeCRsZCO745tyBuTA3jY76I1zvcTnBsrWFCAMEm2aKew7686eUrvX18CXcuLtlwMG0rg8jK8nuxx5rUJENJWQG67ExZksxNgazR6Znj8wV-i4u_ob4eXBPiGMtOCgkbda1kC1LE-vByZEaMAQ4bTdTeJcvZsgL4Ks_KW7jvpbP-oCLWBcx6EJ6QUFl68YOvZGBEU3zX1z3a938WkKJbroaNBOBlx_EX1fsCZeNocYq_aBE2R5IeIyEhKWa8j0uTumz0cqjRHqFiNW7WWOXkpz49uutx29uPE_AUaQgIqY80mrzZZJZg8zkXmdtVhyWliLQVI-LpL3FIYXaJnoFIixfACQv0RfiQ6p8tC6YUUis2qC3pmqnpNjpdfwOI7hybufOoigIh5KXnHSxV8AMYdtvDanqeJ7plWX7k4OaeMD_ONoAItjCejBz9dJmLjOWwXTF0gV8VPRnba6FfHxx_flJ_96XeQSMngJRnouxaCs_XAdG2bEd58S6FeoyIOaDdRjrYy1Ik2Wm1ipu_3YqWsb3wi4fbDc9oHR9DtOma3tb-IGa0v5Nno13EW2the2paKww8zHV_hguIpv7wBJGOc7J-JAWeoDSlOGJAgLNnmvX2L_DUQpG91FxPS5nrFmEiumvZZucqiz1Gy2v0Bu1W4qxAq8aHU-FP3svcQ=w571-h156-no?authuser=1" />
+<img alt="Logo" src="https://lh3.googleusercontent.com/V8MOxOcFMQhgg3ES5uMok_hPZNzKKJQf-E_QOIUIEwfiIQSQzlIeCRsZCO745tyBuTA3jY76I1zvcTnBsrWFCAMEm2aKew7686eUrvX18CXcuLtlwMG0rg8jK8nuxx5rUJENJWQG67ExZksxNgazR6Znj8wV-i4u_ob4eXBPiGMtOCgkbda1kC1LE-vByZEaMAQ4bTdTeJcvZsgL4Ks_KW7jvpbP-oCLWBcx6EJ6QUFl68YOvZGBEU3zX1z3a938WkKJbroaNBOBlx_EX1fsCZeNocYq_aBE2R5IeIyEhKWa8j0uTumz0cqjRHqFiNW7WWOXkpz49uutx29uPE_AUaQgIqY80mrzZZJZg8zkXmdtVhyWliLQVI-LpL3FIYXaJnoFIixfACQv0RfiQ6p8tC6YUUis2qC3pmqnpNjpdfwOI7hybufOoigIh5KXnHSxV8AMYdtvDanqeJ7plWX7k4OaeMD_ONoAItjCejBz9dJmLjOWwXTF0gV8VPRnba6FfHxx_flJ_96XeQSMngJRnouxaCs_XAdG2bEd58S6FeoyIOaDdRjrYy1Ik2Wm1ipu_3YqWsb3wi4fbDc9oHR9DtOma3tb-IGa0v5Nno13EW2the2paKww8zHV_hguIpv7wBJGOc7J-JAWeoDSlOGJAgLNnmvX2L_DUQpG91FxPS5nrFmEiumvZZucqiz1Gy2v0Bu1W4qxAq8aHU-FP3svcQ=w571-h156-no?authuser=1" />
 </div>
 <br></br>
 
@@ -31,9 +31,8 @@ Guide:
 <p></p>
 
 <div align="center">
-<img alt="Read an Article" width=500 src="https://lh3.googleusercontent.com/YIXuW_lLbjrg33xKv_75M4ISgsMfcocOkVmP_bAZcnYy8FVatfp0o3Ry0-tfpXCAsF3xvd2xm_x9_DzwycVTd90H9suJAe0MgAVRW4OR-DsIdfTqGsVmBFKL2eLBjR1vjH6Z6bUsMB2WKcKIjIdYgsVq4s_VMDe0B2zRr7Jcx3bk9pq1K7xeC5MFTmvHkpYN-W41ACmE9iX2x90o-NXBTKFMbnsJigLI_I0gwNQo5H97sW52i2ONHKUmYgVpzSHHm94MpB0Uw8jpMN_bROu6HmO4_HayNv5arJbQEP2SlPksLGhgMxz1s7Kn0-ylvUxfv7tvl0IsGjaEctmuZJs219r8JC8NIktkRK4RgFckA6e-CX1tDGM-mb1CqhpCUp973EAb3f5e9oG-yg42HFqcM7XXE31Hf0rkC6nsVeURQ5wIT1_83nr0N4BYbXrmPTW0l9hnvV_-kgIFrDWkKJGdrgYsE9DD4CN_t6xpGwty-bTInoVELU1chKv3UDMGJlaXpA0NsD2UzlyiINNK_tIMIxiWYZ3NQ9dsLJB4bv-bqH4_Y82lmW3c58IDsL5H3uA52VtTxNJapLz5DqM781eO9bmw60j6iAepFpnywjztE9-CoAIu0vTR3MOjL02MGRBJxr0XQ_T0bG8L3bYWt0ibmGmMiC7_9RlsT0woaqXZYnBX16u9eLrmOgQXY3KPXugCb5IZMwx_R_IJDoD6V8LDHZc=w1057-h603-no?authuser=1" />
+<img alt="Read an Article" width=500 src="https://live.staticflickr.com/65535/51491912049_242ddff341_b.jpg" />
 </div>
-
 
 
 User is the simplest you can be in Feather's Flight.
@@ -69,10 +68,8 @@ Here is a very hospitable **Sign Up** Page.
 <br></br>
 
 <div align="center">
-<img alt="Sign up" width=300 src="https://lh3.googleusercontent.com/c8Adei44FmUZOshh5KeaTPnOfLDwUy2SJVrFbG6avWzVZI-juWvWnYYXsiuxkjYKUwKw8nwYImChUf_VSZhdd1qdGjKbgA855C3olqSoHkuCbCSSIKO4LN1rlhK2SLag9wPerBrv4zkj1ihjiZKCetTVHCrrjb_Fo_LTDJaJ4EMUaA1JXAfT1vy54K5vqxMg0Jq72ThuLmfh9vDr6AKxc1kRV9D-TJcTToRNK2VmqGQ7RN85VnRciW6IgIoLOtJAAX_BDMgBnoHEK5rs6pJ4UrDi2baVYG97Vk9snqp1z_uw8Q_xW7BblwUwGpi1ocz0I9buRURI-cALqKRTEucKo8LGOsmGqWvapqr-zufhVTl2raDjo00HXxGVBBYCWbAIU6tO1zuh23habAizUIaJL8_yLuYH65a0ml166MzUwN7MWBumK0fgwiM7y9Ju1WzHdLcn7AgGVw8jSlkY3ikmQ6qTBQvfigzBhSD7-6LWaqRuWoHBGUPiEypeuGM8zHJ2hWghovkRSYKcyCgEXT8Sr27Y07qGNbxtc3CHMMhPrlO5t74ZYMw7H0QmulbehZn2efJhYR5VzuZSUciAduL4OXcanGgKpdCM_L69BbeGT2oC8sWGk4ivLG-alVCbRZ0LU5vfJBuhyUOsV83v0-9nlo9M9VUzWJr-K0JC4DUX0cvunSMS84ep5gsT4i4iXJYWgvI1N8hd7WhAV4ZWxDutCw=w480-h628-no?authuser=1" />
+<img alt="Sign up" width=300 src="https://live.staticflickr.com/65535/51491201576_4248dcf2b8_z.jpg" />
 </div>
-
-<br></br>
 
 As said, since user can only read articles, there is no really advantage in being a registered user (yet xD).
 
@@ -82,9 +79,8 @@ With a beautiful feather displayed on screen, the Log In Page requires user's us
 :D
 
 
-
 <div align="center">
-<img alt="Log in" width=300 src="https://lh3.googleusercontent.com/uENFKzfzSVPrBEjLj-Fc0yTRWgTypIjcsffE9nHxC3_8hdbSRLjb5xr5Fydb_35S1BB4DABJraH__QmN6bAszT0IRNJeWf_6dh8pOaRWwNIh09IPfy4ZM9U4qat1q7MEfOaQ8FdqndKtZShbJpD7ErbMuZy00FQAt_ZRky9adMbVetM8Urq2lJO9Vj6EdnVequ7yFUbUDiCXekRAqC8kw7BDE6gCvwJbfefdkmn2KEqHU9NkqD_VrVhBMvw2xFUwbxFeVMhX4nGl__HYENb8D16fqxOsxQS6ge2y5Hy9HZ7I3wtbbj0pZcoFMeITZ5ZJVS564ll8wCitVOQIoh3PPAwPyUnDKUXVnb6RyEOKk6dlouF-F1hYtonMd2estkdFGuAxVu1iVTg9mVk-0pkvQA4gvkKO0y0PK4EJY0mb7Pr5mNMJWszbnH-ilQCKKZuKsFcb-Z2az-JHzzl_HYoe_vRsZbHw9Zmbqh1JhgO4J6S-mlP-ukBAXx32Pa-AM5U6Dx-41YzJqQXpdrwoemHJ1i9UAEuH-3lw821zVV5pTP4Zi2gdUuAc4GZ2nyugQI9Pgsx4Mvp8ABP6btaSTTd2ENqQyR7kW5PG8sN2vz6EKrf6lPHA2tWJuc7dQG-1jK8oXtpZSHg6vouzXdbY3C4NCY6pDqhsXw4Gjm4QqA1_kMmMJBnPFYR1CsnCXpowoE95Y2kCOD00Su_5Xwwx9YG6PQ=w484-h552-no?authuser=1" />
+<img alt="Log in" width=300 src="https://live.staticflickr.com/65535/51492129010_41c691f907.jpg" />
 </div>
 
 ## Become an author
@@ -96,7 +92,7 @@ This is the page which gives an ordinary user some powerful features.
 <br></br>
 
 <div align="center">
-<img alt="Become an author" width=300 src="https://lh3.googleusercontent.com/mmsQ2qt7kENZiX9P49zZOeLLfaUnMQCb3ozHahmUX2CEj5O0yezbyAzNXj5-fUHB60aGAGEB2SO3pLyqmDarvxkOvB822gdXGVPhCWpNw220U5MFA3tNnHIdnFSxn6uD56x4VQkKv_GHdBeZoYi7RJZQN_l61RQGQWIu1USSlBTbbIQqLgLUpDGDBhEmDJZcXPGJWcyCC2yf_kHeb7Hkw2Ck4tMnLmWkwbUxBj_iDyoH0Df_fY6fmUTm_Sannr0cbTZevCa1dJONCUM695aTNL_C4Up4HmyJ7jMK_PH2D6i7ecdgDbUiEoa2K-99trL4btGu0fB0cx8Eh8jmiMHMFpqtqVp8pfqT_yd8JDW-r0tI3pVvUxTNKJ2ajYxGbU1Ex1hhzod19u_xOha9c_7rJuGoYvruea49MwbOA7v8GjBSsI0ONyTEffqogX8zQKCNiet4-JkipC8xDrcPNuTy749wAFvwZodn2_89wA2O29rlYex65nPNDgI-V1F6U7OKWw27tjhV55gG9IIvCdUnGlQ7F7LmzWxtNNn7Cqiv74ZfjmvoC6znCZEeXOSwbuHSXUk2U9W9tcrHBxPtTb4ikdcOzb-Jd3QLZ8v7OQWveRWVvssHhpE8DQCK50ciGKfeoWrUdQ5kSyutxTso__NlOtOWN9V47HUe6Z_xJ6RlBsYg5HCbdEr2rGgWhsAPipiQ7f-nnlkmq_Bt0IenT-f1iQ=w464-h636-no?authuser=1" />
+<img alt="Become an author" width=300 src="https://live.staticflickr.com/65535/51492129055_96ed041398.jpg" />
 </div>
 
 <br></br>
@@ -118,11 +114,8 @@ In futures releases, when various actions are provided to ordinary users, becomi
 <br></br>
 
 <div align="center">
-<img alt="As Author" width=500 src="https://lh3.googleusercontent.com/YOusjDTbh9drbFwzoOBQc29otAc-XpgVidwSiM1kwP_bYfee7AGkF9RqsyBMJt1kZ68Sjxhlj3KPOOPrV7fgb_BT9lOibY-6RooMZLyd2dkx96VMdCB4Dp3g1Zk2IVftBYKTDcF-ObyrxlLXomLNZWjm_aecZXusFuzuBWMem5qveU9ENa187zoKcml7iiHUDg6ptF63P6ZOyYdyJnytdrZLGNWriGC6SUiJrjPgx5tp88_2ZZ57f4OgVkcLSXlNpIUyCC4WbbUVFiX98xpzfo539jp-49NvvFZ9vGv05YrfISTBuwpwpeJulFrdtopB_P2BpAGT_DMyDZDYw_EctKsFYx1kCVOiN26j4XPySOlzo3sOSeiRmM6UDkd4WJtsFwviUQCsMjdpCtjcscfX094qwVdPESPHykhlj02W45Bp5_fWh5U8WtGKL7X7jokJKZN6qyeL-fZOW9RNDQTAXSP6rXfHOt7-s2XlZIBhn6p0php4mYOUAz5MXOWwwZ7fOBKs1gJozC1XTm_bYyjMkAfKkaHVjfJUSOn98OggfTauuyDtgXsnSXdpaAMN7ClTXQhamBtwU3iaRV3vDeRNcuRNLSQQKRMET3FaFWq5pPiihlozAhtygzldD9nwBibc6jXFniNSh2ejjUgahnw1DPOPNO0O-XrOo2-K2Os0PLXr6tiKmPcYPUgJKFMsfX0XfhsRHpvtiDKQRWpIWGLUPw=w1032-h681-no?authuser=1" />
+<img alt="As Author" width=500 src="https://live.staticflickr.com/65535/51491912139_d1f6480518.jpg" />
 </div>
-
-
-<br></br>
 
 An Author grows the webpage up. They have their own dashboard. 
 
@@ -156,7 +149,7 @@ This leads the author to a friendly New Publication page, where will be written 
 <br></br>
 
 <div align="center">
-<img alt="New Publication" width=550 height=439 src="https://lh3.googleusercontent.com/WaJTjYc3yA7ZUoFhc6wahpo6t6Ti242DNXomldRl1QNtEQXsMnjdrxGfFEqyw_jPUK8e0640DyI2y4qLQ1Y3UPb5wUXcs5Zg-SYFlZJVyWdUkqh_JjFoazlulOjFqgeb85PbPZ4rJWe1jU0UxKaSTotsEJq0NmF3fSzbtL3gOzPEJtHMy2j-GNR47PJv10UU5HsCECV_sLdtvGWmGhxb7QhPpHerOMzQOSrXIqvR0LB_rfTQ4bh6RowJDZU26J4yTmsvv3yzA2vVFyVU_n2woNqx4B6Nh4ff1Chl44llBUBLjN-1Rle6TNRzkYImJT0-v9eST7c7Ofw9unkF5L3lSVzU1CPOflylB6tToTTZYOS0cs332fld1FtiZUdteawwwDG4detsR150OuhfRML6ywOGxbRhN5iaOc8lKxY9bYULifwWIDjodIoVi8wDcEq-qJ2Jxe2I_I8MgHCQv0zi3lQpc8Cb_6G975RHoUb1YUcu-rsL2T4TOuHfazbtwDumJfKSpBdtxLFAk6xA_54PsOfEgca-EEh_O-UwtG1nO0XW5hvm9mx_dc-zhS6UNO3s4Zl4EkDNlXSEjTm8k5G6OQsLRsjk5WdIwRmuy7CvRQ8G94EykJBE2fiOfqK8oGJeY0a6RprgZLl_t005i71pEY7GysPpp3pLhS2WTr0LjSOO65nfTXEjxOn5jI6U2Q9oG5iete0JGyy8LaEzxPPe0g=w1101-h879-no?authuser=1" />
+<img alt="New Publication" width=550 height=439 src="https://live.staticflickr.com/65535/51491201586_d0be78cd01.jpg" />
 </div>
 
 <br></br>
@@ -181,7 +174,7 @@ Being an author is good, but being an admin is **wonderful** (*and dangerous*).
 
 <br></br>
 
-![Image of home page as admin](https://lh3.googleusercontent.com/kIaMqARCIPTuw4Wwrr7WhLBdkxuezGn1Sw0MiFle_CMaEC5uIuXddRtRmrBTvo5Wwk8utZFHycYYmV6WL1o_PErtkZ17mLFU937Kw3RN6d7dBpLWBypid7Nzcdi-XQ2GUttyQVA3HtYmLJPfZADOQMWg2JlDkrnLgxVE4EAXCFRP0iqRlRyZo2lbAwtE6-xNbcFAkWINTct2lT_QtwoUUPX1olBVs4QUA4eufRvJuPe3qRveBc5ndj7qs7WINpU52hGucfgT8Pev48rnOrN83JDj21C0F9pHceO1xXUt2_EDnv02MG4XqELf77ImpdpTl7rM2Vk06IapKTQYLMcLk5dQeF-d3zMCNeT_GwGIsdSxTVmvJbmuN01r63X9wUCUnCOh2d9FtOV-XSBlz0lAlTUxqJ-xHddFloTjQL_YjTq2nQuLDEM4lCjikuvwKTk5oUWUsWwnyK0XnZPEAd5q23NG_9OxMmB_u_bM42rSzZXpFFt8I1I_8p177F3OU7DpNlgqn8WW5Q3d6Qt-BqXy6abgC1o94sxrcStfI6LJWsHl8pWthqRBaItF_DKh1uUNLQfRlO5Qg4zEmvr3pDk5UAarwc-5yORudmmbw0mQxmR2WoTGXcC8fUXyR2OE8SA467xxouXmR9BA2ptWTW07_dduJHg-bBK5V6aF005JPNzAIanzoEfRNwIEepf_2YUcI7VVDUfB56lsz4Eoj9YocQ=w1074-h704-no?authuser=1)
+![Image of home page as admin](https://live.staticflickr.com/65535/51491201616_4e459a7c07.jpg)
 
 <br></br>
 
