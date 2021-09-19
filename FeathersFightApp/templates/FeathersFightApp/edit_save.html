@@ -9,10 +9,10 @@
 
 <body>
 
-    <div class="edit_publication_header_text">Edit Publication</div>
-    <form method="POST" class="edit_publication_form">{% csrf_token %}
+    <div class="edit_article_header_text">Edit Publication</div>
+    <form method="POST" class="edit_article_form">{% csrf_token %}
 
-        <input type="text" class="edit_publication_title_input" name="title" value="{{ article_save.title }}"
+        <input type="text" class="edit_article_title_input" name="title" value="{{ article_save.title }}"
             placeholder="Title">
 
         <div class="edit_publicaiton_text_area" name="text">
@@ -20,23 +20,23 @@
             {{ form.media }}
         </div>
 
-        <div class="edit_publication_submit">
+        <div class="edit_article_submit">
             <input type="submit" formaction="/dashboard/edit/submit/{{ article_save.id }}"
-                class="edit_publication_submit_button" value="Submit">
+                class="edit_article_submit_button" value="Submit">
         </div>
 
-        <div class="edit_publication_save_and_keep">
+        <div class="edit_article_save_and_keep">
             <input type="submit" formaction="/dashboard/edit/save/{{ article_save.id }}"
-                class="edit_publication_save_and_keep_button" value="Save and Keep Writing">
+                class="edit_article_save_and_keep_button" value="Save and Keep Writing">
         </div>
 
-        <div class="edit_publication_save_and_return">
+        <div class="edit_article_save_and_return">
             <input type="submit" formaction="/dashboard/edit/save/dashboard/{{ article_save.id }}"
-                class="edit_publication_save_and_return_button" value="Save and Return to Dashboard">
+                class="edit_article_save_and_return_button" value="Save and Return to Dashboard">
         </div>
 
-        <div class="edit_publication_return_to_dashboard">
-            <input type="submit" formaction="/dashboard" class="edit_publication_return_to_dashboard_button"
+        <div class="edit_article_return_to_dashboard">
+            <input type="submit" formaction="/dashboard" class="edit_article_return_to_dashboard_button"
                 value="Return to Dashboard">
         </div>
 

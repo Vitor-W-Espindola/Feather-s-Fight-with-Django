@@ -16,7 +16,7 @@
 
     <hr class="admin_dashboard_divider">
 
-    <div class="admin_dashboard_publication_requests">
+    <div class="admin_dashboard_article_requests">
         <div class="admin_dashboard_requests_text_header">
             <div class="admin_dashboard_requests_text">All requests</div>
         </div>
@@ -24,25 +24,25 @@
         {% if article_requests %}
         {% for article_request in article_requests %}
 
-        <div class="admin_dashboard_publication_request">
-            <div class="admin_dashboard_publication_request_title">{{ article_request.article_request.title }}</div>
-            <div class="admin_dashboard_publication_request_author">
+        <div class="admin_dashboard_article_request">
+            <div class="admin_dashboard_article_request_title">{{ article_request.article_request.title }}</div>
+            <div class="admin_dashboard_article_request_author">
                 - {{ article_request.article_request.author.username }}
             </div>
-            <div class="admin_dashboard_publication_request_short_description">
+            <div class="admin_dashboard_article_request_short_description">
                 {{ article_request.short_description }}
             </div>
-            <div class="admin_dashboard_publication_request_datetime">
+            <div class="admin_dashboard_article_request_datetime">
                 {{ article_request.article_request.request_datetime }}
             </div>
 
-            <div class="admin_dashboard_publication_request_actions">
+            <div class="admin_dashboard_article_request_actions">
                 <a href="admin_dashboard/admin_article_request_preview/{{ article_request.article_request.id }}"
-                    class="admin_dashboard_publication_request_action">Visualize</a>
+                    class="admin_dashboard_article_request_action">Visualize</a>
                 <a href="admin_dashboard/approve/{{ article_request.article_request.id }}"
-                    class="admin_dashboard_publication_request_action">Approve</a>
+                    class="admin_dashboard_article_request_action">Approve</a>
                 <a href="admin_dashboard/decline/{{ article_request.article_request.id }}"
-                    class="admin_dashboard_publication_request_action">Decline</a>
+                    class="admin_dashboard_article_request_action">Decline</a>
             </div>
         </div>
         {% endfor %}
@@ -51,29 +51,29 @@
         {% endif %}
     </div>
 
-    <div class="admin_dashboard_authors_publications">
-        <div class="admin_dashboard_authors_publications_text_header">
-            <div class="admin_dashboard_authors_publications_text">All publications</div>
+    <div class="admin_dashboard_authors_articles">
+        <div class="admin_dashboard_authors_articles_text_header">
+            <div class="admin_dashboard_authors_articles_text">All Articles</div>
         </div>
 
         {% if articles %}
         {% for article in articles %}
 
-        <div class="admin_dashboard_author_publication">
-            <div class="admin_dashboard_author_publication_title">{{ article.article.title }}</div>
-            <div class="admin_dashboard_author_publication_author">- {{ article.article.author.username }}</div>
-            <div class="admin_dashboard_author_publication_short_description">{{ article.short_description }}</div>
-            <div class="admin_dashboard_author_publication_datetime">{{ article.article.pub_date }}</div>
-            <div class="admin_dashboard_author_publication_actions">
+        <div class="admin_dashboard_author_article">
+            <div class="admin_dashboard_author_article_title">{{ article.article.title }}</div>
+            <div class="admin_dashboard_author_article_author">- {{ article.article.author.username }}</div>
+            <div class="admin_dashboard_author_article_short_description">{{ article.short_description }}</div>
+            <div class="admin_dashboard_author_article_datetime">{{ article.article.pub_date }}</div>
+            <div class="admin_dashboard_author_article_actions">
                 <a href="admin_dashboard/admin_article_preview/{{ article.article.id }}"
-                    class="admin_dashboard_author_publication_action">Visualize</a>
+                    class="admin_dashboard_author_article_action">Visualize</a>
                 <a href="admin_dashboard/delete/{{ article.article.id }}"
-                    class="admin_dashboard_author_publication_action">Delete</a>
+                    class="admin_dashboard_author_article_action">Delete</a>
             </div>
         </div>
         {% endfor %}
         {% else %}
-        <div class="admin_dashboard_no_author_publication_yet">No publication yet.</div>
+        <div class="admin_dashboard_no_author_article_yet">No publication yet.</div>
         {% endif %}
     </div>
 

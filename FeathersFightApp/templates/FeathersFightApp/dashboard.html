@@ -10,7 +10,7 @@
     <div class="dashboard_header">
         <div class="dashboard_header_text">Dashboard</div>
         <div class="dashboard_header_href">
-            <a href="/dashboard/new">New publication</a>
+            <a href="/dashboard/new">New Article</a>
             |
             <a href="/1">Home Page</a>
         </div>
@@ -18,44 +18,44 @@
 
     <hr class="dashboard_divider">
 
-    <div class="dashboard_users_publications">
+    <div class="dashboard_users_articles">
         <div class="dashboard_text_header">
-            <div class="dashboard_text">Your publications, {{ username }}</div>
+            <div class="dashboard_text">Your Articles, {{ username }}</div>
         </div>
 
 
         {% if article_list %}
         {% for article in article_list %}
 
-        <div class="dashboard_publication">
-            <div class="dashboard_publication_title">{{ article.article.title }}</div>
-            <div class="dashboard_publication_datetime">{{ article.article.pub_date }}</div>
+        <div class="dashboard_article">
+            <div class="dashboard_article_title">{{ article.article.title }}</div>
+            <div class="dashboard_article_datetime">{{ article.article.pub_date }}</div>
 
-            <div class="dashboard_publication_short_description">{{ article.short_description }}</div>
+            <div class="dashboard_article_short_description">{{ article.short_description }}</div>
 
-            <div class="dashboard_publication_actions">
+            <div class="dashboard_article_actions">
                 <a href="dashboard/article_preview/{{ article.article.id }}"
-                    class="dashboard_publication_action">Visualize</a>
+                    class="dashboard_article_action">Visualize</a>
             </div>
         </div>
         {% endfor %}
         {% else %}
-        <div class="dashboard_no_publication_yet">You have no publication yet.</div>
+        <div class="dashboard_no_article_yet">You have no article yet.</div>
         {% endif %}
     </div>
 
     {% if article_requests %}
     <div class="dashboard_text_header">
-        <div class="dashboard_text">Your requests</div>
+        <div class="dashboard_text">Your Requests</div>
     </div>
 
     {% for article_request in article_requests %}
-    <div class="dashboard_users_publications_requests">
-        <div class="dashboard_publication_request_title">{{ article_request.title }}</div>
-        <div class="dashboard_publication_request_datetime">{{ article_request.request_datetime }}</div>
-        <div class="dashboard_publication_request_actions">
+    <div class="dashboard_users_article_requests">
+        <div class="dashboard_article_request_title">{{ article_request.title }}</div>
+        <div class="dashboard_article_request_datetime">{{ article_request.request_datetime }}</div>
+        <div class="dashboard_article_request_actions">
             <a href="/dashboard/article_request_preview/{{ article_request.id }}"
-                class="dashboard_publication_request_action">Preview</a>
+                class="dashboard_article_request_action">Preview</a>
         </div>
     </div>
     {% endfor %}
@@ -63,7 +63,7 @@
 
     {% if saved_articles %}
     <div class="dashboard_text_header">
-        <div class="dashboard_text">Your saves</div>
+        <div class="dashboard_text">Your Saves</div>
     </div>
     {% for saved_article in saved_articles %}
     <div class="dashboard_saves">

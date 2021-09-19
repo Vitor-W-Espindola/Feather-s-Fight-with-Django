@@ -370,7 +370,7 @@ input[type="password"]:focus {
   margin-left: 60px;
   width: 60%;
 }
-.dashboard_users_publications {
+.dashboard_users_articles {
   width: 45%;
 }
 .dashboard_text_header {
@@ -381,57 +381,57 @@ input[type="password"]:focus {
   display: inline;
   font-size: 28px;
 }
-.dashboard_publication {
+.dashboard_article {
   padding-left: 60px;
   padding-top: 45px;
 }
 
-.dashboard_publication_title {
+.dashboard_article_title {
   display: inline;
   font-size: 21px;
 }
-.dashboard_publication_datetime {
+.dashboard_article_datetime {
   display: inline;
   padding-left: 4px;
   display: inline;
   font-style: italic;
   font-size: 15px;
 }
-.dashboard_publication_short_description {
+.dashboard_article_short_description {
   padding-top: 5px;
   color: rgb(136, 136, 136);
 }
-.dashboard_publication_actions {
+.dashboard_article_actions {
   padding-top: 15px;
 }
-.dashboard_publication_action {
+.dashboard_article_action {
   padding-right: 15px;
   color: rgb(62, 122, 233);
   text-decoration: none;
 }
-.dashboard_no_publication_yet {
+.dashboard_no_article_yet {
   padding-left: 60px;
   padding-top: 45px;
   font-size: 20px;
 }
-.dashboard_users_publications_requests {
+.dashboard_users_article_requests {
   padding-left: 60px;
   padding-top: 45px;
 }
-.dashboard_publication_request_title {
+.dashboard_article_request_title {
   display: inline;
   font-size: 21px;
 }
-.dashboard_publication_request_datetime {
+.dashboard_article_request_datetime {
   display: inline;
   padding-left: 4px;
   font-style: italic;
   font-size: 15px;
 }
-.dashboard_publication_request_actions {
+.dashboard_article_request_actions {
   padding-top: 15px;
 }
-.dashboard_publication_request_action {
+.dashboard_article_request_action {
   padding-right: 15px;
   color: rgb(62, 122, 233);
   text-decoration: none;
@@ -462,20 +462,20 @@ input[type="password"]:focus {
   padding-top: 70px;
 }
 
-/* new_publication.html */
+/* new_article.html */
 
-.new_publication_header_text {
+.new_article_header_text {
   padding-top: 100px;
   padding-left: 140px;
   font-size: 40px;
 }
-.new_publication_form {
+.new_article_form {
   padding-top: 50px;
   padding-left: 140px;
   width: 42%;
   height: 100%;
 }
-.new_publication_title_input {
+.new_article_title_input {
   width: 40%;
   height: 35px;
   font-size: 18px;
@@ -486,10 +486,10 @@ input[type="password"]:focus {
 .new_publicaiton_text_area {
   padding-top: 30px;
 }
-.new_publication_submit {
+.new_article_submit {
   padding-top: 30px;
 }
-.new_publication_submit_button {
+.new_article_submit_button {
   width: 10%;
   height: 40px;
   background-color: white;
@@ -497,10 +497,10 @@ input[type="password"]:focus {
   border-width: 1px;
   border-color: black;
 }
-.new_publication_save_and_keep {
+.new_article_save_and_keep {
   padding-top: 15px;
 }
-.new_publication_save_and_keep_button {
+.new_article_save_and_keep_button {
   width: 25%;
   height: 40px;
   background-color: white;
@@ -508,10 +508,10 @@ input[type="password"]:focus {
   border-width: 1px;
   border-color: black;
 }
-.new_publication_save_and_return {
+.new_article_save_and_return {
   padding-top: 15px;
 }
-.new_publication_save_and_return_button {
+.new_article_save_and_return_button {
   width: 25%;
   height: 40px;
   background-color: white;
@@ -519,11 +519,11 @@ input[type="password"]:focus {
   border-width: 1px;
   border-color: black;
 }
-.new_publication_return_to_dashboard {
+.new_article_return_to_dashboard {
   padding-top: 15px;
   padding-bottom: 40px;
 }
-.new_publication_return_to_dashboard_button {
+.new_article_return_to_dashboard_button {
   width: 25%;
   height: 40px;
   background-color: white;
@@ -532,20 +532,20 @@ input[type="password"]:focus {
   border-color: black;
 }
 
-/* edit_publication.html */
+/* edit_article.html */
 
-.edit_publication_header_text {
+.edit_article_header_text {
   padding-top: 100px;
   padding-left: 140px;
   font-size: 40px;
 }
-.edit_publication_form {
+.edit_article_form {
   padding-top: 50px;
   padding-left: 140px;
   width: 42%;
   height: 100%;
 }
-.edit_publication_title_input {
+.edit_article_title_input {
   width: 40%;
   height: 35px;
   font-size: 18px;
@@ -556,10 +556,10 @@ input[type="password"]:focus {
 .edit_publicaiton_text_area {
   padding-top: 30px;
 }
-.edit_publication_submit {
+.edit_article_submit {
   padding-top: 30px;
 }
-.edit_publication_submit_button {
+.edit_article_submit_button {
   width: 10%;
   height: 40px;
   background-color: white;
@@ -567,10 +567,10 @@ input[type="password"]:focus {
   border-width: 1px;
   border-color: black;
 }
-.edit_publication_save_and_keep {
+.edit_article_save_and_keep {
   padding-top: 15px;
 }
-.edit_publication_save_and_keep_button {
+.edit_article_save_and_keep_button {
   width: 25%;
   height: 40px;
   background-color: white;
@@ -578,10 +578,10 @@ input[type="password"]:focus {
   border-width: 1px;
   border-color: black;
 }
-.edit_publication_save_and_return {
+.edit_article_save_and_return {
   padding-top: 15px;
 }
-.edit_publication_save_and_return_button {
+.edit_article_save_and_return_button {
   width: 25%;
   height: 40px;
   background-color: white;
@@ -589,11 +589,11 @@ input[type="password"]:focus {
   border-width: 1px;
   border-color: black;
 }
-.edit_publication_return_to_dashboard {
+.edit_article_return_to_dashboard {
   padding-top: 15px;
   padding-bottom: 40px;
 }
-.edit_publication_return_to_dashboard_button {
+.edit_article_return_to_dashboard_button {
   width: 25%;
   height: 40px;
   background-color: white;
@@ -625,7 +625,7 @@ input[type="password"]:focus {
   margin-left: 60px;
   width: 60%;
 }
-.admin_dashboard_publication_requests {
+.admin_dashboard_article_requests {
   width: 45%;
 }
 .admin_dashboard_requests_text_header {
@@ -636,31 +636,31 @@ input[type="password"]:focus {
   display: inline;
   font-size: 28px;
 }
-.admin_dashboard_publication_request {
+.admin_dashboard_article_request {
   padding-left: 60px;
   padding-top: 45px;
 }
-.admin_dashboard_publication_request_title {
+.admin_dashboard_article_request_title {
   display: inline;
   font-size: 21px;
 }
-.admin_dashboard_publication_request_author {
+.admin_dashboard_article_request_author {
   display: inline;
   color: rgb(136, 136, 136);
 }
-.admin_dashboard_publication_request_short_description {
+.admin_dashboard_article_request_short_description {
   padding-top: 5px;
   color: rgb(136, 136, 136);
 }
-.admin_dashboard_publication_request_datetime {
+.admin_dashboard_article_request_datetime {
   padding-top: 10px;
   font-style: italic;
   font-size: 15px;
 }
-.admin_dashboard_publication_request_actions {
+.admin_dashboard_article_request_actions {
   padding-top: 15px;
 }
-.admin_dashboard_publication_request_action {
+.admin_dashboard_article_request_action {
   padding-right: 15px;
   color: rgb(62, 122, 233);
   text-decoration: none;
@@ -670,47 +670,47 @@ input[type="password"]:focus {
   padding-top: 45px;
   font-size: 20px;
 }
-.admin_dashboard_authors_publications {
+.admin_dashboard_authors_articles {
   padding-top: 45px;
 }
-.admin_dashboard_authors_publications_text_header {
+.admin_dashboard_authors_articles_text_header {
   padding-left: 60px;
   padding-top: 70px;
 }
-.admin_dashboard_authors_publications_text {
+.admin_dashboard_authors_articles_text {
   display: inline;
   font-size: 28px;
 }
-.admin_dashboard_author_publication {
+.admin_dashboard_author_article {
   padding-left: 60px;
   padding-top: 45px;
 }
-.admin_dashboard_author_publication_title {
+.admin_dashboard_author_article_title {
   display: inline;
   font-size: 21px;
 }
-.admin_dashboard_author_publication_author {
+.admin_dashboard_author_article_author {
   display: inline;
   color: rgb(136, 136, 136);
 }
-.admin_dashboard_author_publication_short_description {
+.admin_dashboard_author_article_short_description {
   padding-top: 5px;
   color: rgb(136, 136, 136);
 }
-.admin_dashboard_author_publication_datetime {
+.admin_dashboard_author_article_datetime {
   padding-top: 10px;
   font-style: italic;
   font-size: 15px;
 }
-.admin_dashboard_author_publication_actions {
+.admin_dashboard_author_article_actions {
   padding-top: 15px;
 }
-.admin_dashboard_author_publication_action {
+.admin_dashboard_author_article_action {
   padding-right: 15px;
   color: rgb(62, 122, 233);
   text-decoration: none;
 }
-.admin_dashboard_no_author_publication_yet {
+.admin_dashboard_no_author_article_yet {
   padding-left: 60px;
   padding-top: 45px;
   font-size: 20px;
