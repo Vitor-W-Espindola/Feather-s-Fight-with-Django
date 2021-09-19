@@ -11,7 +11,7 @@ class Fight(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=True, limit_choices_to={'groups__name':'Authors'})
 
     def __str__(self):
-        return "%i -> %s" % (self.id, self.style)
+        return "%i -> %s" % (self.id, self.title)
 
 class PublicationRequest(models.Model):
     title = models.CharField(max_length=30)

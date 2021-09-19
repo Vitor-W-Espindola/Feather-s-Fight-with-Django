@@ -142,12 +142,8 @@ def fight_delete(request, publication_id):
     return HttpResponseRedirect("/dashboard")
 
 def new_publication_page(request):
-    requests = PublicationRequest.objects.filter(author=request.user)
-    if(len(requests) > 0):
-        return HttpResponse('You have requests awaiting.')
-    else:
-        form = PublicationRequestForm()
-        return render(request, 'FeathersFightApp/new_publication.html', {'form':form})
+    form = PublicationRequestForm()
+    return render(request, 'FeathersFightApp/new_publication.html', {'form':form})
 
 def edit_publication_page(request, save_id):
     save = get_object_or_404(SavePublication, id=save_id)
@@ -195,6 +191,7 @@ def request_preview(request, request_id):
     return HttpResponse(template.render(context, request))
 
 def new_save(request):
+    
     save = SavePublication.objects.create(
         title=request.POST['title'],
         text=request.POST['text'],
@@ -250,25 +247,33 @@ def delete_save(request, save_id):
     return HttpResponseRedirect('/dashboard')
 
 def submit_new(request):
-    title = request.POST['title']
-    text = request.POST['text']
-    author = request.user
-    
-    pub = PublicationRequest.objects.create(title=title, text=text, author=author, request_datetime=datetime.now())
-    pub.save()
+    requests = PublicationRequest.objects.filter(author=request.user)
+    if(len(requests) > 0):
+        return HttpResponse('You have requests awaiting.')
+    else:
+        title = request.POST['title']
+        text = request.POST['text']
+        author = request.user
+        
+        pub = PublicationRequest.objects.create(title=title, text=text, author=author, request_datetime=datetime.now())
+        pub.save()
 
-    return HttpResponseRedirect('/dashboard')
+        return HttpResponseRedirect('/dashboard')
 
 def submit_save(request, save_id):
     
-    title = request.POST['title']
-    text = request.POST['text']
-    author = request.user
-    
-    pub = PublicationRequest.objects.create(title=title, text=text, author=author, request_datetime=datetime.now())
-    pub.save()
+    requests = PublicationRequest.objects.filter(author=request.user)
+    if(len(requests) > 0):
+        return HttpResponse('You have requests awaiting.')
+    else:
+        title = request.POST['title']
+        text = request.POST['text']
+        author = request.user
+        
+        pub = PublicationRequest.objects.create(title=title, text=text, author=author, request_datetime=datetime.now())
+        pub.save()
 
-    save = SavePublication.objects.get(pk=save_id)
-    save.delete()
+        save = SavePublication.objects.get(pk=save_id)
+        save.delete()
 
-    return HttpResponseRedirect('/dashboard')
+        return HttpResponseRedirect('/dashboard')

@@ -31,7 +31,7 @@ def index_with_no_page(request):
 
 def index_with_page(request, index_page_id):
 
-    username = "User"
+    username = "Visitor"
     logged_in = 0
     author = 0
     admin = 0

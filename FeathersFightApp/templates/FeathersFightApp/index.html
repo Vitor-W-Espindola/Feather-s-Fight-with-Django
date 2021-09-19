@@ -32,7 +32,7 @@
     <div class="pagination_div">
         {% for number in range_of_pages %}
         {% if number == index_page_id %}
-        <label>{{ number }}</label>
+        <label class="pageref">{{ number }}</label>
         {% else %}
         <a href="/{{ number }}" class="pageref">{{ number }}</a>
         {% endif %}
@@ -47,14 +47,19 @@
     </div>
     {% endif %}
     {% if admin == 1 %}
-    <div class="index_dashboard">
+    <div class="index_admin_dashboard">
         <a href="/admin_dashboard" class="index_dashboardref">Admin Dashboard</a>
     </div>
     {% endif %}
     <div class="index_footer_info">
-        <a href="" class="index_footer_info_item">About |</a>
-        <a href="/register" class="index_footer_info_item">Become an author |</a>
-        <a href="" class="index_footer_info_item">More |</a>
+        <a href="/register" class="index_footer_info_item">Sign up</a>
+        |
+        <a href="" class="index_footer_info_item">About</a>
+        |
+        <a href="/register_author" class="index_footer_info_item">Become an author</a>
+        |
+        <a href="" class="index_footer_info_item">More</a>
+        |
         {% if logged_in == 0%}
         <a href="/login" class="index_footer_info_item">Log in </a>
         {% else %}

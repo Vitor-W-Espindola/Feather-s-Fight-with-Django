@@ -25,6 +25,14 @@ def removeTags(html):
     # return data by retrieving the tag content
     return ' '.join(soup.stripped_strings)   
 
+def removeTags(html):
+    soup = BeautifulSoup(html, "html.parser")
+    for data in soup(['style', 'script']):
+        data.decompose()
+  
+    # return data by retrieving the tag content
+    return ' '.join(soup.stripped_strings)   
+
 
 def register_page(request):
     template = loader.get_template('FeathersFightApp/register.html')
@@ -38,17 +46,61 @@ def register_process(request):
     username = request.POST["username"]
     email = request.POST["email"]
     password = request.POST["password"]
+    confirm_password = request.POST["confirm_password"]
+
+    if(password != confirm_password):
+        return HttpResponse('Passowords do not match.')
     
-    # If user already exists
-    try:
-        user = User.objects.create_user(username=username, email=email, password=password)
-    
-    except IntegrityError:
-        return HttpResponse("User already registered.")
-    except ValueError:
-        return HttpResponse("Fill all form fields.")
+    if(username != "" and email != "" and password != "" and confirm_password != ""):
         
+        username_exist = User.objects.filter(username=username)
+        email_exist = User.objects.filter(email=email)
+    
+        # If user and email are not registered
+        if(len(username_exist) == 0 and len(email_exist) == 0):
+            user = User.objects.create_user(username=username, email=email, password=password)
+            user.save()
+            auth.login(request, user)
+            return HttpResponseRedirect('/')
+        else:
+            return HttpResponse('User already registered.')
     else:
-        user.save()
-        auth.login(request, user)
-        return HttpResponseRedirect('/')
+        return HttpResponse("Fill all form fields.")
+
+
+
+def register_author_page(request):
+    template = loader.get_template('FeathersFightApp/register_author.html')
+    return HttpResponse(template.render({}, request))
+    
+def register_author_process(request):
+    
+    if(request.method != "POST"):
+        return HttpResponse("Not a post method.")
+    
+    username = request.POST["username"]
+    email = request.POST["email"]
+    password = request.POST["password"]
+    confirm_password = request.POST["confirm_password"]
+
+    if(password != confirm_password):
+        return HttpResponse('Passowords do not match.')
+    
+    if(username != "" and email != "" and password != "" and confirm_password != ""):
+        
+        username_exist = User.objects.filter(username=username)
+        email_exist = User.objects.filter(email=email)
+    
+        # If user and email are not registered
+        if(len(username_exist) == 0 and len(email_exist) == 0):
+            user = User.objects.create_user(username=username, email=email, password=password)
+            authors= Group.objects.get(name="Authors")
+            authors.user_set.add(user)
+            user.save()
+            auth.login(request, user)
+            return HttpResponseRedirect('/')
+        else:
+            return HttpResponse('User already registered.')
+    else:
+        return HttpResponse("Fill all form fields.")
+

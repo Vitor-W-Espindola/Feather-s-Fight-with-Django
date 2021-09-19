@@ -31,7 +31,7 @@
 }
 .item_container {
   padding: 50px;
-  width: 22%;
+  width: 28%;
   height: 150px;
   margin-left: auto;
   margin-right: auto;
@@ -48,17 +48,23 @@
   font-style: italic;
   font-size: 17px;
   text-align: justify;
-  width: 70%;
+  width: 60%;
 }
 .pagination_div {
   text-align: center;
   padding-top: 20px;
 }
 .pageref {
+  padding-right: 5px;
   color: black;
 }
 .index_dashboard {
-  padding-top: 50px;
+  padding-top: 60px;
+  font-size: 16px;
+  text-align: center;
+}
+.index_admin_dashboard {
+  padding-top: 20px;
   font-size: 16px;
   text-align: center;
 }
@@ -82,7 +88,8 @@
 /* fight.html */
 
 .style {
-  width: 28%;
+  width: 38%;
+
   margin-left: auto;
   margin-right: auto;
   font-size: 50px;
@@ -91,7 +98,8 @@
   text-align: right;
 }
 .description {
-  width: 28%;
+  width: 38%;
+
   margin-left: auto;
   margin-right: auto;
   text-align: justify;
@@ -103,14 +111,16 @@
   color: rgb(0, 0, 0);
 }
 .pub_date {
-  width: 28%;
+  width: 38%;
+
   margin-left: auto;
   margin-right: auto;
   text-align: right;
 }
 .author {
   padding-top: 10px;
-  width: 28%;
+  width: 38%;
+
   margin-left: auto;
   margin-right: auto;
   text-align: right;

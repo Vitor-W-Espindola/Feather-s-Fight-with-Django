@@ -10,11 +10,11 @@
 <body>
     <div class="register_header">
         <img class="register_feather" src="{% static 'FeathersFightApp/images/feather.png' %}">
-        <div class="register_title"><label>Sign up</label></div>
+        <div class="register_title"><label>Become an author</label></div>
     </div>
     <hr class="register_divider">
 
-    <form action="register/success" class="register_form" method="post">{% csrf_token %}
+    <form action="registe_author/success" class="register_form" method="post">{% csrf_token %}
         <div class="register_text_input">
             <input type="text" class="register_area_input" name="username" placeholder="Username">
         </div>

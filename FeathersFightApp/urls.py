@@ -17,6 +17,10 @@ urlpatterns = [
     path('register', register_page, name='register_page'),
     path('register/success', register_process, name='register'),
 
+    # register_author.py
+    path('register_author', register_author_page, name='register_page'),
+    path('register_author/success', register_author_process, name='register'),
+
     # login.py
     path('login', login_page, name='login_page'),
     path('login/success', login_process, name='login'),
