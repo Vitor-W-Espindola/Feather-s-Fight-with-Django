@@ -28,16 +28,18 @@ Guide:
 - [As Admin](#as-admin)
   - [Admin Dashboard, Publications and Requests](#admin-dashboard-publications-and-requests)
 
-<br></br>
- 
+
+<p></p>
+
 
 # As User
-<p></p>
+
 
 <div align="center">
 <img alt="Read an Article" width=500 src="https://live.staticflickr.com/65535/51491912049_242ddff341_b.jpg" />
 </div>
 
+<p></p>
 
 User is the simplest you can be in Feather's Flight.
 Fortunately, Django offers an **User** model and also **authentication tools**.
@@ -54,6 +56,9 @@ It becomes easy to manipulate those roles, as explained later on.
 <img alt="Read an Article" src="https://media.giphy.com/media/LEo0WKMgQ621y0mjje/giphy.gif?cid=790b76116b46572d560b15945fb69c168345dd7afb70889b&rid=giphy.gif&ct=g" />
 </div>
 
+<p></p>
+
+
 **Read an Article** turns to be the **<3** of **Feather's Fight**.
 
 Every single user has the permission to browse through the pages and choose to see any available article.
@@ -69,6 +74,9 @@ Here is a very hospitable **Sign Up** Page.
 <div align="center">
 <img alt="Sign up" width=300 src="https://live.staticflickr.com/65535/51491201576_4248dcf2b8_z.jpg" />
 </div>
+
+<p></p>
+
 
 As said, since user can only read articles, there is no really advantage in being a registered user (yet xD).
 
@@ -92,6 +100,7 @@ This is the page which gives an ordinary user some powerful features.
 <img alt="Become an author" width=300 src="https://live.staticflickr.com/65535/51492129055_96ed041398.jpg" />
 </div>
 
+<p></p>
 
 At the moment, this page allows everyone to become an author (being added to the Authors group).
 
@@ -110,6 +119,7 @@ In futures releases, when various actions are provided to ordinary users, becomi
 <img alt="As Author" width=500 src="https://live.staticflickr.com/65535/51491912139_d1f6480518.jpg" />
 </div>
 
+<p></p>
 
 An Author grows the webpage up. They have their own dashboard. 
 
@@ -126,9 +136,10 @@ Here is where authors enjoy their free time. (Beautiful, isn't it ?)
 
 
 <div align="center">
-<img alt="Dashboard" src="https://media.giphy.com/media/rBja6oxIU7hjO9rB2x/giphy.gif?cid=790b761150a5338df12e27f7772bef1cfcb63ed3cab74fbb&rid=giphy.gif&ct=g" />
+<img alt="Dashboard" src="https://media.giphy.com/media/2Qw8wR0BPMbhTyLtZJ/giphy.gif?cid=790b76114faed042b8c966c815f6c2e45febe4a980a43358&rid=giphy.gif&ct=g" />
 </div>
 
+<p></p>
 
 The Dashboard shows all author's publications, pending requests, and saved publications. 
 
@@ -141,7 +152,7 @@ This leads the author to a friendly New Publication page, where will be written 
 
 
 <div align="center">
-<img alt="New Publication" width=530 src="https://live.staticflickr.com/65535/51491201586_d0be78cd01.jpg" />
+<img alt="New Article" width=530 src="https://live.staticflickr.com/65535/51494742450_ab311028af.jpg" />
 </div>
 
 ## Publications,  requests and saves
@@ -163,6 +174,8 @@ Being an author is good, but being an admin is **wonderful** (*and dangerous*).
 <div align="center">
 <img alt="Image of Home Page as Admin" width=550 src="https://live.staticflickr.com/65535/51491201616_4e459a7c07.jpg" />
 </div>
+
+<p></p>
 
 An admin has **full control** of requests and publications.
 In order to become an admin, it is necessary to contact other admin - there is no interface for this.
