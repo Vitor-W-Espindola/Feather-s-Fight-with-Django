@@ -28,10 +28,12 @@ Guide:
  
 
 # As User
-<br></br>
+<p></p>
 
-![Image of the home page as user](https://lh3.googleusercontent.com/YIXuW_lLbjrg33xKv_75M4ISgsMfcocOkVmP_bAZcnYy8FVatfp0o3Ry0-tfpXCAsF3xvd2xm_x9_DzwycVTd90H9suJAe0MgAVRW4OR-DsIdfTqGsVmBFKL2eLBjR1vjH6Z6bUsMB2WKcKIjIdYgsVq4s_VMDe0B2zRr7Jcx3bk9pq1K7xeC5MFTmvHkpYN-W41ACmE9iX2x90o-NXBTKFMbnsJigLI_I0gwNQo5H97sW52i2ONHKUmYgVpzSHHm94MpB0Uw8jpMN_bROu6HmO4_HayNv5arJbQEP2SlPksLGhgMxz1s7Kn0-ylvUxfv7tvl0IsGjaEctmuZJs219r8JC8NIktkRK4RgFckA6e-CX1tDGM-mb1CqhpCUp973EAb3f5e9oG-yg42HFqcM7XXE31Hf0rkC6nsVeURQ5wIT1_83nr0N4BYbXrmPTW0l9hnvV_-kgIFrDWkKJGdrgYsE9DD4CN_t6xpGwty-bTInoVELU1chKv3UDMGJlaXpA0NsD2UzlyiINNK_tIMIxiWYZ3NQ9dsLJB4bv-bqH4_Y82lmW3c58IDsL5H3uA52VtTxNJapLz5DqM781eO9bmw60j6iAepFpnywjztE9-CoAIu0vTR3MOjL02MGRBJxr0XQ_T0bG8L3bYWt0ibmGmMiC7_9RlsT0woaqXZYnBX16u9eLrmOgQXY3KPXugCb5IZMwx_R_IJDoD6V8LDHZc=w1057-h603-no?authuser=1)
-<br></br>
+<div align="center">
+<img alt="Read an Article" width=500 src="https://lh3.googleusercontent.com/YIXuW_lLbjrg33xKv_75M4ISgsMfcocOkVmP_bAZcnYy8FVatfp0o3Ry0-tfpXCAsF3xvd2xm_x9_DzwycVTd90H9suJAe0MgAVRW4OR-DsIdfTqGsVmBFKL2eLBjR1vjH6Z6bUsMB2WKcKIjIdYgsVq4s_VMDe0B2zRr7Jcx3bk9pq1K7xeC5MFTmvHkpYN-W41ACmE9iX2x90o-NXBTKFMbnsJigLI_I0gwNQo5H97sW52i2ONHKUmYgVpzSHHm94MpB0Uw8jpMN_bROu6HmO4_HayNv5arJbQEP2SlPksLGhgMxz1s7Kn0-ylvUxfv7tvl0IsGjaEctmuZJs219r8JC8NIktkRK4RgFckA6e-CX1tDGM-mb1CqhpCUp973EAb3f5e9oG-yg42HFqcM7XXE31Hf0rkC6nsVeURQ5wIT1_83nr0N4BYbXrmPTW0l9hnvV_-kgIFrDWkKJGdrgYsE9DD4CN_t6xpGwty-bTInoVELU1chKv3UDMGJlaXpA0NsD2UzlyiINNK_tIMIxiWYZ3NQ9dsLJB4bv-bqH4_Y82lmW3c58IDsL5H3uA52VtTxNJapLz5DqM781eO9bmw60j6iAepFpnywjztE9-CoAIu0vTR3MOjL02MGRBJxr0XQ_T0bG8L3bYWt0ibmGmMiC7_9RlsT0woaqXZYnBX16u9eLrmOgQXY3KPXugCb5IZMwx_R_IJDoD6V8LDHZc=w1057-h603-no?authuser=1" />
+</div>
+
 
 
 User is the simplest you can be in Feather's Flight.
@@ -61,31 +63,29 @@ The user is redirected to the page where the article is displayed. It is availab
 At the moment, user is limited to only read the article and further information.
 *Future releases* will allow users to **rate the article** and also **comment and share opinion**.
 
-<br></br>
 
 ## Sign up
-Here is a very hospitable **sign up** page.
+Here is a very hospitable **Sign Up** Page.
 <br></br>
 
-![Image of sign up page](https://lh3.googleusercontent.com/c8Adei44FmUZOshh5KeaTPnOfLDwUy2SJVrFbG6avWzVZI-juWvWnYYXsiuxkjYKUwKw8nwYImChUf_VSZhdd1qdGjKbgA855C3olqSoHkuCbCSSIKO4LN1rlhK2SLag9wPerBrv4zkj1ihjiZKCetTVHCrrjb_Fo_LTDJaJ4EMUaA1JXAfT1vy54K5vqxMg0Jq72ThuLmfh9vDr6AKxc1kRV9D-TJcTToRNK2VmqGQ7RN85VnRciW6IgIoLOtJAAX_BDMgBnoHEK5rs6pJ4UrDi2baVYG97Vk9snqp1z_uw8Q_xW7BblwUwGpi1ocz0I9buRURI-cALqKRTEucKo8LGOsmGqWvapqr-zufhVTl2raDjo00HXxGVBBYCWbAIU6tO1zuh23habAizUIaJL8_yLuYH65a0ml166MzUwN7MWBumK0fgwiM7y9Ju1WzHdLcn7AgGVw8jSlkY3ikmQ6qTBQvfigzBhSD7-6LWaqRuWoHBGUPiEypeuGM8zHJ2hWghovkRSYKcyCgEXT8Sr27Y07qGNbxtc3CHMMhPrlO5t74ZYMw7H0QmulbehZn2efJhYR5VzuZSUciAduL4OXcanGgKpdCM_L69BbeGT2oC8sWGk4ivLG-alVCbRZ0LU5vfJBuhyUOsV83v0-9nlo9M9VUzWJr-K0JC4DUX0cvunSMS84ep5gsT4i4iXJYWgvI1N8hd7WhAV4ZWxDutCw=w480-h628-no?authuser=1)
+<div align="center">
+<img alt="Read an Article" width=300 src="https://lh3.googleusercontent.com/c8Adei44FmUZOshh5KeaTPnOfLDwUy2SJVrFbG6avWzVZI-juWvWnYYXsiuxkjYKUwKw8nwYImChUf_VSZhdd1qdGjKbgA855C3olqSoHkuCbCSSIKO4LN1rlhK2SLag9wPerBrv4zkj1ihjiZKCetTVHCrrjb_Fo_LTDJaJ4EMUaA1JXAfT1vy54K5vqxMg0Jq72ThuLmfh9vDr6AKxc1kRV9D-TJcTToRNK2VmqGQ7RN85VnRciW6IgIoLOtJAAX_BDMgBnoHEK5rs6pJ4UrDi2baVYG97Vk9snqp1z_uw8Q_xW7BblwUwGpi1ocz0I9buRURI-cALqKRTEucKo8LGOsmGqWvapqr-zufhVTl2raDjo00HXxGVBBYCWbAIU6tO1zuh23habAizUIaJL8_yLuYH65a0ml166MzUwN7MWBumK0fgwiM7y9Ju1WzHdLcn7AgGVw8jSlkY3ikmQ6qTBQvfigzBhSD7-6LWaqRuWoHBGUPiEypeuGM8zHJ2hWghovkRSYKcyCgEXT8Sr27Y07qGNbxtc3CHMMhPrlO5t74ZYMw7H0QmulbehZn2efJhYR5VzuZSUciAduL4OXcanGgKpdCM_L69BbeGT2oC8sWGk4ivLG-alVCbRZ0LU5vfJBuhyUOsV83v0-9nlo9M9VUzWJr-K0JC4DUX0cvunSMS84ep5gsT4i4iXJYWgvI1N8hd7WhAV4ZWxDutCw=w480-h628-no?authuser=1" />
+</div>
 
-<p></p>
+<br></br>
 
 As said, since user can only read articles, there is no really advantage in being a registered user (yet xD).
 
-<br></br>
-
 
 ## Log in
-With a beautiful feather displayed on screen, the log in page requires user's username and password. 
+With a beautiful feather displayed on screen, the Log In Page requires user's username and password. 
 :D
 
-<br></br>
 
 
-![Image of log in page](https://lh3.googleusercontent.com/uENFKzfzSVPrBEjLj-Fc0yTRWgTypIjcsffE9nHxC3_8hdbSRLjb5xr5Fydb_35S1BB4DABJraH__QmN6bAszT0IRNJeWf_6dh8pOaRWwNIh09IPfy4ZM9U4qat1q7MEfOaQ8FdqndKtZShbJpD7ErbMuZy00FQAt_ZRky9adMbVetM8Urq2lJO9Vj6EdnVequ7yFUbUDiCXekRAqC8kw7BDE6gCvwJbfefdkmn2KEqHU9NkqD_VrVhBMvw2xFUwbxFeVMhX4nGl__HYENb8D16fqxOsxQS6ge2y5Hy9HZ7I3wtbbj0pZcoFMeITZ5ZJVS564ll8wCitVOQIoh3PPAwPyUnDKUXVnb6RyEOKk6dlouF-F1hYtonMd2estkdFGuAxVu1iVTg9mVk-0pkvQA4gvkKO0y0PK4EJY0mb7Pr5mNMJWszbnH-ilQCKKZuKsFcb-Z2az-JHzzl_HYoe_vRsZbHw9Zmbqh1JhgO4J6S-mlP-ukBAXx32Pa-AM5U6Dx-41YzJqQXpdrwoemHJ1i9UAEuH-3lw821zVV5pTP4Zi2gdUuAc4GZ2nyugQI9Pgsx4Mvp8ABP6btaSTTd2ENqQyR7kW5PG8sN2vz6EKrf6lPHA2tWJuc7dQG-1jK8oXtpZSHg6vouzXdbY3C4NCY6pDqhsXw4Gjm4QqA1_kMmMJBnPFYR1CsnCXpowoE95Y2kCOD00Su_5Xwwx9YG6PQ=w484-h552-no?authuser=1)
-
-<br></br>
+<div align="center">
+<img alt="Read an Article" width=300 src="https://lh3.googleusercontent.com/uENFKzfzSVPrBEjLj-Fc0yTRWgTypIjcsffE9nHxC3_8hdbSRLjb5xr5Fydb_35S1BB4DABJraH__QmN6bAszT0IRNJeWf_6dh8pOaRWwNIh09IPfy4ZM9U4qat1q7MEfOaQ8FdqndKtZShbJpD7ErbMuZy00FQAt_ZRky9adMbVetM8Urq2lJO9Vj6EdnVequ7yFUbUDiCXekRAqC8kw7BDE6gCvwJbfefdkmn2KEqHU9NkqD_VrVhBMvw2xFUwbxFeVMhX4nGl__HYENb8D16fqxOsxQS6ge2y5Hy9HZ7I3wtbbj0pZcoFMeITZ5ZJVS564ll8wCitVOQIoh3PPAwPyUnDKUXVnb6RyEOKk6dlouF-F1hYtonMd2estkdFGuAxVu1iVTg9mVk-0pkvQA4gvkKO0y0PK4EJY0mb7Pr5mNMJWszbnH-ilQCKKZuKsFcb-Z2az-JHzzl_HYoe_vRsZbHw9Zmbqh1JhgO4J6S-mlP-ukBAXx32Pa-AM5U6Dx-41YzJqQXpdrwoemHJ1i9UAEuH-3lw821zVV5pTP4Zi2gdUuAc4GZ2nyugQI9Pgsx4Mvp8ABP6btaSTTd2ENqQyR7kW5PG8sN2vz6EKrf6lPHA2tWJuc7dQG-1jK8oXtpZSHg6vouzXdbY3C4NCY6pDqhsXw4Gjm4QqA1_kMmMJBnPFYR1CsnCXpowoE95Y2kCOD00Su_5Xwwx9YG6PQ=w484-h552-no?authuser=1" />
+</div>
 
 ## Become an author
 
@@ -95,7 +95,9 @@ This is the page which gives an ordinary user some powerful features.
 
 <br></br>
 
-![Image of Become an author](https://lh3.googleusercontent.com/mmsQ2qt7kENZiX9P49zZOeLLfaUnMQCb3ozHahmUX2CEj5O0yezbyAzNXj5-fUHB60aGAGEB2SO3pLyqmDarvxkOvB822gdXGVPhCWpNw220U5MFA3tNnHIdnFSxn6uD56x4VQkKv_GHdBeZoYi7RJZQN_l61RQGQWIu1USSlBTbbIQqLgLUpDGDBhEmDJZcXPGJWcyCC2yf_kHeb7Hkw2Ck4tMnLmWkwbUxBj_iDyoH0Df_fY6fmUTm_Sannr0cbTZevCa1dJONCUM695aTNL_C4Up4HmyJ7jMK_PH2D6i7ecdgDbUiEoa2K-99trL4btGu0fB0cx8Eh8jmiMHMFpqtqVp8pfqT_yd8JDW-r0tI3pVvUxTNKJ2ajYxGbU1Ex1hhzod19u_xOha9c_7rJuGoYvruea49MwbOA7v8GjBSsI0ONyTEffqogX8zQKCNiet4-JkipC8xDrcPNuTy749wAFvwZodn2_89wA2O29rlYex65nPNDgI-V1F6U7OKWw27tjhV55gG9IIvCdUnGlQ7F7LmzWxtNNn7Cqiv74ZfjmvoC6znCZEeXOSwbuHSXUk2U9W9tcrHBxPtTb4ikdcOzb-Jd3QLZ8v7OQWveRWVvssHhpE8DQCK50ciGKfeoWrUdQ5kSyutxTso__NlOtOWN9V47HUe6Z_xJ6RlBsYg5HCbdEr2rGgWhsAPipiQ7f-nnlkmq_Bt0IenT-f1iQ=w464-h636-no?authuser=1)
+<div align="center">
+<img alt="Read an Article" width=300 src="https://lh3.googleusercontent.com/mmsQ2qt7kENZiX9P49zZOeLLfaUnMQCb3ozHahmUX2CEj5O0yezbyAzNXj5-fUHB60aGAGEB2SO3pLyqmDarvxkOvB822gdXGVPhCWpNw220U5MFA3tNnHIdnFSxn6uD56x4VQkKv_GHdBeZoYi7RJZQN_l61RQGQWIu1USSlBTbbIQqLgLUpDGDBhEmDJZcXPGJWcyCC2yf_kHeb7Hkw2Ck4tMnLmWkwbUxBj_iDyoH0Df_fY6fmUTm_Sannr0cbTZevCa1dJONCUM695aTNL_C4Up4HmyJ7jMK_PH2D6i7ecdgDbUiEoa2K-99trL4btGu0fB0cx8Eh8jmiMHMFpqtqVp8pfqT_yd8JDW-r0tI3pVvUxTNKJ2ajYxGbU1Ex1hhzod19u_xOha9c_7rJuGoYvruea49MwbOA7v8GjBSsI0ONyTEffqogX8zQKCNiet4-JkipC8xDrcPNuTy749wAFvwZodn2_89wA2O29rlYex65nPNDgI-V1F6U7OKWw27tjhV55gG9IIvCdUnGlQ7F7LmzWxtNNn7Cqiv74ZfjmvoC6znCZEeXOSwbuHSXUk2U9W9tcrHBxPtTb4ikdcOzb-Jd3QLZ8v7OQWveRWVvssHhpE8DQCK50ciGKfeoWrUdQ5kSyutxTso__NlOtOWN9V47HUe6Z_xJ6RlBsYg5HCbdEr2rGgWhsAPipiQ7f-nnlkmq_Bt0IenT-f1iQ=w464-h636-no?authuser=1" />
+</div>
 
 <br></br>
 
@@ -106,6 +108,7 @@ If the username or email is already registered, or if passwords do not match, an
 
 In futures releases, when various actions are provided to ordinary users, becoming an author will not be that easy ! >:(
 
+
 <br></br>
 # As Author
 "With great power, comes great responsibilities." 
@@ -113,7 +116,11 @@ In futures releases, when various actions are provided to ordinary users, becomi
 (Maybe this sentence should have been written in the "As Admin" section, but, from now on, an author can already have some special power)
 
 <br></br>
-![Image home page as author](https://lh3.googleusercontent.com/YOusjDTbh9drbFwzoOBQc29otAc-XpgVidwSiM1kwP_bYfee7AGkF9RqsyBMJt1kZ68Sjxhlj3KPOOPrV7fgb_BT9lOibY-6RooMZLyd2dkx96VMdCB4Dp3g1Zk2IVftBYKTDcF-ObyrxlLXomLNZWjm_aecZXusFuzuBWMem5qveU9ENa187zoKcml7iiHUDg6ptF63P6ZOyYdyJnytdrZLGNWriGC6SUiJrjPgx5tp88_2ZZ57f4OgVkcLSXlNpIUyCC4WbbUVFiX98xpzfo539jp-49NvvFZ9vGv05YrfISTBuwpwpeJulFrdtopB_P2BpAGT_DMyDZDYw_EctKsFYx1kCVOiN26j4XPySOlzo3sOSeiRmM6UDkd4WJtsFwviUQCsMjdpCtjcscfX094qwVdPESPHykhlj02W45Bp5_fWh5U8WtGKL7X7jokJKZN6qyeL-fZOW9RNDQTAXSP6rXfHOt7-s2XlZIBhn6p0php4mYOUAz5MXOWwwZ7fOBKs1gJozC1XTm_bYyjMkAfKkaHVjfJUSOn98OggfTauuyDtgXsnSXdpaAMN7ClTXQhamBtwU3iaRV3vDeRNcuRNLSQQKRMET3FaFWq5pPiihlozAhtygzldD9nwBibc6jXFniNSh2ejjUgahnw1DPOPNO0O-XrOo2-K2Os0PLXr6tiKmPcYPUgJKFMsfX0XfhsRHpvtiDKQRWpIWGLUPw=w1032-h681-no?authuser=1)
+
+<div align="center">
+<img alt="Read an Article" width=500 src="https://lh3.googleusercontent.com/YOusjDTbh9drbFwzoOBQc29otAc-XpgVidwSiM1kwP_bYfee7AGkF9RqsyBMJt1kZ68Sjxhlj3KPOOPrV7fgb_BT9lOibY-6RooMZLyd2dkx96VMdCB4Dp3g1Zk2IVftBYKTDcF-ObyrxlLXomLNZWjm_aecZXusFuzuBWMem5qveU9ENa187zoKcml7iiHUDg6ptF63P6ZOyYdyJnytdrZLGNWriGC6SUiJrjPgx5tp88_2ZZ57f4OgVkcLSXlNpIUyCC4WbbUVFiX98xpzfo539jp-49NvvFZ9vGv05YrfISTBuwpwpeJulFrdtopB_P2BpAGT_DMyDZDYw_EctKsFYx1kCVOiN26j4XPySOlzo3sOSeiRmM6UDkd4WJtsFwviUQCsMjdpCtjcscfX094qwVdPESPHykhlj02W45Bp5_fWh5U8WtGKL7X7jokJKZN6qyeL-fZOW9RNDQTAXSP6rXfHOt7-s2XlZIBhn6p0php4mYOUAz5MXOWwwZ7fOBKs1gJozC1XTm_bYyjMkAfKkaHVjfJUSOn98OggfTauuyDtgXsnSXdpaAMN7ClTXQhamBtwU3iaRV3vDeRNcuRNLSQQKRMET3FaFWq5pPiihlozAhtygzldD9nwBibc6jXFniNSh2ejjUgahnw1DPOPNO0O-XrOo2-K2Os0PLXr6tiKmPcYPUgJKFMsfX0XfhsRHpvtiDKQRWpIWGLUPw=w1032-h681-no?authuser=1" />
+</div>
+
 
 <br></br>
 
@@ -139,7 +146,6 @@ Here is where authors enjoy their free time. (Beautiful, isn't it ?)
 
 The Dashboard shows all author's publications, pending requests, and saved publications. 
 
-<br></br>
 
 ## New Publication
 
@@ -182,7 +188,6 @@ Being an author is good, but being an admin is **wonderful** (*and dangerous*).
 An admin has **full control** of requests and publications.
 In order to become an admin, it is necessary to contact other admin - there is no interface for this.
 
-<br></br>
 
 ## Admin Dashboard, Publications and Requests
 The Admin Dashboard allows an admin to visualize all current requests and if they are going to the home page, or come back to an author's dashboard.
