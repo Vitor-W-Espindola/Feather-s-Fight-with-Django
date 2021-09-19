@@ -23,7 +23,7 @@ Guide:
   - [Become an author](#become-an-author)
 - [As Author](#as-author)
   - [Dashboard](#dashboard)
-  - [New Publication](#new-publication)
+  - [New Article](#new-article)
   - [Publications,  requests and saves](#publications--requests-and-saves)
 - [As Admin](#as-admin)
   - [Admin Dashboard, Publications and Requests](#admin-dashboard-publications-and-requests)
@@ -41,7 +41,8 @@ Guide:
 
 <p></p>
 
-User is the simplest you can be in Feather's Flight.
+User is the simplest you can be in Feather's Fight.
+
 Fortunately, Django offers an **User** model and also **authentication tools**.
 
 Furthermore, Django provides a **Group** model too - this is used to differ users from authors. 
@@ -62,10 +63,11 @@ It becomes easy to manipulate those roles, as explained later on.
 **Read an Article** turns to be the **<3** of **Feather's Fight**.
 
 Every single user has the permission to browse through the pages and choose to see any available article.
-The user is redirected to the page where the article is displayed. It is available to see its **Title**, **Text**, **Publication Date and Time**, and also the **Author's Username**, as shown in the picture below.
+The user is redirected to the page where the article is displayed. It is available to see its **Title**, **Text**, **Publication Date and Time**, and also the **Author's Username**, as shown in the GIF above.
 
 At the moment, user is limited to only read the article and further information.
-*Future releases* will allow users to **rate the article** and also **comment and share opinion**.
+
+Future releases will allow users to **rate the article** and also **comment and share opinion**.
 
 
 ## Sign up
@@ -82,7 +84,7 @@ As said, since user can only read articles, there is no really advantage in bein
 
 
 ## Log in
-With a beautiful feather displayed on screen, the Log In Page requires user's username and password. 
+With a beautiful feather displayed on screen, the **Log In** Page requires user's username and password. 
 :D
 
 
@@ -112,7 +114,7 @@ In futures releases, when various actions are provided to ordinary users, becomi
 # As Author
 "With great power, comes great responsibilities." 
 
-(Maybe this sentence should have been written in the "As Admin" section, but, from now on, an author can already have some special power)
+(Maybe this sentence should have been written in the "As Admin" section. But, from now on, an author already have some special power).
 
 
 <div align="center">
@@ -125,7 +127,7 @@ An Author grows the webpage up. They have their own dashboard.
 
 As an Author, it is possible to create a new article, edit it, save it, and, finally, submit it. 
 
-Submit an article doesn't mean it will suddenly show up at the home page. An admin still need to approve it (or not) - we'll cover that in "As Admin" section.
+Submit an article doesn't mean it will suddenly show up at the home page. An admin still need to approve it (or not) - we'll cover that in the "As Admin" section.
  
 
 
@@ -141,14 +143,14 @@ Here is where authors enjoy their free time. (Beautiful, isn't it ?)
 
 <p></p>
 
-The Dashboard shows all author's publications, pending requests, and saved publications. 
+The Dashboard shows author's published articles, pending requests and also saved articles. 
 
 
-## New Publication
+## New Article
 
-Every time an author wants to publish a new article, the first thing to do is to click on "**New Publication**" (:O).
+Every time an author wants to publish a new article, the first thing to do is to click on "**New Article**" (:O).
 
-This leads the author to a friendly New Publication page, where will be written **title and content of the new article**.
+This leads the author to a friendly New Article page, where  **title and content** will be written.
 
 
 <div align="center">
@@ -159,14 +161,14 @@ This leads the author to a friendly New Publication page, where will be written 
 
 As you can see in the last picture, at bottom of the page, **the author can choose one of the follow items**:
 
-- Submit - when author's work is ready to become a publication, this turns the new article into a **request** and redirect author to dashboard.
-- Save  - this creates or replace a **save** in author's dashboard and the author can keep writing.
-- Save and Return to Dashboard - this creates or replace a **save** in author's dashboard and redirect author to dashboard.
-- Return to Dashboard  - as the name says.
+- **Submit** - when author's work is ready to become a published article, this turns it into a new **request** and redirects author to dashboard.
+- **Save**  - this creates or replaces a **save** in author's dashboard and the author can keep writing.
+- **Save and Return to Dashboard** - this creates or replace a **save** in author's dashboard and redirects author to dashboard.
+- **Return to Dashboard**  - as the name says.
 
 *Very intuitive, right ?* :p
 
-The **submit button** is very important. Once the author submit an article, in order to write a new article, he/she needs to **wait until an admin approve or decline it**.
+The **submit button** is also very important. Once the author has submitted an article, in order to write a new article, he/she will need to **wait until an admin approve or decline it**.
 
 # As Admin
 Being an author is good, but being an admin is **wonderful** (*and dangerous*).
@@ -182,11 +184,11 @@ In order to become an admin, it is necessary to contact other admin - there is n
 
 
 ## Admin Dashboard, Publications and Requests
-The Admin Dashboard allows an admin to visualize all current requests and if they are going to the home page, or come back to an author's dashboard.
+The Admin Dashboard allows an admin to visualize all current requests and if they are going to the home page, or coming back to an author's dashboard.
 
 
-- If the admin **approves** it, then this article will **show up at the home page** and **at author's dashboard as a publication**. 
-- If the admin **declines** it, this article will **return to author's dashboard as a save**.
+- If the admin **approves** it, then the article will **show up at the home page** and **at author's dashboard as a released article**. 
+- If the admin **declines** it, then the article will **return to author's dashboard as a save**.
 
 This dashboard also shows all current articles in the home page, and allows the admin to visualize and delete any, if needed.
 
